@@ -206,6 +206,21 @@ if __name__ == "__main__":
 
     # Set logger
     logger = set_logger(args)
+
+    # Arguments in plain English
+    plain_args = (
+        f"Dataset: {args.dataset}, "
+        f"Portion: {args.portion}, "
+        f"Batch Size: {args.batch_size}, "
+        f"Number of Parties: {args.n_parties}, "
+        f"Temperature: {args.temperature}, "
+        f"Teacher Temperature: {args.tt}, "
+        f"Student Temperature: {args.ts}, "
+        f"Epochs: {args.epochs}, "
+        f"Log Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    )
+    logger.info(plain_args)
+
     logger.info(device)
 
     # Set seed
