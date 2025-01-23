@@ -39,7 +39,7 @@ def set_logger(args):
         logging.root.removeHandler(handler)
 
     args.log_file_name = (
-        f"{args.dataset}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_log-%s"
+        f"{args.dataset}-{args.portion}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_log-%s"
         % (datetime.datetime.now().strftime("%Y-%m-%d-%H%M-%S"))
     )
     log_path = args.log_file_name + ".log"
@@ -56,11 +56,11 @@ def set_logger(args):
     return logger
 
 
-def load_cifar10_data(datadir):
+def load_cifar10_data(datadir, portion):
     transform = transforms.Compose([transforms.ToTensor()])
 
-    cifar10_train_ds = CIFAR10_truncated(datadir, train=True, download=True, transform=transform)
-    cifar10_test_ds = CIFAR10_truncated(datadir, train=False, download=True, transform=transform)
+    cifar10_train_ds = CIFAR10_truncated(datadir, train=True, download=True, transform=transform, portion=portion)
+    cifar10_test_ds = CIFAR10_truncated(datadir, train=False, download=True, transform=transform, portion=portion)
 
     X_train, y_train = cifar10_train_ds.data, cifar10_train_ds.target
     X_test, y_test = cifar10_test_ds.data, cifar10_test_ds.target
@@ -68,11 +68,11 @@ def load_cifar10_data(datadir):
     return (X_train, y_train, X_test, y_test)
 
 
-def load_svhn_data(datadir):
+def load_svhn_data(datadir, portion):
     transform = transforms.Compose([transforms.ToTensor()])
 
-    svhn_train_ds = SVHN_truncated(datadir, split="train", download=True, transform=transform)
-    svhn_test_ds = SVHN_truncated(datadir, split="test", download=True, transform=transform)
+    svhn_train_ds = SVHN_truncated(datadir, split="train", download=True, transform=transform, portion=portion)
+    svhn_test_ds = SVHN_truncated(datadir, split="test", download=True, transform=transform, portion=portion)
 
     X_train, y_train = svhn_train_ds.data, svhn_train_ds.target
     X_test, y_test = svhn_test_ds.data, svhn_test_ds.target
@@ -101,12 +101,12 @@ def record_net_data_stats(y_train, net_dataidx_map, logdir):
     return net_cls_counts
 
 
-def partition_data(dataset, datadir, logdir, partition, n_parties, beta=0.4):
+def partition_data(dataset, datadir, logdir, partition, n_parties, beta=0.4, portion=1.0):
     """Data partitioning to each local party according to the beta distribution"""
     if dataset == "cifar10":
-        X_train, y_train, X_test, y_test = load_cifar10_data(datadir)
+        X_train, y_train, X_test, y_test = load_cifar10_data(datadir, portion)
     elif dataset == "svhn":
-        X_train, y_train, X_test, y_test = load_svhn_data(datadir)
+        X_train, y_train, X_test, y_test = load_svhn_data(datadir, portion)
 
     n_train = y_train.shape[0]
 

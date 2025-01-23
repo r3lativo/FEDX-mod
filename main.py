@@ -29,10 +29,10 @@ def get_args():
     parser.add_argument("--lr", type=float, default=0.01, help="learning rate (default: 0.1)")
     parser.add_argument("--epochs", type=int, default=10, help="number of local epochs")
     parser.add_argument("--n_parties", type=int, default=10, help="number of workers in a distributed cluster")
-    parser.add_argument("--comm_round", type=int, default=100, help="number of maximum communication roun")
+    parser.add_argument("--comm_round", type=int, default=100, help="number of maximum communication rounds")
     parser.add_argument("--init_seed", type=int, default=0, help="Random seed")
     parser.add_argument("--datadir", type=str, required=False, default="./data/", help="Data directory")
-    parser.add_argument("--reg", type=float, default=1e-5, help="L2 regularization strength")
+    parser.add_argument("--reg", type=float, default=1e-5, help="L2 regularization strength")  # Same as "SGD weight decay"!!! Momentum is set elsewhere
     parser.add_argument("--logdir", type=str, required=False, default="./logs/", help="Log directory path")
     parser.add_argument("--modeldir", type=str, required=False, default="./models/", help="Model directory path")
     parser.add_argument(
@@ -45,6 +45,9 @@ def get_args():
     parser.add_argument("--tt", type=float, default=0.1, help="the temperature parameter for js loss in teacher model")
     parser.add_argument("--ts", type=float, default=0.1, help="the temperature parameter for js loss in student model")
     parser.add_argument("--sample_fraction", type=float, default=1.0, help="how many clients are sampled in each round")
+    parser.add_argument(
+        "--portion", type=float, default=1.0, help="Fraction of the dataset to load (e.g., 0.1 for 10%, 1.0 for 100%)"
+    )  # New argument for dataset portion control
     args = parser.parse_args()
     return args
 
@@ -104,10 +107,10 @@ def train_net_fedx(
             target = target.long()
 
             try:
-                random_x, _, _, _ = random_dataloader.next()
+                random_x, _, _, _ = next(random_dataloader)#.next()
             except:
                 random_dataloader = iter(random_loader)
-                random_x, _, _, _ = random_dataloader.next()
+                random_x, _, _, _ = next(random_dataloader)#.next()
             random_x = random_x.cuda()
 
             all_x = torch.cat((x1, x2, random_x), dim=0).cuda()
@@ -191,7 +194,7 @@ if __name__ == "__main__":
     # Create directory to save log and model
     mkdirs(args.logdir)
     mkdirs(args.modeldir)
-    argument_path = f"{args.dataset}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_arguments-%s.json" % datetime.datetime.now().strftime(
+    argument_path = f"{args.dataset}-{args.portion}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_arguments-%s.json" % datetime.datetime.now().strftime(
         "%Y-%m-%d-%H%M-%S"
     )
 
@@ -211,7 +214,7 @@ if __name__ == "__main__":
     # Data partitioning with respect to the number of parties
     logger.info("Partitioning data")
     (X_train, y_train, X_test, y_test, net_dataidx_map, traindata_cls_counts) = partition_data(
-        args.dataset, args.datadir, args.logdir, args.partition, args.n_parties, beta=args.beta
+        args.dataset, args.datadir, args.logdir, args.partition, args.n_parties, beta=args.beta, portion=args.portion
     )
 
     n_party_per_round = int(args.n_parties * args.sample_fraction)

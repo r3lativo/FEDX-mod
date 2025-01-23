@@ -49,6 +49,7 @@ class SVHN_truncated(data.Dataset):
         transform=None,
         target_transform=None,
         download=False,
+        portion=1.0,  # New parameter for portion selection
     ):
         self.root = root
         self.dataidxs = dataidxs
@@ -56,6 +57,8 @@ class SVHN_truncated(data.Dataset):
         self.transform = transform
         self.target_transform = target_transform
         self.download = download
+        self.portion = portion  # Store the portion parameter
+        
         self.data, self.target = self.__build_truncated_dataset__()
 
     def __build_truncated_dataset__(self):
@@ -66,6 +69,17 @@ class SVHN_truncated(data.Dataset):
         if self.dataidxs is not None:
             data = data[self.dataidxs]
             target = target[self.dataidxs]
+        
+        # Select a portion of the dataset
+        portion = self.portion
+        if portion < 1.0:
+            # Calculate the number of samples to select
+            num_samples = int(len(data) * portion)
+            # Randomly select indices for the truncated dataset
+            indices = np.random.choice(len(data), num_samples, replace=False)
+            # Truncate the data and target arrays
+            data = data[indices]
+            target = target[indices]
 
         return data, target
 
@@ -101,6 +115,7 @@ class CIFAR10_truncated(data.Dataset):
         transform=None,
         target_transform=None,
         download=False,
+        portion=1.0,  # New parameter for portion selection
     ):
 
         self.root = root
@@ -109,6 +124,7 @@ class CIFAR10_truncated(data.Dataset):
         self.transform = transform
         self.target_transform = target_transform
         self.download = download
+        self.portion = portion  # Store the portion parameter
 
         self.data, self.target = self.__build_truncated_dataset__()
 
@@ -124,6 +140,17 @@ class CIFAR10_truncated(data.Dataset):
         else:
             data = cifar_dataobj.data
             target = np.array(cifar_dataobj.targets)
+
+        # Select a portion of the dataset
+        portion = self.portion
+        if portion < 1.0:
+            # Calculate the number of samples to select
+            num_samples = int(len(data) * portion)
+            # Randomly select indices for the truncated dataset
+            indices = np.random.choice(len(data), num_samples, replace=False)
+            # Truncate the data and target arrays
+            data = data[indices]
+            target = target[indices]
 
         if self.dataidxs is not None:
             data = data[self.dataidxs]
