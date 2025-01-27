@@ -39,7 +39,7 @@ def set_logger(args):
         logging.root.removeHandler(handler)
 
     args.log_file_name = (
-        f"{args.dataset}-{args.portion}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_log-%s"
+        f"{args.dataset}-{args.portion}-{args.method}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_log-%s"
         % (datetime.datetime.now().strftime("%Y-%m-%d-%H%M-%S"))
     )
     log_path = args.log_file_name + ".log"
@@ -164,7 +164,10 @@ def test_linear_fedX(net, memory_data_loader, test_data_loader):
     # Save training data's embeddings into the feature_bank.
     with torch.no_grad():
         for data, _, target, _ in memory_data_loader:
-            feature, _, _ = net(data.cuda(non_blocking=True))
+            try:
+                feature, _ = net(data.cuda(non_blocking=True))  # simsiam takes only two views
+            except ValueError:
+                feature, _, _ = net(data.cuda(non_blocking=True))  # default takes three views
             feature_bank.append(feature)
         feature_bank = torch.cat(feature_bank, dim=0).contiguous().cuda()
         feature_labels = torch.tensor(memory_data_loader.dataset.target, device=feature_bank.device)
@@ -176,7 +179,10 @@ def test_linear_fedX(net, memory_data_loader, test_data_loader):
     feature_bank_test = []
     with torch.no_grad():
         for data, _, target, _ in test_data_loader:
-            feature_test, _, _ = net(data.cuda(non_blocking=True))
+            try:
+                feature_test, _ = net(data.cuda(non_blocking=True))  # simsiam takes only two views
+            except ValueError:
+                feature_test, _, _ = net(data.cuda(non_blocking=True))  # default takes three views
             feature_bank_test.append(feature_test)
         feature_bank_test = torch.cat(feature_bank_test, dim=0).contiguous().cuda()
         feature_labels_test = torch.tensor(test_data_loader.dataset.target, device=feature_bank_test.device)

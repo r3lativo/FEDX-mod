@@ -14,7 +14,7 @@ import numpy as np
 import torch
 import torch.optim as optim
 
-from losses import js_loss, nt_xent
+from losses import js_loss, nt_xent, simsiam_loss_func
 from model import init_nets
 from utils import get_dataloader, mkdirs, partition_data, test_linear_fedX, set_logger
 
@@ -48,6 +48,7 @@ def get_args():
     parser.add_argument(
         "--portion", type=float, default=1.0, help="Fraction of the dataset to load (e.g., 0.1 for 10%, 1.0 for 100%)"
     )  # New argument for dataset portion control
+    parser.add_argument("--method", type=str, default="default", help="the method used for training")
     args = parser.parse_args()
     return args
 
@@ -58,6 +59,83 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed(seed)
     random.seed(seed)
+
+def train_simsiam_net_fedx(
+    net_id,
+    net,
+    global_net,
+    train_dataloader,
+    val_dataloader,
+    test_dataloader,
+    epochs,
+    lr,
+    args_optimizer,
+    temperature,
+    args,
+    round,
+    device="cpu",
+):
+    net.cuda()
+    global_net.cuda()
+    logger.info("Training network %s" % str(net_id))
+    logger.info("n_training: %d" % len(train_dataloader))
+    logger.info("n_test: %d" % len(test_dataloader))
+
+    # Set optimizer
+    if args_optimizer == "adam":
+        optimizer = optim.Adam(filter(lambda p: p.requires_grad, net.parameters()), lr=lr, weight_decay=args.reg)
+    elif args_optimizer == "amsgrad":
+        optimizer = optim.Adam(
+            filter(lambda p: p.requires_grad, net.parameters()), lr=lr, weight_decay=args.reg, amsgrad=True
+        )
+    elif args_optimizer == "sgd":
+        optimizer = optim.SGD(
+            filter(lambda p: p.requires_grad, net.parameters()), lr=lr, momentum=0.9, weight_decay=args.reg
+        )
+    net.train()
+    global_net.eval()
+
+    for epoch in range(epochs):
+        epoch_loss_collector = []
+        for batch_idx, (x1, x2, _, _) in enumerate(train_dataloader):
+            x1, x2 = x1.cuda(), x2.cuda()
+            optimizer.zero_grad()  # Clear previous gradients
+
+            # Forward pass on local model
+            z1_local, p1_local = net(x1)
+            z2_local, p2_local = net(x2)
+
+            # Forward pass on global model
+            with torch.no_grad():  # Global model remains fixed for the current round
+                z1_global, p1_global = global_net(x1)
+                z2_global, p2_global = global_net(x2)
+
+            # Compute local SimSiam loss scaling with temperature
+            local_loss = (
+                simsiam_loss_func(p1_local, z2_local, args.temperature) +
+                simsiam_loss_func(p2_local, z1_local, args.temperature)
+            ) / 2.0
+
+            # Compute global SimSiam loss scaling with temperature
+            global_loss = (
+                simsiam_loss_func(p1_local, z2_global, args.temperature) +
+                simsiam_loss_func(p2_local, z1_global, args.temperature)
+            ) / 2.0
+
+            # Combine losses
+            loss = local_loss + global_loss
+            loss.backward()
+            optimizer.step()
+
+            epoch_loss_collector.append(loss.item())
+
+        # Compute and log average loss for the epoch
+        epoch_loss = sum(epoch_loss_collector) / len(epoch_loss_collector)
+        logger.info("Epoch: %d Loss: %f" % (epoch, epoch_loss))
+
+    # Set the network to evaluation mode after training is complete
+    net.eval()
+    logger.info(" ** Training complete **")
 
 
 def train_net_fedx(
@@ -103,21 +181,24 @@ def train_net_fedx(
         epoch_loss_collector = []
         for batch_idx, (x1, x2, target, _) in enumerate(train_dataloader):
             x1, x2, target = x1.cuda(), x2.cuda(), target.cuda()
-            optimizer.zero_grad()
-            target = target.long()
+            optimizer.zero_grad()  # Clear previous gradients
+            target = target.long()  # Ensure target is of integer type for classification
 
+            # Fetch a random batch
             try:
-                random_x, _, _, _ = next(random_dataloader)#.next()
+                random_x, _, _, _ = next(random_dataloader)
             except:
                 random_dataloader = iter(random_loader)
-                random_x, _, _, _ = next(random_dataloader)#.next()
+                random_x, _, _, _ = next(random_dataloader)
             random_x = random_x.cuda()
 
+            # Concatenate inputs for contrastive learning
             all_x = torch.cat((x1, x2, random_x), dim=0).cuda()
-            _, proj1, pred1 = net(all_x)
+            _, proj1, pred1 = net(all_x)  # Forward pass on local network
             with torch.no_grad():
-                _, proj2, pred2 = global_net(all_x)
+                _, proj2, pred2 = global_net(all_x)  # Forward pass on global network
 
+            # Split projections and predictions for original, positive, and random inputs
             pred1_original, pred1_pos, pred1_random = pred1.split([x1.size(0), x2.size(0), random_x.size(0)], dim=0)
             proj1_original, proj1_pos, proj1_random = proj1.split([x1.size(0), x2.size(0), random_x.size(0)], dim=0)
             proj2_original, proj2_pos, proj2_random = proj2.split([x1.size(0), x2.size(0), random_x.size(0)], dim=0)
@@ -132,13 +213,17 @@ def train_net_fedx(
             js_local = js_loss(proj1_original, proj1_pos, proj1_random, args.temperature, args.ts)
             loss_js = js_global + js_local
 
+            # Combine all losses and perform backpropagation
             loss = loss_nt + loss_js
-            loss.backward()
-            optimizer.step()
+            loss.backward()  # Compute gradients
+            optimizer.step()  # Update model parameters
             epoch_loss_collector.append(loss.item())
 
+        # Compute and log average loss for the epoch
         epoch_loss = sum(epoch_loss_collector) / len(epoch_loss_collector)
         logger.info("Epoch: %d Loss: %f" % (epoch, epoch_loss))
+
+    # Set the network to evaluation mode after training is complete
     net.eval()
     logger.info(" ** Training complete **")
 
@@ -155,6 +240,7 @@ def local_train_net(
     prev_model_pool=None,
     round=None,
     device="cpu",
+    method="default",
 ):
 
     if global_model:
@@ -166,21 +252,39 @@ def local_train_net(
         logger.info("Training network %s. n_training: %d" % (str(net_id), len(dataidxs)))
         train_dl_local = train_dl_local_dict[net_id]
         val_dl_local = val_dl_local_dict[net_id]
-        train_net_fedx(
-            net_id,
-            net,
-            global_model,
-            train_dl_local,
-            val_dl_local,
-            test_dl,
-            n_epoch,
-            args.lr,
-            args.optimizer,
-            args.temperature,
-            args,
-            round,
-            device=device,
-        )
+
+        if method == "simsiam":
+            train_simsiam_net_fedx(
+                net_id,
+                net,
+                global_model,
+                train_dl_local,
+                val_dl_local,
+                test_dl,
+                n_epoch,
+                args.lr,
+                args.optimizer,
+                args.temperature,
+                args,
+                round,
+                device=device,
+            )
+        else:
+            train_net_fedx(
+                net_id,
+                net,
+                global_model,
+                train_dl_local,
+                val_dl_local,
+                test_dl,
+                n_epoch,
+                args.lr,
+                args.optimizer,
+                args.temperature,
+                args,
+                round,
+                device=device,
+            )
 
     if global_model:
         global_model.to("cpu")
@@ -194,7 +298,7 @@ if __name__ == "__main__":
     # Create directory to save log and model
     mkdirs(args.logdir)
     mkdirs(args.modeldir)
-    argument_path = f"{args.dataset}-{args.portion}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_arguments-%s.json" % datetime.datetime.now().strftime(
+    argument_path = f"{args.dataset}-{args.portion}-{args.method}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_arguments-%s.json" % datetime.datetime.now().strftime(
         "%Y-%m-%d-%H%M-%S"
     )
 
@@ -211,6 +315,7 @@ if __name__ == "__main__":
     plain_args = (
         f"Dataset: {args.dataset}, "
         f"Portion: {args.portion}, "
+        f"Method: {args.method}, "
         f"Batch Size: {args.batch_size}, "
         f"Number of Parties: {args.n_parties}, "
         f"Temperature: {args.temperature}, "
@@ -256,8 +361,8 @@ if __name__ == "__main__":
 
     # Initializing net from each local party.
     logger.info("Initializing nets")
-    nets, local_model_meta_data, layer_type = init_nets(args.net_config, args.n_parties, args, device="cpu")
-    global_models, global_model_meta_data, global_layer_type = init_nets(args.net_config, 1, args, device="cpu")
+    nets, local_model_meta_data, layer_type = init_nets(args.net_config, args.n_parties, args, device="cpu", method=args.method)
+    global_models, global_model_meta_data, global_layer_type = init_nets(args.net_config, 1, args, device="cpu", method=args.method)
 
     global_model = global_models[0]
     n_comm_rounds = args.comm_round
@@ -300,6 +405,7 @@ if __name__ == "__main__":
             test_dl=test_dl,
             global_model=global_model,
             device=device,
+            method=args.method,
         )
 
         total_data_points = sum([len(net_dataidx_map[r]) for r in range(args.n_parties)])
