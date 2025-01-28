@@ -56,13 +56,17 @@ def js_loss(x1, x2, xa, t=0.1, t2=0.01):
 # DEALINGS IN THE SOFTWARE.
 
 
-def simsiam_loss_func(p: torch.Tensor, z: torch.Tensor, t=0.1) -> torch.Tensor:
+# ADAPTED
+
+
+def simsiam_loss_func(p: torch.Tensor, z: torch.Tensor, t: float = 0.1) -> torch.Tensor:
     """Computes SimSiam's loss given batch of predicted features p from view 1 and
     a batch of projected features z from view 2.
 
     Args:
         p (torch.Tensor): Tensor containing predicted features from view 1.
         z (torch.Tensor): Tensor containing projected features from view 2.
+        temperature (float): Temperature scale factor (default=0.1).
 
     Returns:
         torch.Tensor: SimSiam loss.

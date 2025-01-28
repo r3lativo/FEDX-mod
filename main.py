@@ -35,9 +35,7 @@ def get_args():
     parser.add_argument("--reg", type=float, default=1e-5, help="L2 regularization strength")  # Same as "SGD weight decay"!!! Momentum is set elsewhere
     parser.add_argument("--logdir", type=str, required=False, default="./logs/", help="Log directory path")
     parser.add_argument("--modeldir", type=str, required=False, default="./models/", help="Model directory path")
-    parser.add_argument(
-        "--beta", type=float, default=0.5, help="The parameter for the dirichlet distribution for data partitioning"
-    )
+    parser.add_argument("--beta", type=float, default=0.5, help="The parameter for the dirichlet distribution for data partitioning")
     parser.add_argument("--device", type=str, default="cuda:0", help="The device to run the program")
     parser.add_argument("--optimizer", type=str, default="sgd", help="the optimizer")
     parser.add_argument("--out_dim", type=int, default=256, help="the output dimension for the projection layer")
@@ -45,9 +43,9 @@ def get_args():
     parser.add_argument("--tt", type=float, default=0.1, help="the temperature parameter for js loss in teacher model")
     parser.add_argument("--ts", type=float, default=0.1, help="the temperature parameter for js loss in student model")
     parser.add_argument("--sample_fraction", type=float, default=1.0, help="how many clients are sampled in each round")
-    parser.add_argument(
-        "--portion", type=float, default=1.0, help="Fraction of the dataset to load (e.g., 0.1 for 10%, 1.0 for 100%)"
-    )  # New argument for dataset portion control
+
+    # Added arguments
+    parser.add_argument("--portion", type=float, default=1.0, help="Fraction of the dataset to load (e.g., 0.1 for 10%, 1.0 for 100%)")
     parser.add_argument("--method", type=str, default="default", help="the method used for training")
     args = parser.parse_args()
     return args
@@ -59,6 +57,7 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed(seed)
     random.seed(seed)
+
 
 def train_simsiam_net_fedx(
     net_id,
@@ -75,6 +74,11 @@ def train_simsiam_net_fedx(
     round,
     device="cpu",
 ):
+    """
+    Adapted FedX model to integrate SimSiam method
+    """
+    t = args.temperature
+
     net.cuda()
     global_net.cuda()
     logger.info("Training network %s" % str(net_id))
@@ -112,14 +116,14 @@ def train_simsiam_net_fedx(
 
             # Compute local SimSiam loss scaling with temperature
             local_loss = (
-                simsiam_loss_func(p1_local, z2_local, args.temperature) +
-                simsiam_loss_func(p2_local, z1_local, args.temperature)
+                simsiam_loss_func(p1_local, z2_local, t) +
+                simsiam_loss_func(p2_local, z1_local, t)
             ) / 2.0
 
             # Compute global SimSiam loss scaling with temperature
             global_loss = (
-                simsiam_loss_func(p1_local, z2_global, args.temperature) +
-                simsiam_loss_func(p2_local, z1_global, args.temperature)
+                simsiam_loss_func(p1_local, z2_global, t) +
+                simsiam_loss_func(p2_local, z1_global, t)
             ) / 2.0
 
             # Combine losses
