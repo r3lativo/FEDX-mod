@@ -18,6 +18,8 @@ from losses import js_loss, nt_xent, simsiam_loss_func
 from model import init_nets
 from utils import get_dataloader, mkdirs, partition_data, test_linear_fedX, set_logger
 
+from tqdm import tqdm
+
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -73,6 +75,7 @@ def train_simsiam_net_fedx(
     args,
     round,
     device="cpu",
+    pbar=None
 ):
     """
     Adapted FedX model to integrate SimSiam method
@@ -136,6 +139,7 @@ def train_simsiam_net_fedx(
         # Compute and log average loss for the epoch
         epoch_loss = sum(epoch_loss_collector) / len(epoch_loss_collector)
         logger.info("Epoch: %d Loss: %f" % (epoch, epoch_loss))
+        pbar.update(1)
 
     # Set the network to evaluation mode after training is complete
     net.eval()
@@ -156,6 +160,7 @@ def train_net_fedx(
     args,
     round,
     device="cpu",
+    pbar=None
 ):
     net.cuda()
     global_net.cuda()
@@ -226,6 +231,7 @@ def train_net_fedx(
         # Compute and log average loss for the epoch
         epoch_loss = sum(epoch_loss_collector) / len(epoch_loss_collector)
         logger.info("Epoch: %d Loss: %f" % (epoch, epoch_loss))
+        pbar.update(1)
 
     # Set the network to evaluation mode after training is complete
     net.eval()
@@ -245,6 +251,7 @@ def local_train_net(
     round=None,
     device="cpu",
     method="default",
+    pbar=None
 ):
 
     if global_model:
@@ -272,6 +279,7 @@ def local_train_net(
                 args,
                 round,
                 device=device,
+                pbar=pbar
             )
         else:
             train_net_fedx(
@@ -288,6 +296,7 @@ def local_train_net(
                 args,
                 round,
                 device=device,
+                pbar=pbar
             )
 
     if global_model:
@@ -388,50 +397,55 @@ if __name__ == "__main__":
         net_id += 1
 
     # Main training communication loop.
-    for round in range(n_comm_rounds):
-        logger.info("in comm round:" + str(round))
-        party_list_this_round = party_list_rounds[round]
+    t_count = n_comm_rounds * len(nets) * args.epochs + n_comm_rounds
+    with tqdm(total=t_count) as pbar:
+        for round in range(n_comm_rounds):
+            logger.info("in comm round:" + str(round))
+            party_list_this_round = party_list_rounds[round]
 
-        # Download global model from (virtual) central server
-        global_w = global_model.state_dict()
-        nets_this_round = {k: nets[k] for k in party_list_this_round}
-        for net in nets_this_round.values():
-            net.load_state_dict(global_w)
+            # Download global model from (virtual) central server
+            global_w = global_model.state_dict()
+            nets_this_round = {k: nets[k] for k in party_list_this_round}
+            for net in nets_this_round.values():
+                net.load_state_dict(global_w)
 
-        # Train local model with local data
-        local_train_net(
-            nets_this_round,
-            args,
-            net_dataidx_map,
-            train_dl_local_dict,
-            val_dl_local_dict,
-            train_dl=train_dl,
-            test_dl=test_dl,
-            global_model=global_model,
-            device=device,
-            method=args.method,
-        )
+            # Train local model with local data
+            local_train_net(
+                nets_this_round,
+                args,
+                net_dataidx_map,
+                train_dl_local_dict,
+                val_dl_local_dict,
+                train_dl=train_dl,
+                test_dl=test_dl,
+                global_model=global_model,
+                device=device,
+                method=args.method,
+                pbar=pbar
+            )
 
-        total_data_points = sum([len(net_dataidx_map[r]) for r in range(args.n_parties)])
-        fed_avg_freqs = [len(net_dataidx_map[r]) / total_data_points for r in range(args.n_parties)]
+            total_data_points = sum([len(net_dataidx_map[r]) for r in range(args.n_parties)])
+            fed_avg_freqs = [len(net_dataidx_map[r]) / total_data_points for r in range(args.n_parties)]
 
-        # Averaging the local models' parameters to get global model
-        for net_id, net in enumerate(nets_this_round.values()):
-            net_para = net.state_dict()
-            if net_id == 0:
-                for key in net_para:
-                    global_w[key] = net_para[key] * fed_avg_freqs[net_id]
-            else:
-                for key in net_para:
-                    global_w[key] += net_para[key] * fed_avg_freqs[net_id]
+            # Averaging the local models' parameters to get global model
+            for net_id, net in enumerate(nets_this_round.values()):
+                net_para = net.state_dict()
+                if net_id == 0:
+                    for key in net_para:
+                        global_w[key] = net_para[key] * fed_avg_freqs[net_id]
+                else:
+                    for key in net_para:
+                        global_w[key] += net_para[key] * fed_avg_freqs[net_id]
 
-        global_model.load_state_dict(copy.deepcopy(global_w))
-        global_model.cuda()
+            global_model.load_state_dict(copy.deepcopy(global_w))
+            global_model.cuda()
 
-        # Evaluating the global model
-        test_acc_1, test_acc_5 = test_linear_fedX(global_model, val_dl_global, test_dl)
-        logger.info(">> Global Model Test accuracy Top1: %f" % test_acc_1)
-        logger.info(">> Global Model Test accuracy Top5: %f" % test_acc_5)
+            # Evaluating the global model
+            test_acc_1, test_acc_5 = test_linear_fedX(global_model, val_dl_global, test_dl)
+            logger.info(">> Global Model Test accuracy Top1: %f" % test_acc_1)
+            logger.info(">> Global Model Test accuracy Top5: %f" % test_acc_5)
+
+            pbar.update(1)
 
     # Save the final round's local and global models
     torch.save(global_model.state_dict(), args.modeldir + "globalmodel" + args.log_file_name + ".pth")

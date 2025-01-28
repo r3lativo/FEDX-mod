@@ -1,0 +1,86 @@
+01-28 14:13 INFO     Dataset: svhn, Portion: 0.1, Method: simsiam, Batch Size: 512, Number of Parties: 3, Temperature: 0.1, Teacher Temperature: 0.1, Student Temperature: 0.1, Epochs: 3, Log Date: 2025-01-28 14:13:44
+01-28 14:13 INFO     cuda:0
+01-28 14:13 INFO     Partitioning data
+01-28 14:13 INFO     Data statistics: {0: {np.int64(0): np.int64(235), np.int64(1): np.int64(1204), np.int64(2): np.int64(467), np.int64(3): np.int64(8), np.int64(4): np.int64(48), np.int64(5): np.int64(152), np.int64(6): np.int64(89), np.int64(7): np.int64(158), np.int64(8): np.int64(514)}, 1: {np.int64(0): np.int64(118), np.int64(1): np.int64(66), np.int64(2): np.int64(544), np.int64(3): np.int64(782), np.int64(4): np.int64(489), np.int64(5): np.int64(379), np.int64(6): np.int64(364)}, 2: {np.int64(0): np.int64(131), np.int64(1): np.int64(101), np.int64(2): np.int64(54), np.int64(3): np.int64(53), np.int64(4): np.int64(208), np.int64(5): np.int64(167), np.int64(6): np.int64(96), np.int64(7): np.int64(407), np.int64(8): np.int64(7), np.int64(9): np.int64(484)}}
+01-28 14:13 INFO     Initializing nets
+01-28 14:14 INFO     in comm round:0
+01-28 14:14 INFO     Training network 0. n_training: 2875
+01-28 14:14 INFO     Training network 0
+01-28 14:14 INFO     n_training: 11
+01-28 14:14 INFO     n_test: 26
+01-28 14:14 INFO     Epoch: 0 Loss: -5.546533
+01-28 14:14 INFO     Epoch: 1 Loss: -9.492459
+01-28 14:14 INFO     Epoch: 2 Loss: -9.966592
+01-28 14:14 INFO      ** Training complete **
+01-28 14:14 INFO     Training network 1. n_training: 2742
+01-28 14:14 INFO     Training network 1
+01-28 14:14 INFO     n_training: 10
+01-28 14:14 INFO     n_test: 26
+01-28 14:15 INFO     Epoch: 0 Loss: -5.457723
+01-28 14:15 INFO     Epoch: 1 Loss: -9.620002
+01-28 14:15 INFO     Epoch: 2 Loss: -10.206017
+01-28 14:15 INFO      ** Training complete **
+01-28 14:15 INFO     Training network 2. n_training: 1708
+01-28 14:15 INFO     Training network 2
+01-28 14:15 INFO     n_training: 6
+01-28 14:15 INFO     n_test: 26
+01-28 14:15 INFO     Epoch: 0 Loss: -3.486111
+01-28 14:15 INFO     Epoch: 1 Loss: -8.754023
+01-28 14:15 INFO     Epoch: 2 Loss: -9.644897
+01-28 14:15 INFO      ** Training complete **
+01-28 14:18 INFO     >> Global Model Test accuracy Top1: 21.757837
+01-28 14:18 INFO     >> Global Model Test accuracy Top5: 67.812692
+01-28 14:18 INFO     in comm round:1
+01-28 14:18 INFO     Training network 0. n_training: 2875
+01-28 14:18 INFO     Training network 0
+01-28 14:18 INFO     n_training: 11
+01-28 14:18 INFO     n_test: 26
+01-28 14:18 INFO     Epoch: 0 Loss: -8.755786
+01-28 14:19 INFO     Epoch: 1 Loss: -14.501728
+01-28 14:19 INFO     Epoch: 2 Loss: -14.060822
+01-28 14:19 INFO      ** Training complete **
+01-28 14:19 INFO     Training network 1. n_training: 2742
+01-28 14:19 INFO     Training network 1
+01-28 14:19 INFO     n_training: 10
+01-28 14:19 INFO     n_test: 26
+01-28 14:19 INFO     Epoch: 0 Loss: -8.225997
+01-28 14:19 INFO     Epoch: 1 Loss: -14.534243
+01-28 14:20 INFO     Epoch: 2 Loss: -14.003983
+01-28 14:20 INFO      ** Training complete **
+01-28 14:20 INFO     Training network 2. n_training: 1708
+01-28 14:20 INFO     Training network 2
+01-28 14:20 INFO     n_training: 6
+01-28 14:20 INFO     n_test: 26
+01-28 14:20 INFO     Epoch: 0 Loss: -5.875233
+01-28 14:20 INFO     Epoch: 1 Loss: -12.833505
+01-28 14:20 INFO     Epoch: 2 Loss: -14.836387
+01-28 14:20 INFO      ** Training complete **
+01-28 14:23 INFO     >> Global Model Test accuracy Top1: 19.683467
+01-28 14:23 INFO     >> Global Model Test accuracy Top5: 66.625691
+01-28 14:23 INFO     in comm round:2
+01-28 14:23 INFO     Training network 0. n_training: 2875
+01-28 14:23 INFO     Training network 0
+01-28 14:23 INFO     n_training: 11
+01-28 14:23 INFO     n_test: 26
+01-28 14:23 INFO     Epoch: 0 Loss: -16.330608
+01-28 14:23 INFO     Epoch: 1 Loss: -17.217992
+01-28 14:24 INFO     Epoch: 2 Loss: -17.416590
+01-28 14:24 INFO      ** Training complete **
+01-28 14:24 INFO     Training network 1. n_training: 2742
+01-28 14:24 INFO     Training network 1
+01-28 14:24 INFO     n_training: 10
+01-28 14:24 INFO     n_test: 26
+01-28 14:24 INFO     Epoch: 0 Loss: -16.200880
+01-28 14:24 INFO     Epoch: 1 Loss: -17.095090
+01-28 14:24 INFO     Epoch: 2 Loss: -17.229728
+01-28 14:24 INFO      ** Training complete **
+01-28 14:24 INFO     Training network 2. n_training: 1708
+01-28 14:24 INFO     Training network 2
+01-28 14:24 INFO     n_training: 6
+01-28 14:24 INFO     n_test: 26
+01-28 14:24 INFO     Epoch: 0 Loss: -15.412925
+01-28 14:25 INFO     Epoch: 1 Loss: -17.210828
+01-28 14:25 INFO     Epoch: 2 Loss: -17.392871
+01-28 14:25 INFO      ** Training complete **
+01-28 14:27 INFO     >> Global Model Test accuracy Top1: 21.930701
+01-28 14:27 INFO     >> Global Model Test accuracy Top5: 65.964966
