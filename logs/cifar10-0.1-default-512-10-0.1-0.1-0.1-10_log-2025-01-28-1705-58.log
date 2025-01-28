@@ -1,0 +1,3065 @@
+01-28 17:05 INFO     Dataset: cifar10, Portion: 0.1, Method: default, Batch Size: 512, Number of Parties: 10, Temperature: 0.1, Teacher Temperature: 0.1, Student Temperature: 0.1, Epochs: 10, Log Date: 2025-01-28 17:05:58
+01-28 17:05 INFO     cuda:0
+01-28 17:05 INFO     Partitioning data
+01-28 17:06 INFO     Data statistics: {0: {np.int64(0): np.int64(2), np.int64(1): np.int64(26), np.int64(3): np.int64(3), np.int64(4): np.int64(232), np.int64(5): np.int64(16), np.int64(6): np.int64(67), np.int64(7): np.int64(12), np.int64(8): np.int64(48), np.int64(9): np.int64(170)}, 1: {np.int64(0): np.int64(98), np.int64(1): np.int64(6), np.int64(2): np.int64(36), np.int64(5): np.int64(52), np.int64(6): np.int64(11), np.int64(7): np.int64(37), np.int64(8): np.int64(44), np.int64(9): np.int64(9)}, 2: {np.int64(0): np.int64(140), np.int64(1): np.int64(44), np.int64(2): np.int64(47), np.int64(3): np.int64(75), np.int64(4): np.int64(79), np.int64(5): np.int64(88), np.int64(6): np.int64(19), np.int64(7): np.int64(70)}, 3: {np.int64(0): np.int64(117), np.int64(1): np.int64(144), np.int64(3): np.int64(76), np.int64(4): np.int64(53), np.int64(5): np.int64(22), np.int64(6): np.int64(4), np.int64(7): np.int64(1), np.int64(8): np.int64(61), np.int64(9): np.int64(213)}, 4: {np.int64(0): np.int64(18), np.int64(1): np.int64(57), np.int64(2): np.int64(140), np.int64(3): np.int64(44), np.int64(4): np.int64(18), np.int64(5): np.int64(31), np.int64(6): np.int64(96), np.int64(7): np.int64(68), np.int64(8): np.int64(20), np.int64(9): np.int64(4)}, 5: {np.int64(0): np.int64(18), np.int64(2): np.int64(17), np.int64(3): np.int64(68), np.int64(4): np.int64(17), np.int64(5): np.int64(175), np.int64(6): np.int64(158), np.int64(7): np.int64(1), np.int64(8): np.int64(30), np.int64(9): np.int64(35)}, 6: {np.int64(0): np.int64(6), np.int64(1): np.int64(20), np.int64(2): np.int64(43), np.int64(3): np.int64(180), np.int64(4): np.int64(32), np.int64(5): np.int64(98), np.int64(6): np.int64(17), np.int64(7): np.int64(50), np.int64(8): np.int64(179)}, 7: {np.int64(0): np.int64(1), np.int64(1): np.int64(71), np.int64(2): np.int64(21), np.int64(3): np.int64(27), np.int64(5): np.int64(3), np.int64(6): np.int64(46), np.int64(7): np.int64(151), np.int64(8): np.int64(4), np.int64(9): np.int64(25)}, 8: {np.int64(0): np.int64(3), np.int64(1): np.int64(109), np.int64(2): np.int64(177), np.int64(3): np.int64(28), np.int64(4): np.int64(20), np.int64(5): np.int64(44), np.int64(6): np.int64(65), np.int64(7): np.int64(96)}, 9: {np.int64(0): np.int64(100), np.int64(1): np.int64(6), np.int64(2): np.int64(6), np.int64(3): np.int64(26), np.int64(4): np.int64(22), np.int64(5): np.int64(19), np.int64(6): np.int64(8), np.int64(7): np.int64(16), np.int64(8): np.int64(96), np.int64(9): np.int64(48)}}
+01-28 17:06 INFO     Initializing nets
+01-28 17:06 INFO     in comm round:0
+01-28 17:06 INFO     Training network 0. n_training: 576
+01-28 17:06 INFO     Training network 0
+01-28 17:06 INFO     n_training: 2
+01-28 17:06 INFO     n_test: 10
+01-28 17:06 INFO     Epoch: 0 Loss: 17.766893
+01-28 17:06 INFO     Epoch: 1 Loss: 12.727660
+01-28 17:06 INFO     Epoch: 2 Loss: 11.850352
+01-28 17:06 INFO     Epoch: 3 Loss: 11.627668
+01-28 17:06 INFO     Epoch: 4 Loss: 11.554048
+01-28 17:06 INFO     Epoch: 5 Loss: 11.422141
+01-28 17:06 INFO     Epoch: 6 Loss: 11.048912
+01-28 17:06 INFO     Epoch: 7 Loss: 10.626566
+01-28 17:06 INFO     Epoch: 8 Loss: 10.344658
+01-28 17:06 INFO     Epoch: 9 Loss: 9.952189
+01-28 17:06 INFO      ** Training complete **
+01-28 17:06 INFO     Training network 1. n_training: 293
+01-28 17:06 INFO     Training network 1
+01-28 17:06 INFO     n_training: 1
+01-28 17:06 INFO     n_test: 10
+01-28 17:06 INFO     Epoch: 0 Loss: 20.096178
+01-28 17:06 INFO     Epoch: 1 Loss: 15.411473
+01-28 17:06 INFO     Epoch: 2 Loss: 13.140637
+01-28 17:06 INFO     Epoch: 3 Loss: 12.280289
+01-28 17:06 INFO     Epoch: 4 Loss: 11.882100
+01-28 17:07 INFO     Epoch: 5 Loss: 11.668483
+01-28 17:07 INFO     Epoch: 6 Loss: 11.627969
+01-28 17:07 INFO     Epoch: 7 Loss: 11.639765
+01-28 17:07 INFO     Epoch: 8 Loss: 11.616523
+01-28 17:07 INFO     Epoch: 9 Loss: 11.537175
+01-28 17:07 INFO      ** Training complete **
+01-28 17:07 INFO     Training network 2. n_training: 562
+01-28 17:07 INFO     Training network 2
+01-28 17:07 INFO     n_training: 2
+01-28 17:07 INFO     n_test: 10
+01-28 17:07 INFO     Epoch: 0 Loss: 17.800831
+01-28 17:07 INFO     Epoch: 1 Loss: 12.788351
+01-28 17:07 INFO     Epoch: 2 Loss: 11.919617
+01-28 17:07 INFO     Epoch: 3 Loss: 11.754598
+01-28 17:07 INFO     Epoch: 4 Loss: 11.696063
+01-28 17:07 INFO     Epoch: 5 Loss: 11.561186
+01-28 17:07 INFO     Epoch: 6 Loss: 11.356042
+01-28 17:07 INFO     Epoch: 7 Loss: 11.061782
+01-28 17:07 INFO     Epoch: 8 Loss: 10.699234
+01-28 17:07 INFO     Epoch: 9 Loss: 10.426821
+01-28 17:07 INFO      ** Training complete **
+01-28 17:07 INFO     Training network 3. n_training: 691
+01-28 17:07 INFO     Training network 3
+01-28 17:07 INFO     n_training: 2
+01-28 17:07 INFO     n_test: 10
+01-28 17:07 INFO     Epoch: 0 Loss: 17.773469
+01-28 17:07 INFO     Epoch: 1 Loss: 12.737572
+01-28 17:07 INFO     Epoch: 2 Loss: 11.827386
+01-28 17:07 INFO     Epoch: 3 Loss: 11.630388
+01-28 17:07 INFO     Epoch: 4 Loss: 11.597013
+01-28 17:07 INFO     Epoch: 5 Loss: 11.397588
+01-28 17:07 INFO     Epoch: 6 Loss: 11.116419
+01-28 17:07 INFO     Epoch: 7 Loss: 10.610581
+01-28 17:07 INFO     Epoch: 8 Loss: 10.224303
+01-28 17:07 INFO     Epoch: 9 Loss: 10.016736
+01-28 17:07 INFO      ** Training complete **
+01-28 17:07 INFO     Training network 4. n_training: 496
+01-28 17:07 INFO     Training network 4
+01-28 17:07 INFO     n_training: 1
+01-28 17:07 INFO     n_test: 10
+01-28 17:07 INFO     Epoch: 0 Loss: 20.122625
+01-28 17:07 INFO     Epoch: 1 Loss: 15.427663
+01-28 17:07 INFO     Epoch: 2 Loss: 13.176772
+01-28 17:07 INFO     Epoch: 3 Loss: 12.308060
+01-28 17:07 INFO     Epoch: 4 Loss: 11.957107
+01-28 17:07 INFO     Epoch: 5 Loss: 11.771505
+01-28 17:07 INFO     Epoch: 6 Loss: 11.619774
+01-28 17:07 INFO     Epoch: 7 Loss: 11.575327
+01-28 17:07 INFO     Epoch: 8 Loss: 11.584809
+01-28 17:07 INFO     Epoch: 9 Loss: 11.629615
+01-28 17:07 INFO      ** Training complete **
+01-28 17:07 INFO     Training network 5. n_training: 519
+01-28 17:07 INFO     Training network 5
+01-28 17:07 INFO     n_training: 2
+01-28 17:07 INFO     n_test: 10
+01-28 17:07 INFO     Epoch: 0 Loss: 17.763724
+01-28 17:08 INFO     Epoch: 1 Loss: 12.743418
+01-28 17:08 INFO     Epoch: 2 Loss: 11.847072
+01-28 17:08 INFO     Epoch: 3 Loss: 11.640230
+01-28 17:08 INFO     Epoch: 4 Loss: 11.574879
+01-28 17:08 INFO     Epoch: 5 Loss: 11.374931
+01-28 17:08 INFO     Epoch: 6 Loss: 11.019004
+01-28 17:08 INFO     Epoch: 7 Loss: 10.720128
+01-28 17:08 INFO     Epoch: 8 Loss: 10.476992
+01-28 17:08 INFO     Epoch: 9 Loss: 10.062191
+01-28 17:08 INFO      ** Training complete **
+01-28 17:08 INFO     Training network 6. n_training: 625
+01-28 17:08 INFO     Training network 6
+01-28 17:08 INFO     n_training: 2
+01-28 17:08 INFO     n_test: 10
+01-28 17:08 INFO     Epoch: 0 Loss: 17.766861
+01-28 17:08 INFO     Epoch: 1 Loss: 12.757469
+01-28 17:08 INFO     Epoch: 2 Loss: 11.837906
+01-28 17:08 INFO     Epoch: 3 Loss: 11.659801
+01-28 17:08 INFO     Epoch: 4 Loss: 11.542927
+01-28 17:08 INFO     Epoch: 5 Loss: 11.243712
+01-28 17:08 INFO     Epoch: 6 Loss: 10.783127
+01-28 17:08 INFO     Epoch: 7 Loss: 10.361922
+01-28 17:08 INFO     Epoch: 8 Loss: 10.035120
+01-28 17:08 INFO     Epoch: 9 Loss: 9.833712
+01-28 17:08 INFO      ** Training complete **
+01-28 17:08 INFO     Training network 7. n_training: 349
+01-28 17:08 INFO     Training network 7
+01-28 17:08 INFO     n_training: 1
+01-28 17:08 INFO     n_test: 10
+01-28 17:08 INFO     Epoch: 0 Loss: 20.071169
+01-28 17:08 INFO     Epoch: 1 Loss: 15.394115
+01-28 17:08 INFO     Epoch: 2 Loss: 13.158322
+01-28 17:08 INFO     Epoch: 3 Loss: 12.242193
+01-28 17:08 INFO     Epoch: 4 Loss: 11.862086
+01-28 17:08 INFO     Epoch: 5 Loss: 11.667583
+01-28 17:08 INFO     Epoch: 6 Loss: 11.649911
+01-28 17:08 INFO     Epoch: 7 Loss: 11.568132
+01-28 17:08 INFO     Epoch: 8 Loss: 11.566781
+01-28 17:08 INFO     Epoch: 9 Loss: 11.422614
+01-28 17:08 INFO      ** Training complete **
+01-28 17:08 INFO     Training network 8. n_training: 542
+01-28 17:08 INFO     Training network 8
+01-28 17:08 INFO     n_training: 2
+01-28 17:08 INFO     n_test: 10
+01-28 17:08 INFO     Epoch: 0 Loss: 17.779548
+01-28 17:08 INFO     Epoch: 1 Loss: 12.746696
+01-28 17:08 INFO     Epoch: 2 Loss: 11.814756
+01-28 17:08 INFO     Epoch: 3 Loss: 11.596786
+01-28 17:08 INFO     Epoch: 4 Loss: 11.547507
+01-28 17:09 INFO     Epoch: 5 Loss: 11.319710
+01-28 17:09 INFO     Epoch: 6 Loss: 10.916289
+01-28 17:09 INFO     Epoch: 7 Loss: 10.589802
+01-28 17:09 INFO     Epoch: 8 Loss: 10.178821
+01-28 17:09 INFO     Epoch: 9 Loss: 9.965569
+01-28 17:09 INFO      ** Training complete **
+01-28 17:09 INFO     Training network 9. n_training: 347
+01-28 17:09 INFO     Training network 9
+01-28 17:09 INFO     n_training: 1
+01-28 17:09 INFO     n_test: 10
+01-28 17:09 INFO     Epoch: 0 Loss: 20.127815
+01-28 17:09 INFO     Epoch: 1 Loss: 15.440478
+01-28 17:09 INFO     Epoch: 2 Loss: 13.195357
+01-28 17:09 INFO     Epoch: 3 Loss: 12.274632
+01-28 17:09 INFO     Epoch: 4 Loss: 11.923944
+01-28 17:09 INFO     Epoch: 5 Loss: 11.711233
+01-28 17:09 INFO     Epoch: 6 Loss: 11.634991
+01-28 17:09 INFO     Epoch: 7 Loss: 11.674355
+01-28 17:09 INFO     Epoch: 8 Loss: 11.733400
+01-28 17:09 INFO     Epoch: 9 Loss: 11.603499
+01-28 17:09 INFO      ** Training complete **
+01-28 17:11 INFO     >> Global Model Test accuracy Top1: 40.650000
+01-28 17:11 INFO     >> Global Model Test accuracy Top5: 88.520000
+01-28 17:11 INFO     in comm round:1
+01-28 17:11 INFO     Training network 0. n_training: 576
+01-28 17:11 INFO     Training network 0
+01-28 17:11 INFO     n_training: 2
+01-28 17:11 INFO     n_test: 10
+01-28 17:11 INFO     Epoch: 0 Loss: 19.673619
+01-28 17:11 INFO     Epoch: 1 Loss: 18.545051
+01-28 17:11 INFO     Epoch: 2 Loss: 16.635613
+01-28 17:11 INFO     Epoch: 3 Loss: 13.867959
+01-28 17:11 INFO     Epoch: 4 Loss: 11.531209
+01-28 17:11 INFO     Epoch: 5 Loss: 10.318891
+01-28 17:11 INFO     Epoch: 6 Loss: 9.834078
+01-28 17:11 INFO     Epoch: 7 Loss: 9.404644
+01-28 17:11 INFO     Epoch: 8 Loss: 9.132736
+01-28 17:11 INFO     Epoch: 9 Loss: 8.802396
+01-28 17:11 INFO      ** Training complete **
+01-28 17:11 INFO     Training network 1. n_training: 293
+01-28 17:11 INFO     Training network 1
+01-28 17:11 INFO     n_training: 1
+01-28 17:11 INFO     n_test: 10
+01-28 17:11 INFO     Epoch: 0 Loss: 19.959740
+01-28 17:11 INFO     Epoch: 1 Loss: 19.645990
+01-28 17:11 INFO     Epoch: 2 Loss: 19.048265
+01-28 17:12 INFO     Epoch: 3 Loss: 18.326021
+01-28 17:12 INFO     Epoch: 4 Loss: 17.269350
+01-28 17:12 INFO     Epoch: 5 Loss: 15.998278
+01-28 17:12 INFO     Epoch: 6 Loss: 14.455686
+01-28 17:12 INFO     Epoch: 7 Loss: 12.964098
+01-28 17:12 INFO     Epoch: 8 Loss: 11.810661
+01-28 17:12 INFO     Epoch: 9 Loss: 11.071587
+01-28 17:12 INFO      ** Training complete **
+01-28 17:12 INFO     Training network 2. n_training: 562
+01-28 17:12 INFO     Training network 2
+01-28 17:12 INFO     n_training: 2
+01-28 17:12 INFO     n_test: 10
+01-28 17:12 INFO     Epoch: 0 Loss: 19.938875
+01-28 17:12 INFO     Epoch: 1 Loss: 18.810511
+01-28 17:12 INFO     Epoch: 2 Loss: 16.728372
+01-28 17:12 INFO     Epoch: 3 Loss: 13.786105
+01-28 17:12 INFO     Epoch: 4 Loss: 11.571960
+01-28 17:12 INFO     Epoch: 5 Loss: 10.438331
+01-28 17:12 INFO     Epoch: 6 Loss: 9.986650
+01-28 17:12 INFO     Epoch: 7 Loss: 9.527630
+01-28 17:12 INFO     Epoch: 8 Loss: 9.373897
+01-28 17:12 INFO     Epoch: 9 Loss: 8.997889
+01-28 17:12 INFO      ** Training complete **
+01-28 17:12 INFO     Training network 3. n_training: 691
+01-28 17:12 INFO     Training network 3
+01-28 17:12 INFO     n_training: 2
+01-28 17:12 INFO     n_test: 10
+01-28 17:12 INFO     Epoch: 0 Loss: 19.601481
+01-28 17:12 INFO     Epoch: 1 Loss: 18.548827
+01-28 17:12 INFO     Epoch: 2 Loss: 16.665676
+01-28 17:12 INFO     Epoch: 3 Loss: 13.834302
+01-28 17:12 INFO     Epoch: 4 Loss: 11.524016
+01-28 17:12 INFO     Epoch: 5 Loss: 10.304531
+01-28 17:12 INFO     Epoch: 6 Loss: 9.854792
+01-28 17:12 INFO     Epoch: 7 Loss: 9.478430
+01-28 17:12 INFO     Epoch: 8 Loss: 9.175166
+01-28 17:12 INFO     Epoch: 9 Loss: 8.894715
+01-28 17:12 INFO      ** Training complete **
+01-28 17:12 INFO     Training network 4. n_training: 496
+01-28 17:12 INFO     Training network 4
+01-28 17:12 INFO     n_training: 1
+01-28 17:12 INFO     n_test: 10
+01-28 17:12 INFO     Epoch: 0 Loss: 19.619808
+01-28 17:12 INFO     Epoch: 1 Loss: 19.505745
+01-28 17:12 INFO     Epoch: 2 Loss: 19.153923
+01-28 17:12 INFO     Epoch: 3 Loss: 18.230850
+01-28 17:12 INFO     Epoch: 4 Loss: 17.203035
+01-28 17:12 INFO     Epoch: 5 Loss: 15.990626
+01-28 17:12 INFO     Epoch: 6 Loss: 14.445742
+01-28 17:12 INFO     Epoch: 7 Loss: 13.061844
+01-28 17:12 INFO     Epoch: 8 Loss: 11.967840
+01-28 17:12 INFO     Epoch: 9 Loss: 11.084425
+01-28 17:12 INFO      ** Training complete **
+01-28 17:12 INFO     Training network 5. n_training: 519
+01-28 17:12 INFO     Training network 5
+01-28 17:12 INFO     n_training: 2
+01-28 17:12 INFO     n_test: 10
+01-28 17:12 INFO     Epoch: 0 Loss: 19.748296
+01-28 17:13 INFO     Epoch: 1 Loss: 18.716204
+01-28 17:13 INFO     Epoch: 2 Loss: 16.685061
+01-28 17:13 INFO     Epoch: 3 Loss: 13.799818
+01-28 17:13 INFO     Epoch: 4 Loss: 11.497417
+01-28 17:13 INFO     Epoch: 5 Loss: 10.369113
+01-28 17:13 INFO     Epoch: 6 Loss: 9.902412
+01-28 17:13 INFO     Epoch: 7 Loss: 9.474391
+01-28 17:13 INFO     Epoch: 8 Loss: 9.297046
+01-28 17:13 INFO     Epoch: 9 Loss: 8.885459
+01-28 17:13 INFO      ** Training complete **
+01-28 17:13 INFO     Training network 6. n_training: 625
+01-28 17:13 INFO     Training network 6
+01-28 17:13 INFO     n_training: 2
+01-28 17:13 INFO     n_test: 10
+01-28 17:13 INFO     Epoch: 0 Loss: 19.706141
+01-28 17:13 INFO     Epoch: 1 Loss: 18.598873
+01-28 17:13 INFO     Epoch: 2 Loss: 16.693298
+01-28 17:13 INFO     Epoch: 3 Loss: 13.787089
+01-28 17:13 INFO     Epoch: 4 Loss: 11.464735
+01-28 17:13 INFO     Epoch: 5 Loss: 10.285828
+01-28 17:13 INFO     Epoch: 6 Loss: 9.756465
+01-28 17:13 INFO     Epoch: 7 Loss: 9.396482
+01-28 17:13 INFO     Epoch: 8 Loss: 9.067015
+01-28 17:13 INFO     Epoch: 9 Loss: 8.763521
+01-28 17:13 INFO      ** Training complete **
+01-28 17:13 INFO     Training network 7. n_training: 349
+01-28 17:13 INFO     Training network 7
+01-28 17:13 INFO     n_training: 1
+01-28 17:13 INFO     n_test: 10
+01-28 17:13 INFO     Epoch: 0 Loss: 20.063396
+01-28 17:13 INFO     Epoch: 1 Loss: 19.495422
+01-28 17:13 INFO     Epoch: 2 Loss: 19.068516
+01-28 17:13 INFO     Epoch: 3 Loss: 18.354111
+01-28 17:13 INFO     Epoch: 4 Loss: 17.231989
+01-28 17:13 INFO     Epoch: 5 Loss: 15.951241
+01-28 17:13 INFO     Epoch: 6 Loss: 14.487549
+01-28 17:13 INFO     Epoch: 7 Loss: 12.984571
+01-28 17:13 INFO     Epoch: 8 Loss: 11.808239
+01-28 17:13 INFO     Epoch: 9 Loss: 11.050959
+01-28 17:13 INFO      ** Training complete **
+01-28 17:13 INFO     Training network 8. n_training: 542
+01-28 17:13 INFO     Training network 8
+01-28 17:13 INFO     n_training: 2
+01-28 17:13 INFO     n_test: 10
+01-28 17:13 INFO     Epoch: 0 Loss: 19.879282
+01-28 17:13 INFO     Epoch: 1 Loss: 18.723046
+01-28 17:13 INFO     Epoch: 2 Loss: 16.710169
+01-28 17:13 INFO     Epoch: 3 Loss: 13.782088
+01-28 17:13 INFO     Epoch: 4 Loss: 11.535714
+01-28 17:13 INFO     Epoch: 5 Loss: 10.372363
+01-28 17:14 INFO     Epoch: 6 Loss: 9.904233
+01-28 17:14 INFO     Epoch: 7 Loss: 9.478463
+01-28 17:14 INFO     Epoch: 8 Loss: 9.258040
+01-28 17:14 INFO     Epoch: 9 Loss: 8.927597
+01-28 17:14 INFO      ** Training complete **
+01-28 17:14 INFO     Training network 9. n_training: 347
+01-28 17:14 INFO     Training network 9
+01-28 17:14 INFO     n_training: 1
+01-28 17:14 INFO     n_test: 10
+01-28 17:14 INFO     Epoch: 0 Loss: 19.726559
+01-28 17:14 INFO     Epoch: 1 Loss: 19.555521
+01-28 17:14 INFO     Epoch: 2 Loss: 19.055132
+01-28 17:14 INFO     Epoch: 3 Loss: 18.159113
+01-28 17:14 INFO     Epoch: 4 Loss: 17.286240
+01-28 17:14 INFO     Epoch: 5 Loss: 16.005442
+01-28 17:14 INFO     Epoch: 6 Loss: 14.421150
+01-28 17:14 INFO     Epoch: 7 Loss: 13.029562
+01-28 17:14 INFO     Epoch: 8 Loss: 11.889320
+01-28 17:14 INFO     Epoch: 9 Loss: 11.098783
+01-28 17:14 INFO      ** Training complete **
+01-28 17:16 INFO     >> Global Model Test accuracy Top1: 42.310000
+01-28 17:16 INFO     >> Global Model Test accuracy Top5: 89.290000
+01-28 17:16 INFO     in comm round:2
+01-28 17:16 INFO     Training network 0. n_training: 576
+01-28 17:16 INFO     Training network 0
+01-28 17:16 INFO     n_training: 2
+01-28 17:16 INFO     n_test: 10
+01-28 17:16 INFO     Epoch: 0 Loss: 13.468333
+01-28 17:16 INFO     Epoch: 1 Loss: 12.221760
+01-28 17:16 INFO     Epoch: 2 Loss: 10.618933
+01-28 17:16 INFO     Epoch: 3 Loss: 9.079024
+01-28 17:16 INFO     Epoch: 4 Loss: 8.479158
+01-28 17:16 INFO     Epoch: 5 Loss: 7.998351
+01-28 17:16 INFO     Epoch: 6 Loss: 7.722220
+01-28 17:16 INFO     Epoch: 7 Loss: 7.499116
+01-28 17:16 INFO     Epoch: 8 Loss: 7.368763
+01-28 17:16 INFO     Epoch: 9 Loss: 7.276774
+01-28 17:16 INFO      ** Training complete **
+01-28 17:16 INFO     Training network 1. n_training: 293
+01-28 17:16 INFO     Training network 1
+01-28 17:16 INFO     n_training: 1
+01-28 17:16 INFO     n_test: 10
+01-28 17:16 INFO     Epoch: 0 Loss: 13.505449
+01-28 17:16 INFO     Epoch: 1 Loss: 13.094613
+01-28 17:16 INFO     Epoch: 2 Loss: 12.490114
+01-28 17:16 INFO     Epoch: 3 Loss: 11.782237
+01-28 17:16 INFO     Epoch: 4 Loss: 11.063256
+01-28 17:16 INFO     Epoch: 5 Loss: 10.146007
+01-28 17:17 INFO     Epoch: 6 Loss: 9.282009
+01-28 17:17 INFO     Epoch: 7 Loss: 8.766759
+01-28 17:17 INFO     Epoch: 8 Loss: 8.423429
+01-28 17:17 INFO     Epoch: 9 Loss: 8.280988
+01-28 17:17 INFO      ** Training complete **
+01-28 17:17 INFO     Training network 2. n_training: 562
+01-28 17:17 INFO     Training network 2
+01-28 17:17 INFO     n_training: 2
+01-28 17:17 INFO     n_test: 10
+01-28 17:17 INFO     Epoch: 0 Loss: 13.263651
+01-28 17:17 INFO     Epoch: 1 Loss: 12.151190
+01-28 17:17 INFO     Epoch: 2 Loss: 10.742332
+01-28 17:17 INFO     Epoch: 3 Loss: 9.167588
+01-28 17:17 INFO     Epoch: 4 Loss: 8.639220
+01-28 17:17 INFO     Epoch: 5 Loss: 8.137900
+01-28 17:17 INFO     Epoch: 6 Loss: 7.975272
+01-28 17:17 INFO     Epoch: 7 Loss: 7.662355
+01-28 17:17 INFO     Epoch: 8 Loss: 7.674008
+01-28 17:17 INFO     Epoch: 9 Loss: 7.436584
+01-28 17:17 INFO      ** Training complete **
+01-28 17:17 INFO     Training network 3. n_training: 691
+01-28 17:17 INFO     Training network 3
+01-28 17:17 INFO     n_training: 2
+01-28 17:17 INFO     n_test: 10
+01-28 17:17 INFO     Epoch: 0 Loss: 13.306748
+01-28 17:17 INFO     Epoch: 1 Loss: 12.182821
+01-28 17:17 INFO     Epoch: 2 Loss: 10.495747
+01-28 17:17 INFO     Epoch: 3 Loss: 8.997077
+01-28 17:17 INFO     Epoch: 4 Loss: 8.357694
+01-28 17:17 INFO     Epoch: 5 Loss: 8.014575
+01-28 17:17 INFO     Epoch: 6 Loss: 7.718725
+01-28 17:17 INFO     Epoch: 7 Loss: 7.556842
+01-28 17:17 INFO     Epoch: 8 Loss: 7.478190
+01-28 17:17 INFO     Epoch: 9 Loss: 7.340875
+01-28 17:17 INFO      ** Training complete **
+01-28 17:17 INFO     Training network 4. n_training: 496
+01-28 17:17 INFO     Training network 4
+01-28 17:17 INFO     n_training: 1
+01-28 17:17 INFO     n_test: 10
+01-28 17:17 INFO     Epoch: 0 Loss: 13.578887
+01-28 17:17 INFO     Epoch: 1 Loss: 13.273383
+01-28 17:17 INFO     Epoch: 2 Loss: 12.427927
+01-28 17:17 INFO     Epoch: 3 Loss: 11.609803
+01-28 17:17 INFO     Epoch: 4 Loss: 11.184888
+01-28 17:17 INFO     Epoch: 5 Loss: 10.094467
+01-28 17:17 INFO     Epoch: 6 Loss: 9.228437
+01-28 17:17 INFO     Epoch: 7 Loss: 8.734994
+01-28 17:17 INFO     Epoch: 8 Loss: 8.503072
+01-28 17:17 INFO     Epoch: 9 Loss: 8.444169
+01-28 17:17 INFO      ** Training complete **
+01-28 17:17 INFO     Training network 5. n_training: 519
+01-28 17:17 INFO     Training network 5
+01-28 17:17 INFO     n_training: 2
+01-28 17:17 INFO     n_test: 10
+01-28 17:17 INFO     Epoch: 0 Loss: 13.089561
+01-28 17:17 INFO     Epoch: 1 Loss: 12.135896
+01-28 17:18 INFO     Epoch: 2 Loss: 10.615409
+01-28 17:18 INFO     Epoch: 3 Loss: 9.103103
+01-28 17:18 INFO     Epoch: 4 Loss: 8.392198
+01-28 17:18 INFO     Epoch: 5 Loss: 8.032948
+01-28 17:18 INFO     Epoch: 6 Loss: 7.716016
+01-28 17:18 INFO     Epoch: 7 Loss: 7.478487
+01-28 17:18 INFO     Epoch: 8 Loss: 7.270280
+01-28 17:18 INFO     Epoch: 9 Loss: 7.277468
+01-28 17:18 INFO      ** Training complete **
+01-28 17:18 INFO     Training network 6. n_training: 625
+01-28 17:18 INFO     Training network 6
+01-28 17:18 INFO     n_training: 2
+01-28 17:18 INFO     n_test: 10
+01-28 17:18 INFO     Epoch: 0 Loss: 13.319510
+01-28 17:18 INFO     Epoch: 1 Loss: 12.184126
+01-28 17:18 INFO     Epoch: 2 Loss: 10.629297
+01-28 17:18 INFO     Epoch: 3 Loss: 9.131825
+01-28 17:18 INFO     Epoch: 4 Loss: 8.346484
+01-28 17:18 INFO     Epoch: 5 Loss: 8.088899
+01-28 17:18 INFO     Epoch: 6 Loss: 7.617295
+01-28 17:18 INFO     Epoch: 7 Loss: 7.430618
+01-28 17:18 INFO     Epoch: 8 Loss: 7.353215
+01-28 17:18 INFO     Epoch: 9 Loss: 7.275971
+01-28 17:18 INFO      ** Training complete **
+01-28 17:18 INFO     Training network 7. n_training: 349
+01-28 17:18 INFO     Training network 7
+01-28 17:18 INFO     n_training: 1
+01-28 17:18 INFO     n_test: 10
+01-28 17:18 INFO     Epoch: 0 Loss: 13.405782
+01-28 17:18 INFO     Epoch: 1 Loss: 13.179640
+01-28 17:18 INFO     Epoch: 2 Loss: 12.459251
+01-28 17:18 INFO     Epoch: 3 Loss: 11.747896
+01-28 17:18 INFO     Epoch: 4 Loss: 11.082886
+01-28 17:18 INFO     Epoch: 5 Loss: 10.111552
+01-28 17:18 INFO     Epoch: 6 Loss: 9.327362
+01-28 17:18 INFO     Epoch: 7 Loss: 8.859171
+01-28 17:18 INFO     Epoch: 8 Loss: 8.487576
+01-28 17:18 INFO     Epoch: 9 Loss: 8.219871
+01-28 17:18 INFO      ** Training complete **
+01-28 17:18 INFO     Training network 8. n_training: 542
+01-28 17:18 INFO     Training network 8
+01-28 17:18 INFO     n_training: 2
+01-28 17:18 INFO     n_test: 10
+01-28 17:18 INFO     Epoch: 0 Loss: 13.057090
+01-28 17:18 INFO     Epoch: 1 Loss: 12.105940
+01-28 17:18 INFO     Epoch: 2 Loss: 10.678426
+01-28 17:18 INFO     Epoch: 3 Loss: 9.153164
+01-28 17:18 INFO     Epoch: 4 Loss: 8.438967
+01-28 17:18 INFO     Epoch: 5 Loss: 8.069405
+01-28 17:18 INFO     Epoch: 6 Loss: 7.712670
+01-28 17:19 INFO     Epoch: 7 Loss: 7.495889
+01-28 17:19 INFO     Epoch: 8 Loss: 7.562990
+01-28 17:19 INFO     Epoch: 9 Loss: 7.273193
+01-28 17:19 INFO      ** Training complete **
+01-28 17:19 INFO     Training network 9. n_training: 347
+01-28 17:19 INFO     Training network 9
+01-28 17:19 INFO     n_training: 1
+01-28 17:19 INFO     n_test: 10
+01-28 17:19 INFO     Epoch: 0 Loss: 13.492345
+01-28 17:19 INFO     Epoch: 1 Loss: 13.317760
+01-28 17:19 INFO     Epoch: 2 Loss: 12.402599
+01-28 17:19 INFO     Epoch: 3 Loss: 11.781933
+01-28 17:19 INFO     Epoch: 4 Loss: 11.078321
+01-28 17:19 INFO     Epoch: 5 Loss: 10.148890
+01-28 17:19 INFO     Epoch: 6 Loss: 9.322866
+01-28 17:19 INFO     Epoch: 7 Loss: 8.725025
+01-28 17:19 INFO     Epoch: 8 Loss: 8.540284
+01-28 17:19 INFO     Epoch: 9 Loss: 8.318962
+01-28 17:19 INFO      ** Training complete **
+01-28 17:21 INFO     >> Global Model Test accuracy Top1: 42.690000
+01-28 17:21 INFO     >> Global Model Test accuracy Top5: 89.600000
+01-28 17:21 INFO     in comm round:3
+01-28 17:21 INFO     Training network 0. n_training: 576
+01-28 17:21 INFO     Training network 0
+01-28 17:21 INFO     n_training: 2
+01-28 17:21 INFO     n_test: 10
+01-28 17:21 INFO     Epoch: 0 Loss: 8.170887
+01-28 17:21 INFO     Epoch: 1 Loss: 7.875023
+01-28 17:21 INFO     Epoch: 2 Loss: 7.590283
+01-28 17:21 INFO     Epoch: 3 Loss: 7.340691
+01-28 17:21 INFO     Epoch: 4 Loss: 7.237466
+01-28 17:21 INFO     Epoch: 5 Loss: 6.967998
+01-28 17:21 INFO     Epoch: 6 Loss: 6.808285
+01-28 17:21 INFO     Epoch: 7 Loss: 6.640262
+01-28 17:21 INFO     Epoch: 8 Loss: 6.621504
+01-28 17:21 INFO     Epoch: 9 Loss: 6.546202
+01-28 17:21 INFO      ** Training complete **
+01-28 17:21 INFO     Training network 1. n_training: 293
+01-28 17:21 INFO     Training network 1
+01-28 17:21 INFO     n_training: 1
+01-28 17:21 INFO     n_test: 10
+01-28 17:21 INFO     Epoch: 0 Loss: 8.178284
+01-28 17:21 INFO     Epoch: 1 Loss: 7.954170
+01-28 17:21 INFO     Epoch: 2 Loss: 7.831686
+01-28 17:21 INFO     Epoch: 3 Loss: 7.702478
+01-28 17:21 INFO     Epoch: 4 Loss: 7.669484
+01-28 17:21 INFO     Epoch: 5 Loss: 7.601863
+01-28 17:21 INFO     Epoch: 6 Loss: 7.326249
+01-28 17:21 INFO     Epoch: 7 Loss: 7.101732
+01-28 17:21 INFO     Epoch: 8 Loss: 6.999701
+01-28 17:21 INFO     Epoch: 9 Loss: 6.991340
+01-28 17:21 INFO      ** Training complete **
+01-28 17:21 INFO     Training network 2. n_training: 562
+01-28 17:21 INFO     Training network 2
+01-28 17:21 INFO     n_training: 2
+01-28 17:21 INFO     n_test: 10
+01-28 17:21 INFO     Epoch: 0 Loss: 8.384438
+01-28 17:22 INFO     Epoch: 1 Loss: 8.089610
+01-28 17:22 INFO     Epoch: 2 Loss: 7.862301
+01-28 17:22 INFO     Epoch: 3 Loss: 7.505543
+01-28 17:22 INFO     Epoch: 4 Loss: 7.376444
+01-28 17:22 INFO     Epoch: 5 Loss: 7.286846
+01-28 17:22 INFO     Epoch: 6 Loss: 7.113032
+01-28 17:22 INFO     Epoch: 7 Loss: 6.842394
+01-28 17:22 INFO     Epoch: 8 Loss: 6.650459
+01-28 17:22 INFO     Epoch: 9 Loss: 6.509838
+01-28 17:22 INFO      ** Training complete **
+01-28 17:22 INFO     Training network 3. n_training: 691
+01-28 17:22 INFO     Training network 3
+01-28 17:22 INFO     n_training: 2
+01-28 17:22 INFO     n_test: 10
+01-28 17:22 INFO     Epoch: 0 Loss: 8.115084
+01-28 17:22 INFO     Epoch: 1 Loss: 7.858238
+01-28 17:22 INFO     Epoch: 2 Loss: 7.709112
+01-28 17:22 INFO     Epoch: 3 Loss: 7.442270
+01-28 17:22 INFO     Epoch: 4 Loss: 7.081414
+01-28 17:22 INFO     Epoch: 5 Loss: 6.907697
+01-28 17:22 INFO     Epoch: 6 Loss: 6.849358
+01-28 17:22 INFO     Epoch: 7 Loss: 6.817924
+01-28 17:22 INFO     Epoch: 8 Loss: 6.635483
+01-28 17:22 INFO     Epoch: 9 Loss: 6.626285
+01-28 17:22 INFO      ** Training complete **
+01-28 17:22 INFO     Training network 4. n_training: 496
+01-28 17:22 INFO     Training network 4
+01-28 17:22 INFO     n_training: 1
+01-28 17:22 INFO     n_test: 10
+01-28 17:22 INFO     Epoch: 0 Loss: 8.489138
+01-28 17:22 INFO     Epoch: 1 Loss: 8.281228
+01-28 17:22 INFO     Epoch: 2 Loss: 8.070571
+01-28 17:22 INFO     Epoch: 3 Loss: 7.891978
+01-28 17:22 INFO     Epoch: 4 Loss: 7.737778
+01-28 17:22 INFO     Epoch: 5 Loss: 7.698377
+01-28 17:22 INFO     Epoch: 6 Loss: 7.547023
+01-28 17:22 INFO     Epoch: 7 Loss: 7.174730
+01-28 17:22 INFO     Epoch: 8 Loss: 7.226191
+01-28 17:22 INFO     Epoch: 9 Loss: 7.170252
+01-28 17:22 INFO      ** Training complete **
+01-28 17:22 INFO     Training network 5. n_training: 519
+01-28 17:22 INFO     Training network 5
+01-28 17:22 INFO     n_training: 2
+01-28 17:22 INFO     n_test: 10
+01-28 17:22 INFO     Epoch: 0 Loss: 8.069732
+01-28 17:22 INFO     Epoch: 1 Loss: 7.868609
+01-28 17:22 INFO     Epoch: 2 Loss: 7.621298
+01-28 17:22 INFO     Epoch: 3 Loss: 7.344674
+01-28 17:22 INFO     Epoch: 4 Loss: 7.050108
+01-28 17:22 INFO     Epoch: 5 Loss: 6.805158
+01-28 17:23 INFO     Epoch: 6 Loss: 6.772099
+01-28 17:23 INFO     Epoch: 7 Loss: 6.732355
+01-28 17:23 INFO     Epoch: 8 Loss: 6.501344
+01-28 17:23 INFO     Epoch: 9 Loss: 6.355410
+01-28 17:23 INFO      ** Training complete **
+01-28 17:23 INFO     Training network 6. n_training: 625
+01-28 17:23 INFO     Training network 6
+01-28 17:23 INFO     n_training: 2
+01-28 17:23 INFO     n_test: 10
+01-28 17:23 INFO     Epoch: 0 Loss: 8.178752
+01-28 17:23 INFO     Epoch: 1 Loss: 7.841825
+01-28 17:23 INFO     Epoch: 2 Loss: 7.589472
+01-28 17:23 INFO     Epoch: 3 Loss: 7.431613
+01-28 17:23 INFO     Epoch: 4 Loss: 7.128237
+01-28 17:23 INFO     Epoch: 5 Loss: 6.942459
+01-28 17:23 INFO     Epoch: 6 Loss: 6.759900
+01-28 17:23 INFO     Epoch: 7 Loss: 6.625960
+01-28 17:23 INFO     Epoch: 8 Loss: 6.609392
+01-28 17:23 INFO     Epoch: 9 Loss: 6.444446
+01-28 17:23 INFO      ** Training complete **
+01-28 17:23 INFO     Training network 7. n_training: 349
+01-28 17:23 INFO     Training network 7
+01-28 17:23 INFO     n_training: 1
+01-28 17:23 INFO     n_test: 10
+01-28 17:23 INFO     Epoch: 0 Loss: 8.340178
+01-28 17:23 INFO     Epoch: 1 Loss: 8.317964
+01-28 17:23 INFO     Epoch: 2 Loss: 7.963632
+01-28 17:23 INFO     Epoch: 3 Loss: 7.977417
+01-28 17:23 INFO     Epoch: 4 Loss: 7.692912
+01-28 17:23 INFO     Epoch: 5 Loss: 7.531217
+01-28 17:23 INFO     Epoch: 6 Loss: 7.373837
+01-28 17:23 INFO     Epoch: 7 Loss: 7.431381
+01-28 17:23 INFO     Epoch: 8 Loss: 7.237842
+01-28 17:23 INFO     Epoch: 9 Loss: 7.244673
+01-28 17:23 INFO      ** Training complete **
+01-28 17:23 INFO     Training network 8. n_training: 542
+01-28 17:23 INFO     Training network 8
+01-28 17:23 INFO     n_training: 2
+01-28 17:23 INFO     n_test: 10
+01-28 17:23 INFO     Epoch: 0 Loss: 8.199819
+01-28 17:23 INFO     Epoch: 1 Loss: 7.882149
+01-28 17:23 INFO     Epoch: 2 Loss: 7.693788
+01-28 17:23 INFO     Epoch: 3 Loss: 7.384493
+01-28 17:23 INFO     Epoch: 4 Loss: 7.129241
+01-28 17:23 INFO     Epoch: 5 Loss: 6.993945
+01-28 17:23 INFO     Epoch: 6 Loss: 6.940302
+01-28 17:23 INFO     Epoch: 7 Loss: 6.688597
+01-28 17:23 INFO     Epoch: 8 Loss: 6.662502
+01-28 17:23 INFO     Epoch: 9 Loss: 6.549567
+01-28 17:23 INFO      ** Training complete **
+01-28 17:23 INFO     Training network 9. n_training: 347
+01-28 17:23 INFO     Training network 9
+01-28 17:23 INFO     n_training: 1
+01-28 17:23 INFO     n_test: 10
+01-28 17:23 INFO     Epoch: 0 Loss: 8.165611
+01-28 17:24 INFO     Epoch: 1 Loss: 8.067812
+01-28 17:24 INFO     Epoch: 2 Loss: 8.011508
+01-28 17:24 INFO     Epoch: 3 Loss: 7.864896
+01-28 17:24 INFO     Epoch: 4 Loss: 7.772611
+01-28 17:24 INFO     Epoch: 5 Loss: 7.754050
+01-28 17:24 INFO     Epoch: 6 Loss: 7.575381
+01-28 17:24 INFO     Epoch: 7 Loss: 7.464841
+01-28 17:24 INFO     Epoch: 8 Loss: 7.303573
+01-28 17:24 INFO     Epoch: 9 Loss: 7.043173
+01-28 17:24 INFO      ** Training complete **
+01-28 17:26 INFO     >> Global Model Test accuracy Top1: 41.790000
+01-28 17:26 INFO     >> Global Model Test accuracy Top5: 89.780000
+01-28 17:26 INFO     in comm round:4
+01-28 17:26 INFO     Training network 0. n_training: 576
+01-28 17:26 INFO     Training network 0
+01-28 17:26 INFO     n_training: 2
+01-28 17:26 INFO     n_test: 10
+01-28 17:26 INFO     Epoch: 0 Loss: 6.753007
+01-28 17:26 INFO     Epoch: 1 Loss: 6.743240
+01-28 17:26 INFO     Epoch: 2 Loss: 6.528135
+01-28 17:26 INFO     Epoch: 3 Loss: 6.405679
+01-28 17:26 INFO     Epoch: 4 Loss: 6.187357
+01-28 17:26 INFO     Epoch: 5 Loss: 6.110015
+01-28 17:26 INFO     Epoch: 6 Loss: 6.044241
+01-28 17:26 INFO     Epoch: 7 Loss: 5.792278
+01-28 17:26 INFO     Epoch: 8 Loss: 5.861183
+01-28 17:26 INFO     Epoch: 9 Loss: 5.583835
+01-28 17:26 INFO      ** Training complete **
+01-28 17:26 INFO     Training network 1. n_training: 293
+01-28 17:26 INFO     Training network 1
+01-28 17:26 INFO     n_training: 1
+01-28 17:26 INFO     n_test: 10
+01-28 17:26 INFO     Epoch: 0 Loss: 6.757782
+01-28 17:26 INFO     Epoch: 1 Loss: 6.726431
+01-28 17:26 INFO     Epoch: 2 Loss: 6.578631
+01-28 17:26 INFO     Epoch: 3 Loss: 6.527573
+01-28 17:26 INFO     Epoch: 4 Loss: 6.450041
+01-28 17:26 INFO     Epoch: 5 Loss: 6.405069
+01-28 17:26 INFO     Epoch: 6 Loss: 6.292319
+01-28 17:26 INFO     Epoch: 7 Loss: 6.240316
+01-28 17:26 INFO     Epoch: 8 Loss: 6.123568
+01-28 17:26 INFO     Epoch: 9 Loss: 6.031301
+01-28 17:26 INFO      ** Training complete **
+01-28 17:26 INFO     Training network 2. n_training: 562
+01-28 17:26 INFO     Training network 2
+01-28 17:26 INFO     n_training: 2
+01-28 17:26 INFO     n_test: 10
+01-28 17:26 INFO     Epoch: 0 Loss: 6.919797
+01-28 17:26 INFO     Epoch: 1 Loss: 6.807113
+01-28 17:26 INFO     Epoch: 2 Loss: 6.606510
+01-28 17:26 INFO     Epoch: 3 Loss: 6.487013
+01-28 17:27 INFO     Epoch: 4 Loss: 6.327711
+01-28 17:27 INFO     Epoch: 5 Loss: 6.178873
+01-28 17:27 INFO     Epoch: 6 Loss: 6.062129
+01-28 17:27 INFO     Epoch: 7 Loss: 5.967626
+01-28 17:27 INFO     Epoch: 8 Loss: 5.746113
+01-28 17:27 INFO     Epoch: 9 Loss: 5.627547
+01-28 17:27 INFO      ** Training complete **
+01-28 17:27 INFO     Training network 3. n_training: 691
+01-28 17:27 INFO     Training network 3
+01-28 17:27 INFO     n_training: 2
+01-28 17:27 INFO     n_test: 10
+01-28 17:27 INFO     Epoch: 0 Loss: 6.686614
+01-28 17:27 INFO     Epoch: 1 Loss: 6.548700
+01-28 17:27 INFO     Epoch: 2 Loss: 6.492219
+01-28 17:27 INFO     Epoch: 3 Loss: 6.397163
+01-28 17:27 INFO     Epoch: 4 Loss: 6.271417
+01-28 17:27 INFO     Epoch: 5 Loss: 6.121347
+01-28 17:27 INFO     Epoch: 6 Loss: 6.064124
+01-28 17:27 INFO     Epoch: 7 Loss: 5.864674
+01-28 17:27 INFO     Epoch: 8 Loss: 5.698121
+01-28 17:27 INFO     Epoch: 9 Loss: 5.552255
+01-28 17:27 INFO      ** Training complete **
+01-28 17:27 INFO     Training network 4. n_training: 496
+01-28 17:27 INFO     Training network 4
+01-28 17:27 INFO     n_training: 1
+01-28 17:27 INFO     n_test: 10
+01-28 17:27 INFO     Epoch: 0 Loss: 6.857686
+01-28 17:27 INFO     Epoch: 1 Loss: 6.799887
+01-28 17:27 INFO     Epoch: 2 Loss: 6.810196
+01-28 17:27 INFO     Epoch: 3 Loss: 6.712379
+01-28 17:27 INFO     Epoch: 4 Loss: 6.634386
+01-28 17:27 INFO     Epoch: 5 Loss: 6.408715
+01-28 17:27 INFO     Epoch: 6 Loss: 6.335962
+01-28 17:27 INFO     Epoch: 7 Loss: 6.290034
+01-28 17:27 INFO     Epoch: 8 Loss: 6.398741
+01-28 17:27 INFO     Epoch: 9 Loss: 6.137993
+01-28 17:27 INFO      ** Training complete **
+01-28 17:27 INFO     Training network 5. n_training: 519
+01-28 17:27 INFO     Training network 5
+01-28 17:27 INFO     n_training: 2
+01-28 17:27 INFO     n_test: 10
+01-28 17:27 INFO     Epoch: 0 Loss: 6.788359
+01-28 17:27 INFO     Epoch: 1 Loss: 6.663687
+01-28 17:27 INFO     Epoch: 2 Loss: 6.593853
+01-28 17:27 INFO     Epoch: 3 Loss: 6.383910
+01-28 17:27 INFO     Epoch: 4 Loss: 6.175888
+01-28 17:27 INFO     Epoch: 5 Loss: 6.143716
+01-28 17:27 INFO     Epoch: 6 Loss: 5.870223
+01-28 17:27 INFO     Epoch: 7 Loss: 5.745176
+01-28 17:27 INFO     Epoch: 8 Loss: 5.586187
+01-28 17:28 INFO     Epoch: 9 Loss: 5.622848
+01-28 17:28 INFO      ** Training complete **
+01-28 17:28 INFO     Training network 6. n_training: 625
+01-28 17:28 INFO     Training network 6
+01-28 17:28 INFO     n_training: 2
+01-28 17:28 INFO     n_test: 10
+01-28 17:28 INFO     Epoch: 0 Loss: 6.821945
+01-28 17:28 INFO     Epoch: 1 Loss: 6.664091
+01-28 17:28 INFO     Epoch: 2 Loss: 6.488613
+01-28 17:28 INFO     Epoch: 3 Loss: 6.497288
+01-28 17:28 INFO     Epoch: 4 Loss: 6.243591
+01-28 17:28 INFO     Epoch: 5 Loss: 6.083996
+01-28 17:28 INFO     Epoch: 6 Loss: 6.009265
+01-28 17:28 INFO     Epoch: 7 Loss: 5.874238
+01-28 17:28 INFO     Epoch: 8 Loss: 5.697449
+01-28 17:28 INFO     Epoch: 9 Loss: 5.580266
+01-28 17:28 INFO      ** Training complete **
+01-28 17:28 INFO     Training network 7. n_training: 349
+01-28 17:28 INFO     Training network 7
+01-28 17:28 INFO     n_training: 1
+01-28 17:28 INFO     n_test: 10
+01-28 17:28 INFO     Epoch: 0 Loss: 6.880108
+01-28 17:28 INFO     Epoch: 1 Loss: 6.931602
+01-28 17:28 INFO     Epoch: 2 Loss: 6.738432
+01-28 17:28 INFO     Epoch: 3 Loss: 6.516210
+01-28 17:28 INFO     Epoch: 4 Loss: 6.506202
+01-28 17:28 INFO     Epoch: 5 Loss: 6.412197
+01-28 17:28 INFO     Epoch: 6 Loss: 6.524651
+01-28 17:28 INFO     Epoch: 7 Loss: 6.326652
+01-28 17:28 INFO     Epoch: 8 Loss: 6.324948
+01-28 17:28 INFO     Epoch: 9 Loss: 6.098992
+01-28 17:28 INFO      ** Training complete **
+01-28 17:28 INFO     Training network 8. n_training: 542
+01-28 17:28 INFO     Training network 8
+01-28 17:28 INFO     n_training: 2
+01-28 17:28 INFO     n_test: 10
+01-28 17:28 INFO     Epoch: 0 Loss: 6.889461
+01-28 17:28 INFO     Epoch: 1 Loss: 6.691118
+01-28 17:28 INFO     Epoch: 2 Loss: 6.638872
+01-28 17:28 INFO     Epoch: 3 Loss: 6.421869
+01-28 17:28 INFO     Epoch: 4 Loss: 6.211846
+01-28 17:28 INFO     Epoch: 5 Loss: 6.008212
+01-28 17:28 INFO     Epoch: 6 Loss: 5.920728
+01-28 17:28 INFO     Epoch: 7 Loss: 5.776560
+01-28 17:28 INFO     Epoch: 8 Loss: 5.683147
+01-28 17:28 INFO     Epoch: 9 Loss: 5.550746
+01-28 17:28 INFO      ** Training complete **
+01-28 17:28 INFO     Training network 9. n_training: 347
+01-28 17:28 INFO     Training network 9
+01-28 17:28 INFO     n_training: 1
+01-28 17:28 INFO     n_test: 10
+01-28 17:28 INFO     Epoch: 0 Loss: 7.019186
+01-28 17:28 INFO     Epoch: 1 Loss: 6.884739
+01-28 17:28 INFO     Epoch: 2 Loss: 6.731801
+01-28 17:28 INFO     Epoch: 3 Loss: 6.639939
+01-28 17:28 INFO     Epoch: 4 Loss: 6.615665
+01-28 17:28 INFO     Epoch: 5 Loss: 6.463218
+01-28 17:28 INFO     Epoch: 6 Loss: 6.440753
+01-28 17:28 INFO     Epoch: 7 Loss: 6.275832
+01-28 17:29 INFO     Epoch: 8 Loss: 6.232024
+01-28 17:29 INFO     Epoch: 9 Loss: 6.275781
+01-28 17:29 INFO      ** Training complete **
+01-28 17:31 INFO     >> Global Model Test accuracy Top1: 43.970000
+01-28 17:31 INFO     >> Global Model Test accuracy Top5: 90.560000
+01-28 17:31 INFO     in comm round:5
+01-28 17:31 INFO     Training network 0. n_training: 576
+01-28 17:31 INFO     Training network 0
+01-28 17:31 INFO     n_training: 2
+01-28 17:31 INFO     n_test: 10
+01-28 17:31 INFO     Epoch: 0 Loss: 6.280866
+01-28 17:31 INFO     Epoch: 1 Loss: 6.086412
+01-28 17:31 INFO     Epoch: 2 Loss: 5.897317
+01-28 17:31 INFO     Epoch: 3 Loss: 5.866923
+01-28 17:31 INFO     Epoch: 4 Loss: 5.588085
+01-28 17:31 INFO     Epoch: 5 Loss: 5.399738
+01-28 17:31 INFO     Epoch: 6 Loss: 5.262052
+01-28 17:31 INFO     Epoch: 7 Loss: 5.029889
+01-28 17:31 INFO     Epoch: 8 Loss: 4.923772
+01-28 17:31 INFO     Epoch: 9 Loss: 4.841962
+01-28 17:31 INFO      ** Training complete **
+01-28 17:31 INFO     Training network 1. n_training: 293
+01-28 17:31 INFO     Training network 1
+01-28 17:31 INFO     n_training: 1
+01-28 17:31 INFO     n_test: 10
+01-28 17:31 INFO     Epoch: 0 Loss: 6.075031
+01-28 17:31 INFO     Epoch: 1 Loss: 5.937578
+01-28 17:31 INFO     Epoch: 2 Loss: 5.915211
+01-28 17:31 INFO     Epoch: 3 Loss: 5.876503
+01-28 17:31 INFO     Epoch: 4 Loss: 5.841022
+01-28 17:31 INFO     Epoch: 5 Loss: 5.819613
+01-28 17:31 INFO     Epoch: 6 Loss: 5.565715
+01-28 17:31 INFO     Epoch: 7 Loss: 5.690199
+01-28 17:31 INFO     Epoch: 8 Loss: 5.461828
+01-28 17:31 INFO     Epoch: 9 Loss: 5.380988
+01-28 17:31 INFO      ** Training complete **
+01-28 17:31 INFO     Training network 2. n_training: 562
+01-28 17:31 INFO     Training network 2
+01-28 17:31 INFO     n_training: 2
+01-28 17:31 INFO     n_test: 10
+01-28 17:31 INFO     Epoch: 0 Loss: 6.121111
+01-28 17:31 INFO     Epoch: 1 Loss: 6.083599
+01-28 17:31 INFO     Epoch: 2 Loss: 5.910188
+01-28 17:31 INFO     Epoch: 3 Loss: 5.752451
+01-28 17:31 INFO     Epoch: 4 Loss: 5.642776
+01-28 17:31 INFO     Epoch: 5 Loss: 5.451850
+01-28 17:31 INFO     Epoch: 6 Loss: 5.391943
+01-28 17:31 INFO     Epoch: 7 Loss: 5.103972
+01-28 17:31 INFO     Epoch: 8 Loss: 4.992018
+01-28 17:32 INFO     Epoch: 9 Loss: 4.896353
+01-28 17:32 INFO      ** Training complete **
+01-28 17:32 INFO     Training network 3. n_training: 691
+01-28 17:32 INFO     Training network 3
+01-28 17:32 INFO     n_training: 2
+01-28 17:32 INFO     n_test: 10
+01-28 17:32 INFO     Epoch: 0 Loss: 6.148681
+01-28 17:32 INFO     Epoch: 1 Loss: 5.982103
+01-28 17:32 INFO     Epoch: 2 Loss: 5.893655
+01-28 17:32 INFO     Epoch: 3 Loss: 5.829819
+01-28 17:32 INFO     Epoch: 4 Loss: 5.573035
+01-28 17:32 INFO     Epoch: 5 Loss: 5.515425
+01-28 17:32 INFO     Epoch: 6 Loss: 5.356480
+01-28 17:32 INFO     Epoch: 7 Loss: 5.152606
+01-28 17:32 INFO     Epoch: 8 Loss: 4.984189
+01-28 17:32 INFO     Epoch: 9 Loss: 4.909281
+01-28 17:32 INFO      ** Training complete **
+01-28 17:32 INFO     Training network 4. n_training: 496
+01-28 17:32 INFO     Training network 4
+01-28 17:32 INFO     n_training: 1
+01-28 17:32 INFO     n_test: 10
+01-28 17:32 INFO     Epoch: 0 Loss: 6.334134
+01-28 17:32 INFO     Epoch: 1 Loss: 6.126218
+01-28 17:32 INFO     Epoch: 2 Loss: 6.218345
+01-28 17:32 INFO     Epoch: 3 Loss: 6.130787
+01-28 17:32 INFO     Epoch: 4 Loss: 6.054472
+01-28 17:32 INFO     Epoch: 5 Loss: 5.950275
+01-28 17:32 INFO     Epoch: 6 Loss: 5.765577
+01-28 17:32 INFO     Epoch: 7 Loss: 5.707553
+01-28 17:32 INFO     Epoch: 8 Loss: 5.613120
+01-28 17:32 INFO     Epoch: 9 Loss: 5.614791
+01-28 17:32 INFO      ** Training complete **
+01-28 17:32 INFO     Training network 5. n_training: 519
+01-28 17:32 INFO     Training network 5
+01-28 17:32 INFO     n_training: 2
+01-28 17:32 INFO     n_test: 10
+01-28 17:32 INFO     Epoch: 0 Loss: 6.259305
+01-28 17:32 INFO     Epoch: 1 Loss: 6.123845
+01-28 17:32 INFO     Epoch: 2 Loss: 5.919927
+01-28 17:32 INFO     Epoch: 3 Loss: 5.680796
+01-28 17:32 INFO     Epoch: 4 Loss: 5.545239
+01-28 17:32 INFO     Epoch: 5 Loss: 5.359554
+01-28 17:32 INFO     Epoch: 6 Loss: 5.175681
+01-28 17:32 INFO     Epoch: 7 Loss: 5.175941
+01-28 17:32 INFO     Epoch: 8 Loss: 4.927455
+01-28 17:32 INFO     Epoch: 9 Loss: 4.796246
+01-28 17:32 INFO      ** Training complete **
+01-28 17:32 INFO     Training network 6. n_training: 625
+01-28 17:32 INFO     Training network 6
+01-28 17:32 INFO     n_training: 2
+01-28 17:32 INFO     n_test: 10
+01-28 17:32 INFO     Epoch: 0 Loss: 6.180855
+01-28 17:32 INFO     Epoch: 1 Loss: 6.097084
+01-28 17:32 INFO     Epoch: 2 Loss: 5.907799
+01-28 17:32 INFO     Epoch: 3 Loss: 5.680696
+01-28 17:33 INFO     Epoch: 4 Loss: 5.685186
+01-28 17:33 INFO     Epoch: 5 Loss: 5.427862
+01-28 17:33 INFO     Epoch: 6 Loss: 5.388803
+01-28 17:33 INFO     Epoch: 7 Loss: 5.132535
+01-28 17:33 INFO     Epoch: 8 Loss: 4.902951
+01-28 17:33 INFO     Epoch: 9 Loss: 4.862609
+01-28 17:33 INFO      ** Training complete **
+01-28 17:33 INFO     Training network 7. n_training: 349
+01-28 17:33 INFO     Training network 7
+01-28 17:33 INFO     n_training: 1
+01-28 17:33 INFO     n_test: 10
+01-28 17:33 INFO     Epoch: 0 Loss: 6.145771
+01-28 17:33 INFO     Epoch: 1 Loss: 6.037404
+01-28 17:33 INFO     Epoch: 2 Loss: 6.093634
+01-28 17:33 INFO     Epoch: 3 Loss: 6.104675
+01-28 17:33 INFO     Epoch: 4 Loss: 5.784726
+01-28 17:33 INFO     Epoch: 5 Loss: 5.786694
+01-28 17:33 INFO     Epoch: 6 Loss: 5.754975
+01-28 17:33 INFO     Epoch: 7 Loss: 5.644213
+01-28 17:33 INFO     Epoch: 8 Loss: 5.537401
+01-28 17:33 INFO     Epoch: 9 Loss: 5.416350
+01-28 17:33 INFO      ** Training complete **
+01-28 17:33 INFO     Training network 8. n_training: 542
+01-28 17:33 INFO     Training network 8
+01-28 17:33 INFO     n_training: 2
+01-28 17:33 INFO     n_test: 10
+01-28 17:33 INFO     Epoch: 0 Loss: 6.210118
+01-28 17:33 INFO     Epoch: 1 Loss: 5.929043
+01-28 17:33 INFO     Epoch: 2 Loss: 5.915689
+01-28 17:33 INFO     Epoch: 3 Loss: 5.747699
+01-28 17:33 INFO     Epoch: 4 Loss: 5.598731
+01-28 17:33 INFO     Epoch: 5 Loss: 5.368888
+01-28 17:33 INFO     Epoch: 6 Loss: 5.165294
+01-28 17:33 INFO     Epoch: 7 Loss: 5.071708
+01-28 17:33 INFO     Epoch: 8 Loss: 4.971030
+01-28 17:33 INFO     Epoch: 9 Loss: 4.852553
+01-28 17:33 INFO      ** Training complete **
+01-28 17:33 INFO     Training network 9. n_training: 347
+01-28 17:33 INFO     Training network 9
+01-28 17:33 INFO     n_training: 1
+01-28 17:33 INFO     n_test: 10
+01-28 17:33 INFO     Epoch: 0 Loss: 6.170125
+01-28 17:33 INFO     Epoch: 1 Loss: 6.129347
+01-28 17:33 INFO     Epoch: 2 Loss: 6.003412
+01-28 17:33 INFO     Epoch: 3 Loss: 5.999652
+01-28 17:33 INFO     Epoch: 4 Loss: 5.850727
+01-28 17:33 INFO     Epoch: 5 Loss: 5.969892
+01-28 17:33 INFO     Epoch: 6 Loss: 5.700637
+01-28 17:33 INFO     Epoch: 7 Loss: 5.794912
+01-28 17:33 INFO     Epoch: 8 Loss: 5.560361
+01-28 17:33 INFO     Epoch: 9 Loss: 5.437482
+01-28 17:33 INFO      ** Training complete **
+01-28 17:36 INFO     >> Global Model Test accuracy Top1: 42.980000
+01-28 17:36 INFO     >> Global Model Test accuracy Top5: 90.020000
+01-28 17:36 INFO     in comm round:6
+01-28 17:36 INFO     Training network 0. n_training: 576
+01-28 17:36 INFO     Training network 0
+01-28 17:36 INFO     n_training: 2
+01-28 17:36 INFO     n_test: 10
+01-28 17:36 INFO     Epoch: 0 Loss: 5.578740
+01-28 17:36 INFO     Epoch: 1 Loss: 5.356563
+01-28 17:36 INFO     Epoch: 2 Loss: 5.123827
+01-28 17:36 INFO     Epoch: 3 Loss: 4.986139
+01-28 17:36 INFO     Epoch: 4 Loss: 4.756813
+01-28 17:36 INFO     Epoch: 5 Loss: 4.427495
+01-28 17:36 INFO     Epoch: 6 Loss: 4.242211
+01-28 17:36 INFO     Epoch: 7 Loss: 4.130412
+01-28 17:36 INFO     Epoch: 8 Loss: 3.892140
+01-28 17:36 INFO     Epoch: 9 Loss: 3.818037
+01-28 17:36 INFO      ** Training complete **
+01-28 17:36 INFO     Training network 1. n_training: 293
+01-28 17:36 INFO     Training network 1
+01-28 17:36 INFO     n_training: 1
+01-28 17:36 INFO     n_test: 10
+01-28 17:36 INFO     Epoch: 0 Loss: 5.630058
+01-28 17:36 INFO     Epoch: 1 Loss: 5.356556
+01-28 17:36 INFO     Epoch: 2 Loss: 5.354497
+01-28 17:36 INFO     Epoch: 3 Loss: 5.365976
+01-28 17:36 INFO     Epoch: 4 Loss: 5.045692
+01-28 17:36 INFO     Epoch: 5 Loss: 4.917341
+01-28 17:36 INFO     Epoch: 6 Loss: 4.820038
+01-28 17:36 INFO     Epoch: 7 Loss: 4.662848
+01-28 17:36 INFO     Epoch: 8 Loss: 4.552022
+01-28 17:36 INFO     Epoch: 9 Loss: 4.400970
+01-28 17:36 INFO      ** Training complete **
+01-28 17:36 INFO     Training network 2. n_training: 562
+01-28 17:36 INFO     Training network 2
+01-28 17:36 INFO     n_training: 2
+01-28 17:36 INFO     n_test: 10
+01-28 17:36 INFO     Epoch: 0 Loss: 5.520407
+01-28 17:36 INFO     Epoch: 1 Loss: 5.310839
+01-28 17:36 INFO     Epoch: 2 Loss: 5.132437
+01-28 17:36 INFO     Epoch: 3 Loss: 4.998064
+01-28 17:36 INFO     Epoch: 4 Loss: 4.716504
+01-28 17:36 INFO     Epoch: 5 Loss: 4.517140
+01-28 17:36 INFO     Epoch: 6 Loss: 4.310554
+01-28 17:36 INFO     Epoch: 7 Loss: 4.194670
+01-28 17:36 INFO     Epoch: 8 Loss: 4.085023
+01-28 17:36 INFO     Epoch: 9 Loss: 4.002311
+01-28 17:36 INFO      ** Training complete **
+01-28 17:36 INFO     Training network 3. n_training: 691
+01-28 17:36 INFO     Training network 3
+01-28 17:36 INFO     n_training: 2
+01-28 17:36 INFO     n_test: 10
+01-28 17:36 INFO     Epoch: 0 Loss: 5.537830
+01-28 17:36 INFO     Epoch: 1 Loss: 5.371446
+01-28 17:36 INFO     Epoch: 2 Loss: 5.227229
+01-28 17:36 INFO     Epoch: 3 Loss: 4.930595
+01-28 17:37 INFO     Epoch: 4 Loss: 4.773209
+01-28 17:37 INFO     Epoch: 5 Loss: 4.583192
+01-28 17:37 INFO     Epoch: 6 Loss: 4.433090
+01-28 17:37 INFO     Epoch: 7 Loss: 4.226932
+01-28 17:37 INFO     Epoch: 8 Loss: 4.166746
+01-28 17:37 INFO     Epoch: 9 Loss: 4.015418
+01-28 17:37 INFO      ** Training complete **
+01-28 17:37 INFO     Training network 4. n_training: 496
+01-28 17:37 INFO     Training network 4
+01-28 17:37 INFO     n_training: 1
+01-28 17:37 INFO     n_test: 10
+01-28 17:37 INFO     Epoch: 0 Loss: 5.810882
+01-28 17:37 INFO     Epoch: 1 Loss: 5.670357
+01-28 17:37 INFO     Epoch: 2 Loss: 5.492329
+01-28 17:37 INFO     Epoch: 3 Loss: 5.385705
+01-28 17:37 INFO     Epoch: 4 Loss: 5.344909
+01-28 17:37 INFO     Epoch: 5 Loss: 5.072100
+01-28 17:37 INFO     Epoch: 6 Loss: 4.822655
+01-28 17:37 INFO     Epoch: 7 Loss: 5.047156
+01-28 17:37 INFO     Epoch: 8 Loss: 5.053348
+01-28 17:37 INFO     Epoch: 9 Loss: 4.573560
+01-28 17:37 INFO      ** Training complete **
+01-28 17:37 INFO     Training network 5. n_training: 519
+01-28 17:37 INFO     Training network 5
+01-28 17:37 INFO     n_training: 2
+01-28 17:37 INFO     n_test: 10
+01-28 17:37 INFO     Epoch: 0 Loss: 5.573587
+01-28 17:37 INFO     Epoch: 1 Loss: 5.339362
+01-28 17:37 INFO     Epoch: 2 Loss: 5.086844
+01-28 17:37 INFO     Epoch: 3 Loss: 4.900666
+01-28 17:37 INFO     Epoch: 4 Loss: 4.681268
+01-28 17:37 INFO     Epoch: 5 Loss: 4.386081
+01-28 17:37 INFO     Epoch: 6 Loss: 4.243165
+01-28 17:37 INFO     Epoch: 7 Loss: 4.209526
+01-28 17:37 INFO     Epoch: 8 Loss: 3.997363
+01-28 17:37 INFO     Epoch: 9 Loss: 3.953988
+01-28 17:37 INFO      ** Training complete **
+01-28 17:37 INFO     Training network 6. n_training: 625
+01-28 17:37 INFO     Training network 6
+01-28 17:37 INFO     n_training: 2
+01-28 17:37 INFO     n_test: 10
+01-28 17:37 INFO     Epoch: 0 Loss: 5.609397
+01-28 17:37 INFO     Epoch: 1 Loss: 5.404500
+01-28 17:37 INFO     Epoch: 2 Loss: 5.179707
+01-28 17:37 INFO     Epoch: 3 Loss: 4.981404
+01-28 17:37 INFO     Epoch: 4 Loss: 4.668034
+01-28 17:37 INFO     Epoch: 5 Loss: 4.445296
+01-28 17:37 INFO     Epoch: 6 Loss: 4.244677
+01-28 17:37 INFO     Epoch: 7 Loss: 4.241901
+01-28 17:37 INFO     Epoch: 8 Loss: 4.036601
+01-28 17:38 INFO     Epoch: 9 Loss: 3.889391
+01-28 17:38 INFO      ** Training complete **
+01-28 17:38 INFO     Training network 7. n_training: 349
+01-28 17:38 INFO     Training network 7
+01-28 17:38 INFO     n_training: 1
+01-28 17:38 INFO     n_test: 10
+01-28 17:38 INFO     Epoch: 0 Loss: 5.540796
+01-28 17:38 INFO     Epoch: 1 Loss: 5.468620
+01-28 17:38 INFO     Epoch: 2 Loss: 5.331935
+01-28 17:38 INFO     Epoch: 3 Loss: 5.288934
+01-28 17:38 INFO     Epoch: 4 Loss: 5.346236
+01-28 17:38 INFO     Epoch: 5 Loss: 5.021811
+01-28 17:38 INFO     Epoch: 6 Loss: 5.012911
+01-28 17:38 INFO     Epoch: 7 Loss: 4.739674
+01-28 17:38 INFO     Epoch: 8 Loss: 4.764310
+01-28 17:38 INFO     Epoch: 9 Loss: 4.401578
+01-28 17:38 INFO      ** Training complete **
+01-28 17:38 INFO     Training network 8. n_training: 542
+01-28 17:38 INFO     Training network 8
+01-28 17:38 INFO     n_training: 2
+01-28 17:38 INFO     n_test: 10
+01-28 17:38 INFO     Epoch: 0 Loss: 5.521085
+01-28 17:38 INFO     Epoch: 1 Loss: 5.289152
+01-28 17:38 INFO     Epoch: 2 Loss: 5.027285
+01-28 17:38 INFO     Epoch: 3 Loss: 4.857006
+01-28 17:38 INFO     Epoch: 4 Loss: 4.661316
+01-28 17:38 INFO     Epoch: 5 Loss: 4.481608
+01-28 17:38 INFO     Epoch: 6 Loss: 4.289397
+01-28 17:38 INFO     Epoch: 7 Loss: 4.131566
+01-28 17:38 INFO     Epoch: 8 Loss: 4.057152
+01-28 17:38 INFO     Epoch: 9 Loss: 3.861187
+01-28 17:38 INFO      ** Training complete **
+01-28 17:38 INFO     Training network 9. n_training: 347
+01-28 17:38 INFO     Training network 9
+01-28 17:38 INFO     n_training: 1
+01-28 17:38 INFO     n_test: 10
+01-28 17:38 INFO     Epoch: 0 Loss: 5.602057
+01-28 17:38 INFO     Epoch: 1 Loss: 5.548617
+01-28 17:38 INFO     Epoch: 2 Loss: 5.342731
+01-28 17:38 INFO     Epoch: 3 Loss: 5.287053
+01-28 17:38 INFO     Epoch: 4 Loss: 5.215885
+01-28 17:38 INFO     Epoch: 5 Loss: 5.164622
+01-28 17:38 INFO     Epoch: 6 Loss: 4.782876
+01-28 17:38 INFO     Epoch: 7 Loss: 4.888812
+01-28 17:38 INFO     Epoch: 8 Loss: 4.746290
+01-28 17:38 INFO     Epoch: 9 Loss: 4.642868
+01-28 17:38 INFO      ** Training complete **
+01-28 17:40 INFO     >> Global Model Test accuracy Top1: 43.910000
+01-28 17:40 INFO     >> Global Model Test accuracy Top5: 89.820000
+01-28 17:40 INFO     in comm round:7
+01-28 17:40 INFO     Training network 0. n_training: 576
+01-28 17:40 INFO     Training network 0
+01-28 17:40 INFO     n_training: 2
+01-28 17:40 INFO     n_test: 10
+01-28 17:40 INFO     Epoch: 0 Loss: 4.182152
+01-28 17:40 INFO     Epoch: 1 Loss: 4.095448
+01-28 17:40 INFO     Epoch: 2 Loss: 4.037042
+01-28 17:41 INFO     Epoch: 3 Loss: 3.809812
+01-28 17:41 INFO     Epoch: 4 Loss: 3.740120
+01-28 17:41 INFO     Epoch: 5 Loss: 3.576435
+01-28 17:41 INFO     Epoch: 6 Loss: 3.461333
+01-28 17:41 INFO     Epoch: 7 Loss: 3.547566
+01-28 17:41 INFO     Epoch: 8 Loss: 3.531457
+01-28 17:41 INFO     Epoch: 9 Loss: 3.339907
+01-28 17:41 INFO      ** Training complete **
+01-28 17:41 INFO     Training network 1. n_training: 293
+01-28 17:41 INFO     Training network 1
+01-28 17:41 INFO     n_training: 1
+01-28 17:41 INFO     n_test: 10
+01-28 17:41 INFO     Epoch: 0 Loss: 4.401623
+01-28 17:41 INFO     Epoch: 1 Loss: 4.218367
+01-28 17:41 INFO     Epoch: 2 Loss: 4.193523
+01-28 17:41 INFO     Epoch: 3 Loss: 3.997761
+01-28 17:41 INFO     Epoch: 4 Loss: 3.953392
+01-28 17:41 INFO     Epoch: 5 Loss: 4.045742
+01-28 17:41 INFO     Epoch: 6 Loss: 3.770045
+01-28 17:41 INFO     Epoch: 7 Loss: 3.688056
+01-28 17:41 INFO     Epoch: 8 Loss: 3.840960
+01-28 17:41 INFO     Epoch: 9 Loss: 3.608988
+01-28 17:41 INFO      ** Training complete **
+01-28 17:41 INFO     Training network 2. n_training: 562
+01-28 17:41 INFO     Training network 2
+01-28 17:41 INFO     n_training: 2
+01-28 17:41 INFO     n_test: 10
+01-28 17:41 INFO     Epoch: 0 Loss: 4.332333
+01-28 17:41 INFO     Epoch: 1 Loss: 4.161191
+01-28 17:41 INFO     Epoch: 2 Loss: 4.046640
+01-28 17:41 INFO     Epoch: 3 Loss: 3.939409
+01-28 17:41 INFO     Epoch: 4 Loss: 3.850046
+01-28 17:41 INFO     Epoch: 5 Loss: 3.730944
+01-28 17:41 INFO     Epoch: 6 Loss: 3.719097
+01-28 17:41 INFO     Epoch: 7 Loss: 3.547843
+01-28 17:41 INFO     Epoch: 8 Loss: 3.521198
+01-28 17:41 INFO     Epoch: 9 Loss: 3.423432
+01-28 17:41 INFO      ** Training complete **
+01-28 17:41 INFO     Training network 3. n_training: 691
+01-28 17:41 INFO     Training network 3
+01-28 17:41 INFO     n_training: 2
+01-28 17:41 INFO     n_test: 10
+01-28 17:41 INFO     Epoch: 0 Loss: 4.350836
+01-28 17:41 INFO     Epoch: 1 Loss: 4.120286
+01-28 17:41 INFO     Epoch: 2 Loss: 4.110651
+01-28 17:41 INFO     Epoch: 3 Loss: 3.948024
+01-28 17:41 INFO     Epoch: 4 Loss: 3.923677
+01-28 17:41 INFO     Epoch: 5 Loss: 3.862949
+01-28 17:41 INFO     Epoch: 6 Loss: 3.744138
+01-28 17:41 INFO     Epoch: 7 Loss: 3.571296
+01-28 17:42 INFO     Epoch: 8 Loss: 3.455329
+01-28 17:42 INFO     Epoch: 9 Loss: 3.287363
+01-28 17:42 INFO      ** Training complete **
+01-28 17:42 INFO     Training network 4. n_training: 496
+01-28 17:42 INFO     Training network 4
+01-28 17:42 INFO     n_training: 1
+01-28 17:42 INFO     n_test: 10
+01-28 17:42 INFO     Epoch: 0 Loss: 4.363170
+01-28 17:42 INFO     Epoch: 1 Loss: 4.350969
+01-28 17:42 INFO     Epoch: 2 Loss: 4.294913
+01-28 17:42 INFO     Epoch: 3 Loss: 4.258573
+01-28 17:42 INFO     Epoch: 4 Loss: 4.070604
+01-28 17:42 INFO     Epoch: 5 Loss: 4.181426
+01-28 17:42 INFO     Epoch: 6 Loss: 4.115692
+01-28 17:42 INFO     Epoch: 7 Loss: 4.133081
+01-28 17:42 INFO     Epoch: 8 Loss: 3.898080
+01-28 17:42 INFO     Epoch: 9 Loss: 3.829976
+01-28 17:42 INFO      ** Training complete **
+01-28 17:42 INFO     Training network 5. n_training: 519
+01-28 17:42 INFO     Training network 5
+01-28 17:42 INFO     n_training: 2
+01-28 17:42 INFO     n_test: 10
+01-28 17:42 INFO     Epoch: 0 Loss: 4.272595
+01-28 17:42 INFO     Epoch: 1 Loss: 4.260588
+01-28 17:42 INFO     Epoch: 2 Loss: 3.998163
+01-28 17:42 INFO     Epoch: 3 Loss: 4.006997
+01-28 17:42 INFO     Epoch: 4 Loss: 3.858008
+01-28 17:42 INFO     Epoch: 5 Loss: 3.694095
+01-28 17:42 INFO     Epoch: 6 Loss: 3.774545
+01-28 17:42 INFO     Epoch: 7 Loss: 3.462691
+01-28 17:42 INFO     Epoch: 8 Loss: 3.438738
+01-28 17:42 INFO     Epoch: 9 Loss: 3.304478
+01-28 17:42 INFO      ** Training complete **
+01-28 17:42 INFO     Training network 6. n_training: 625
+01-28 17:42 INFO     Training network 6
+01-28 17:42 INFO     n_training: 2
+01-28 17:42 INFO     n_test: 10
+01-28 17:42 INFO     Epoch: 0 Loss: 4.288983
+01-28 17:42 INFO     Epoch: 1 Loss: 4.168535
+01-28 17:42 INFO     Epoch: 2 Loss: 4.116701
+01-28 17:42 INFO     Epoch: 3 Loss: 3.979487
+01-28 17:42 INFO     Epoch: 4 Loss: 3.831194
+01-28 17:42 INFO     Epoch: 5 Loss: 3.765757
+01-28 17:42 INFO     Epoch: 6 Loss: 3.639933
+01-28 17:42 INFO     Epoch: 7 Loss: 3.448651
+01-28 17:42 INFO     Epoch: 8 Loss: 3.401528
+01-28 17:42 INFO     Epoch: 9 Loss: 3.354666
+01-28 17:42 INFO      ** Training complete **
+01-28 17:42 INFO     Training network 7. n_training: 349
+01-28 17:42 INFO     Training network 7
+01-28 17:42 INFO     n_training: 1
+01-28 17:42 INFO     n_test: 10
+01-28 17:42 INFO     Epoch: 0 Loss: 4.325431
+01-28 17:42 INFO     Epoch: 1 Loss: 4.196146
+01-28 17:42 INFO     Epoch: 2 Loss: 4.227416
+01-28 17:42 INFO     Epoch: 3 Loss: 4.234410
+01-28 17:42 INFO     Epoch: 4 Loss: 4.143734
+01-28 17:42 INFO     Epoch: 5 Loss: 3.967517
+01-28 17:42 INFO     Epoch: 6 Loss: 3.934511
+01-28 17:42 INFO     Epoch: 7 Loss: 3.774847
+01-28 17:43 INFO     Epoch: 8 Loss: 3.743219
+01-28 17:43 INFO     Epoch: 9 Loss: 3.643721
+01-28 17:43 INFO      ** Training complete **
+01-28 17:43 INFO     Training network 8. n_training: 542
+01-28 17:43 INFO     Training network 8
+01-28 17:43 INFO     n_training: 2
+01-28 17:43 INFO     n_test: 10
+01-28 17:43 INFO     Epoch: 0 Loss: 4.296484
+01-28 17:43 INFO     Epoch: 1 Loss: 4.140488
+01-28 17:43 INFO     Epoch: 2 Loss: 4.064864
+01-28 17:43 INFO     Epoch: 3 Loss: 3.989051
+01-28 17:43 INFO     Epoch: 4 Loss: 3.769885
+01-28 17:43 INFO     Epoch: 5 Loss: 3.824379
+01-28 17:43 INFO     Epoch: 6 Loss: 3.637362
+01-28 17:43 INFO     Epoch: 7 Loss: 3.566924
+01-28 17:43 INFO     Epoch: 8 Loss: 3.534852
+01-28 17:43 INFO     Epoch: 9 Loss: 3.414548
+01-28 17:43 INFO      ** Training complete **
+01-28 17:43 INFO     Training network 9. n_training: 347
+01-28 17:43 INFO     Training network 9
+01-28 17:43 INFO     n_training: 1
+01-28 17:43 INFO     n_test: 10
+01-28 17:43 INFO     Epoch: 0 Loss: 4.402044
+01-28 17:43 INFO     Epoch: 1 Loss: 4.324236
+01-28 17:43 INFO     Epoch: 2 Loss: 4.219791
+01-28 17:43 INFO     Epoch: 3 Loss: 4.090279
+01-28 17:43 INFO     Epoch: 4 Loss: 4.151810
+01-28 17:43 INFO     Epoch: 5 Loss: 3.945110
+01-28 17:43 INFO     Epoch: 6 Loss: 4.002557
+01-28 17:43 INFO     Epoch: 7 Loss: 4.018558
+01-28 17:43 INFO     Epoch: 8 Loss: 3.915179
+01-28 17:43 INFO     Epoch: 9 Loss: 3.742163
+01-28 17:43 INFO      ** Training complete **
+01-28 17:45 INFO     >> Global Model Test accuracy Top1: 44.070000
+01-28 17:45 INFO     >> Global Model Test accuracy Top5: 90.520000
+01-28 17:45 INFO     in comm round:8
+01-28 17:45 INFO     Training network 0. n_training: 576
+01-28 17:45 INFO     Training network 0
+01-28 17:45 INFO     n_training: 2
+01-28 17:45 INFO     n_test: 10
+01-28 17:45 INFO     Epoch: 0 Loss: 3.650925
+01-28 17:45 INFO     Epoch: 1 Loss: 3.364041
+01-28 17:45 INFO     Epoch: 2 Loss: 3.500434
+01-28 17:45 INFO     Epoch: 3 Loss: 3.328310
+01-28 17:45 INFO     Epoch: 4 Loss: 3.290969
+01-28 17:45 INFO     Epoch: 5 Loss: 3.175839
+01-28 17:45 INFO     Epoch: 6 Loss: 3.177105
+01-28 17:45 INFO     Epoch: 7 Loss: 3.077203
+01-28 17:46 INFO     Epoch: 8 Loss: 2.959549
+01-28 17:46 INFO     Epoch: 9 Loss: 2.913198
+01-28 17:46 INFO      ** Training complete **
+01-28 17:46 INFO     Training network 1. n_training: 293
+01-28 17:46 INFO     Training network 1
+01-28 17:46 INFO     n_training: 1
+01-28 17:46 INFO     n_test: 10
+01-28 17:46 INFO     Epoch: 0 Loss: 3.505790
+01-28 17:46 INFO     Epoch: 1 Loss: 3.582684
+01-28 17:46 INFO     Epoch: 2 Loss: 3.458843
+01-28 17:46 INFO     Epoch: 3 Loss: 3.365256
+01-28 17:46 INFO     Epoch: 4 Loss: 3.361668
+01-28 17:46 INFO     Epoch: 5 Loss: 3.469337
+01-28 17:46 INFO     Epoch: 6 Loss: 3.229802
+01-28 17:46 INFO     Epoch: 7 Loss: 3.290525
+01-28 17:46 INFO     Epoch: 8 Loss: 3.194932
+01-28 17:46 INFO     Epoch: 9 Loss: 3.207442
+01-28 17:46 INFO      ** Training complete **
+01-28 17:46 INFO     Training network 2. n_training: 562
+01-28 17:46 INFO     Training network 2
+01-28 17:46 INFO     n_training: 2
+01-28 17:46 INFO     n_test: 10
+01-28 17:46 INFO     Epoch: 0 Loss: 3.651224
+01-28 17:46 INFO     Epoch: 1 Loss: 3.638335
+01-28 17:46 INFO     Epoch: 2 Loss: 3.526033
+01-28 17:46 INFO     Epoch: 3 Loss: 3.455687
+01-28 17:46 INFO     Epoch: 4 Loss: 3.507755
+01-28 17:46 INFO     Epoch: 5 Loss: 3.357929
+01-28 17:46 INFO     Epoch: 6 Loss: 3.217459
+01-28 17:46 INFO     Epoch: 7 Loss: 3.128373
+01-28 17:46 INFO     Epoch: 8 Loss: 3.182485
+01-28 17:46 INFO     Epoch: 9 Loss: 2.938698
+01-28 17:46 INFO      ** Training complete **
+01-28 17:46 INFO     Training network 3. n_training: 691
+01-28 17:46 INFO     Training network 3
+01-28 17:46 INFO     n_training: 2
+01-28 17:46 INFO     n_test: 10
+01-28 17:46 INFO     Epoch: 0 Loss: 3.524699
+01-28 17:46 INFO     Epoch: 1 Loss: 3.516719
+01-28 17:46 INFO     Epoch: 2 Loss: 3.427279
+01-28 17:46 INFO     Epoch: 3 Loss: 3.432767
+01-28 17:46 INFO     Epoch: 4 Loss: 3.348797
+01-28 17:46 INFO     Epoch: 5 Loss: 3.327447
+01-28 17:46 INFO     Epoch: 6 Loss: 3.298506
+01-28 17:46 INFO     Epoch: 7 Loss: 3.100367
+01-28 17:46 INFO     Epoch: 8 Loss: 3.067836
+01-28 17:46 INFO     Epoch: 9 Loss: 2.998546
+01-28 17:46 INFO      ** Training complete **
+01-28 17:46 INFO     Training network 4. n_training: 496
+01-28 17:46 INFO     Training network 4
+01-28 17:46 INFO     n_training: 1
+01-28 17:46 INFO     n_test: 10
+01-28 17:46 INFO     Epoch: 0 Loss: 3.786840
+01-28 17:46 INFO     Epoch: 1 Loss: 3.662349
+01-28 17:46 INFO     Epoch: 2 Loss: 3.561767
+01-28 17:46 INFO     Epoch: 3 Loss: 3.590088
+01-28 17:46 INFO     Epoch: 4 Loss: 3.503995
+01-28 17:46 INFO     Epoch: 5 Loss: 3.512712
+01-28 17:46 INFO     Epoch: 6 Loss: 3.397852
+01-28 17:47 INFO     Epoch: 7 Loss: 3.472363
+01-28 17:47 INFO     Epoch: 8 Loss: 3.451763
+01-28 17:47 INFO     Epoch: 9 Loss: 3.439661
+01-28 17:47 INFO      ** Training complete **
+01-28 17:47 INFO     Training network 5. n_training: 519
+01-28 17:47 INFO     Training network 5
+01-28 17:47 INFO     n_training: 2
+01-28 17:47 INFO     n_test: 10
+01-28 17:47 INFO     Epoch: 0 Loss: 3.606304
+01-28 17:47 INFO     Epoch: 1 Loss: 3.514833
+01-28 17:47 INFO     Epoch: 2 Loss: 3.339309
+01-28 17:47 INFO     Epoch: 3 Loss: 3.420590
+01-28 17:47 INFO     Epoch: 4 Loss: 3.321190
+01-28 17:47 INFO     Epoch: 5 Loss: 3.288618
+01-28 17:47 INFO     Epoch: 6 Loss: 3.170883
+01-28 17:47 INFO     Epoch: 7 Loss: 3.090420
+01-28 17:47 INFO     Epoch: 8 Loss: 3.053765
+01-28 17:47 INFO     Epoch: 9 Loss: 2.980928
+01-28 17:47 INFO      ** Training complete **
+01-28 17:47 INFO     Training network 6. n_training: 625
+01-28 17:47 INFO     Training network 6
+01-28 17:47 INFO     n_training: 2
+01-28 17:47 INFO     n_test: 10
+01-28 17:47 INFO     Epoch: 0 Loss: 3.545420
+01-28 17:47 INFO     Epoch: 1 Loss: 3.502502
+01-28 17:47 INFO     Epoch: 2 Loss: 3.476510
+01-28 17:47 INFO     Epoch: 3 Loss: 3.461046
+01-28 17:47 INFO     Epoch: 4 Loss: 3.380185
+01-28 17:47 INFO     Epoch: 5 Loss: 3.327753
+01-28 17:47 INFO     Epoch: 6 Loss: 3.353559
+01-28 17:47 INFO     Epoch: 7 Loss: 3.156988
+01-28 17:47 INFO     Epoch: 8 Loss: 3.144309
+01-28 17:47 INFO     Epoch: 9 Loss: 2.989758
+01-28 17:47 INFO      ** Training complete **
+01-28 17:47 INFO     Training network 7. n_training: 349
+01-28 17:47 INFO     Training network 7
+01-28 17:47 INFO     n_training: 1
+01-28 17:47 INFO     n_test: 10
+01-28 17:47 INFO     Epoch: 0 Loss: 3.524399
+01-28 17:47 INFO     Epoch: 1 Loss: 3.558717
+01-28 17:47 INFO     Epoch: 2 Loss: 3.481745
+01-28 17:47 INFO     Epoch: 3 Loss: 3.488824
+01-28 17:47 INFO     Epoch: 4 Loss: 3.584588
+01-28 17:47 INFO     Epoch: 5 Loss: 3.400676
+01-28 17:47 INFO     Epoch: 6 Loss: 3.365629
+01-28 17:47 INFO     Epoch: 7 Loss: 3.269156
+01-28 17:47 INFO     Epoch: 8 Loss: 3.299505
+01-28 17:47 INFO     Epoch: 9 Loss: 3.217627
+01-28 17:47 INFO      ** Training complete **
+01-28 17:47 INFO     Training network 8. n_training: 542
+01-28 17:47 INFO     Training network 8
+01-28 17:47 INFO     n_training: 2
+01-28 17:47 INFO     n_test: 10
+01-28 17:47 INFO     Epoch: 0 Loss: 3.541550
+01-28 17:47 INFO     Epoch: 1 Loss: 3.532318
+01-28 17:47 INFO     Epoch: 2 Loss: 3.528892
+01-28 17:47 INFO     Epoch: 3 Loss: 3.339245
+01-28 17:48 INFO     Epoch: 4 Loss: 3.438705
+01-28 17:48 INFO     Epoch: 5 Loss: 3.351974
+01-28 17:48 INFO     Epoch: 6 Loss: 3.240821
+01-28 17:48 INFO     Epoch: 7 Loss: 3.187202
+01-28 17:48 INFO     Epoch: 8 Loss: 3.046681
+01-28 17:48 INFO     Epoch: 9 Loss: 2.978523
+01-28 17:48 INFO      ** Training complete **
+01-28 17:48 INFO     Training network 9. n_training: 347
+01-28 17:48 INFO     Training network 9
+01-28 17:48 INFO     n_training: 1
+01-28 17:48 INFO     n_test: 10
+01-28 17:48 INFO     Epoch: 0 Loss: 3.571779
+01-28 17:48 INFO     Epoch: 1 Loss: 3.674102
+01-28 17:48 INFO     Epoch: 2 Loss: 3.632141
+01-28 17:48 INFO     Epoch: 3 Loss: 3.643110
+01-28 17:48 INFO     Epoch: 4 Loss: 3.534252
+01-28 17:48 INFO     Epoch: 5 Loss: 3.403583
+01-28 17:48 INFO     Epoch: 6 Loss: 3.416518
+01-28 17:48 INFO     Epoch: 7 Loss: 3.430283
+01-28 17:48 INFO     Epoch: 8 Loss: 3.322494
+01-28 17:48 INFO     Epoch: 9 Loss: 3.380849
+01-28 17:48 INFO      ** Training complete **
+01-28 17:50 INFO     >> Global Model Test accuracy Top1: 45.620000
+01-28 17:50 INFO     >> Global Model Test accuracy Top5: 91.010000
+01-28 17:50 INFO     in comm round:9
+01-28 17:50 INFO     Training network 0. n_training: 576
+01-28 17:50 INFO     Training network 0
+01-28 17:50 INFO     n_training: 2
+01-28 17:50 INFO     n_test: 10
+01-28 17:50 INFO     Epoch: 0 Loss: 3.164078
+01-28 17:50 INFO     Epoch: 1 Loss: 3.080027
+01-28 17:50 INFO     Epoch: 2 Loss: 2.990590
+01-28 17:50 INFO     Epoch: 3 Loss: 2.925043
+01-28 17:50 INFO     Epoch: 4 Loss: 2.925640
+01-28 17:50 INFO     Epoch: 5 Loss: 2.844458
+01-28 17:50 INFO     Epoch: 6 Loss: 2.764413
+01-28 17:50 INFO     Epoch: 7 Loss: 2.733456
+01-28 17:50 INFO     Epoch: 8 Loss: 2.582762
+01-28 17:50 INFO     Epoch: 9 Loss: 2.508711
+01-28 17:50 INFO      ** Training complete **
+01-28 17:50 INFO     Training network 1. n_training: 293
+01-28 17:50 INFO     Training network 1
+01-28 17:50 INFO     n_training: 1
+01-28 17:50 INFO     n_test: 10
+01-28 17:50 INFO     Epoch: 0 Loss: 3.111118
+01-28 17:50 INFO     Epoch: 1 Loss: 3.091601
+01-28 17:50 INFO     Epoch: 2 Loss: 3.052257
+01-28 17:50 INFO     Epoch: 3 Loss: 2.956675
+01-28 17:50 INFO     Epoch: 4 Loss: 2.966452
+01-28 17:50 INFO     Epoch: 5 Loss: 2.873301
+01-28 17:50 INFO     Epoch: 6 Loss: 2.942382
+01-28 17:51 INFO     Epoch: 7 Loss: 2.996000
+01-28 17:51 INFO     Epoch: 8 Loss: 2.809662
+01-28 17:51 INFO     Epoch: 9 Loss: 2.748371
+01-28 17:51 INFO      ** Training complete **
+01-28 17:51 INFO     Training network 2. n_training: 562
+01-28 17:51 INFO     Training network 2
+01-28 17:51 INFO     n_training: 2
+01-28 17:51 INFO     n_test: 10
+01-28 17:51 INFO     Epoch: 0 Loss: 3.164644
+01-28 17:51 INFO     Epoch: 1 Loss: 3.142657
+01-28 17:51 INFO     Epoch: 2 Loss: 3.056150
+01-28 17:51 INFO     Epoch: 3 Loss: 3.081616
+01-28 17:51 INFO     Epoch: 4 Loss: 3.035544
+01-28 17:51 INFO     Epoch: 5 Loss: 2.915823
+01-28 17:51 INFO     Epoch: 6 Loss: 2.874431
+01-28 17:51 INFO     Epoch: 7 Loss: 2.693486
+01-28 17:51 INFO     Epoch: 8 Loss: 2.568854
+01-28 17:51 INFO     Epoch: 9 Loss: 2.542823
+01-28 17:51 INFO      ** Training complete **
+01-28 17:51 INFO     Training network 3. n_training: 691
+01-28 17:51 INFO     Training network 3
+01-28 17:51 INFO     n_training: 2
+01-28 17:51 INFO     n_test: 10
+01-28 17:51 INFO     Epoch: 0 Loss: 3.243840
+01-28 17:51 INFO     Epoch: 1 Loss: 3.185149
+01-28 17:51 INFO     Epoch: 2 Loss: 3.141236
+01-28 17:51 INFO     Epoch: 3 Loss: 3.047667
+01-28 17:51 INFO     Epoch: 4 Loss: 3.021973
+01-28 17:51 INFO     Epoch: 5 Loss: 2.889275
+01-28 17:51 INFO     Epoch: 6 Loss: 2.764142
+01-28 17:51 INFO     Epoch: 7 Loss: 2.760383
+01-28 17:51 INFO     Epoch: 8 Loss: 2.689142
+01-28 17:51 INFO     Epoch: 9 Loss: 2.782240
+01-28 17:51 INFO      ** Training complete **
+01-28 17:51 INFO     Training network 4. n_training: 496
+01-28 17:51 INFO     Training network 4
+01-28 17:51 INFO     n_training: 1
+01-28 17:51 INFO     n_test: 10
+01-28 17:51 INFO     Epoch: 0 Loss: 3.339469
+01-28 17:51 INFO     Epoch: 1 Loss: 3.026967
+01-28 17:51 INFO     Epoch: 2 Loss: 3.197014
+01-28 17:51 INFO     Epoch: 3 Loss: 3.206467
+01-28 17:51 INFO     Epoch: 4 Loss: 3.089553
+01-28 17:51 INFO     Epoch: 5 Loss: 3.105956
+01-28 17:51 INFO     Epoch: 6 Loss: 3.106693
+01-28 17:51 INFO     Epoch: 7 Loss: 2.973206
+01-28 17:51 INFO     Epoch: 8 Loss: 3.129102
+01-28 17:51 INFO     Epoch: 9 Loss: 2.818013
+01-28 17:51 INFO      ** Training complete **
+01-28 17:51 INFO     Training network 5. n_training: 519
+01-28 17:51 INFO     Training network 5
+01-28 17:51 INFO     n_training: 2
+01-28 17:51 INFO     n_test: 10
+01-28 17:51 INFO     Epoch: 0 Loss: 3.210595
+01-28 17:51 INFO     Epoch: 1 Loss: 3.113932
+01-28 17:51 INFO     Epoch: 2 Loss: 3.029164
+01-28 17:51 INFO     Epoch: 3 Loss: 3.000332
+01-28 17:52 INFO     Epoch: 4 Loss: 2.892555
+01-28 17:52 INFO     Epoch: 5 Loss: 2.879242
+01-28 17:52 INFO     Epoch: 6 Loss: 2.878401
+01-28 17:52 INFO     Epoch: 7 Loss: 2.762961
+01-28 17:52 INFO     Epoch: 8 Loss: 2.601568
+01-28 17:52 INFO     Epoch: 9 Loss: 2.581927
+01-28 17:52 INFO      ** Training complete **
+01-28 17:52 INFO     Training network 6. n_training: 625
+01-28 17:52 INFO     Training network 6
+01-28 17:52 INFO     n_training: 2
+01-28 17:52 INFO     n_test: 10
+01-28 17:52 INFO     Epoch: 0 Loss: 3.172127
+01-28 17:52 INFO     Epoch: 1 Loss: 3.136849
+01-28 17:52 INFO     Epoch: 2 Loss: 3.060184
+01-28 17:52 INFO     Epoch: 3 Loss: 3.086735
+01-28 17:52 INFO     Epoch: 4 Loss: 2.960779
+01-28 17:52 INFO     Epoch: 5 Loss: 2.943315
+01-28 17:52 INFO     Epoch: 6 Loss: 2.843100
+01-28 17:52 INFO     Epoch: 7 Loss: 2.882502
+01-28 17:52 INFO     Epoch: 8 Loss: 2.659822
+01-28 17:52 INFO     Epoch: 9 Loss: 2.630343
+01-28 17:52 INFO      ** Training complete **
+01-28 17:52 INFO     Training network 7. n_training: 349
+01-28 17:52 INFO     Training network 7
+01-28 17:52 INFO     n_training: 1
+01-28 17:52 INFO     n_test: 10
+01-28 17:52 INFO     Epoch: 0 Loss: 3.174200
+01-28 17:52 INFO     Epoch: 1 Loss: 3.223415
+01-28 17:52 INFO     Epoch: 2 Loss: 3.194083
+01-28 17:52 INFO     Epoch: 3 Loss: 3.072770
+01-28 17:52 INFO     Epoch: 4 Loss: 3.055305
+01-28 17:52 INFO     Epoch: 5 Loss: 2.976890
+01-28 17:52 INFO     Epoch: 6 Loss: 3.048857
+01-28 17:52 INFO     Epoch: 7 Loss: 2.951928
+01-28 17:52 INFO     Epoch: 8 Loss: 2.740039
+01-28 17:52 INFO     Epoch: 9 Loss: 2.740446
+01-28 17:52 INFO      ** Training complete **
+01-28 17:52 INFO     Training network 8. n_training: 542
+01-28 17:52 INFO     Training network 8
+01-28 17:52 INFO     n_training: 2
+01-28 17:52 INFO     n_test: 10
+01-28 17:52 INFO     Epoch: 0 Loss: 3.262068
+01-28 17:52 INFO     Epoch: 1 Loss: 3.237254
+01-28 17:52 INFO     Epoch: 2 Loss: 3.152836
+01-28 17:52 INFO     Epoch: 3 Loss: 3.106414
+01-28 17:52 INFO     Epoch: 4 Loss: 3.046521
+01-28 17:52 INFO     Epoch: 5 Loss: 2.975222
+01-28 17:52 INFO     Epoch: 6 Loss: 2.779927
+01-28 17:52 INFO     Epoch: 7 Loss: 2.784930
+01-28 17:52 INFO     Epoch: 8 Loss: 2.642121
+01-28 17:52 INFO     Epoch: 9 Loss: 2.568919
+01-28 17:52 INFO      ** Training complete **
+01-28 17:52 INFO     Training network 9. n_training: 347
+01-28 17:52 INFO     Training network 9
+01-28 17:52 INFO     n_training: 1
+01-28 17:52 INFO     n_test: 10
+01-28 17:53 INFO     Epoch: 0 Loss: 3.282438
+01-28 17:53 INFO     Epoch: 1 Loss: 3.152255
+01-28 17:53 INFO     Epoch: 2 Loss: 3.148593
+01-28 17:53 INFO     Epoch: 3 Loss: 3.267547
+01-28 17:53 INFO     Epoch: 4 Loss: 3.051136
+01-28 17:53 INFO     Epoch: 5 Loss: 3.031461
+01-28 17:53 INFO     Epoch: 6 Loss: 3.031261
+01-28 17:53 INFO     Epoch: 7 Loss: 3.116688
+01-28 17:53 INFO     Epoch: 8 Loss: 2.943361
+01-28 17:53 INFO     Epoch: 9 Loss: 3.016456
+01-28 17:53 INFO      ** Training complete **
+01-28 17:55 INFO     >> Global Model Test accuracy Top1: 45.620000
+01-28 17:55 INFO     >> Global Model Test accuracy Top5: 91.230000
+01-28 17:55 INFO     in comm round:10
+01-28 17:55 INFO     Training network 0. n_training: 576
+01-28 17:55 INFO     Training network 0
+01-28 17:55 INFO     n_training: 2
+01-28 17:55 INFO     n_test: 10
+01-28 17:55 INFO     Epoch: 0 Loss: 2.807284
+01-28 17:55 INFO     Epoch: 1 Loss: 2.748219
+01-28 17:55 INFO     Epoch: 2 Loss: 2.676965
+01-28 17:55 INFO     Epoch: 3 Loss: 2.669718
+01-28 17:55 INFO     Epoch: 4 Loss: 2.668432
+01-28 17:55 INFO     Epoch: 5 Loss: 2.522049
+01-28 17:55 INFO     Epoch: 6 Loss: 2.475892
+01-28 17:55 INFO     Epoch: 7 Loss: 2.407318
+01-28 17:55 INFO     Epoch: 8 Loss: 2.345541
+01-28 17:55 INFO     Epoch: 9 Loss: 2.306645
+01-28 17:55 INFO      ** Training complete **
+01-28 17:55 INFO     Training network 1. n_training: 293
+01-28 17:55 INFO     Training network 1
+01-28 17:55 INFO     n_training: 1
+01-28 17:55 INFO     n_test: 10
+01-28 17:55 INFO     Epoch: 0 Loss: 2.798320
+01-28 17:55 INFO     Epoch: 1 Loss: 2.890512
+01-28 17:55 INFO     Epoch: 2 Loss: 2.900874
+01-28 17:55 INFO     Epoch: 3 Loss: 2.807502
+01-28 17:55 INFO     Epoch: 4 Loss: 2.685494
+01-28 17:55 INFO     Epoch: 5 Loss: 2.787547
+01-28 17:55 INFO     Epoch: 6 Loss: 2.671363
+01-28 17:55 INFO     Epoch: 7 Loss: 2.564121
+01-28 17:55 INFO     Epoch: 8 Loss: 2.550869
+01-28 17:55 INFO     Epoch: 9 Loss: 2.554338
+01-28 17:55 INFO      ** Training complete **
+01-28 17:55 INFO     Training network 2. n_training: 562
+01-28 17:55 INFO     Training network 2
+01-28 17:55 INFO     n_training: 2
+01-28 17:55 INFO     n_test: 10
+01-28 17:55 INFO     Epoch: 0 Loss: 2.783870
+01-28 17:55 INFO     Epoch: 1 Loss: 2.837101
+01-28 17:55 INFO     Epoch: 2 Loss: 2.781005
+01-28 17:55 INFO     Epoch: 3 Loss: 2.731373
+01-28 17:55 INFO     Epoch: 4 Loss: 2.611263
+01-28 17:56 INFO     Epoch: 5 Loss: 2.744365
+01-28 17:56 INFO     Epoch: 6 Loss: 2.554419
+01-28 17:56 INFO     Epoch: 7 Loss: 2.475782
+01-28 17:56 INFO     Epoch: 8 Loss: 2.489016
+01-28 17:56 INFO     Epoch: 9 Loss: 2.340901
+01-28 17:56 INFO      ** Training complete **
+01-28 17:56 INFO     Training network 3. n_training: 691
+01-28 17:56 INFO     Training network 3
+01-28 17:56 INFO     n_training: 2
+01-28 17:56 INFO     n_test: 10
+01-28 17:56 INFO     Epoch: 0 Loss: 2.849218
+01-28 17:56 INFO     Epoch: 1 Loss: 2.800087
+01-28 17:56 INFO     Epoch: 2 Loss: 2.759156
+01-28 17:56 INFO     Epoch: 3 Loss: 2.761584
+01-28 17:56 INFO     Epoch: 4 Loss: 2.546529
+01-28 17:56 INFO     Epoch: 5 Loss: 2.681833
+01-28 17:56 INFO     Epoch: 6 Loss: 2.584995
+01-28 17:56 INFO     Epoch: 7 Loss: 2.562278
+01-28 17:56 INFO     Epoch: 8 Loss: 2.359457
+01-28 17:56 INFO     Epoch: 9 Loss: 2.341164
+01-28 17:56 INFO      ** Training complete **
+01-28 17:56 INFO     Training network 4. n_training: 496
+01-28 17:56 INFO     Training network 4
+01-28 17:56 INFO     n_training: 1
+01-28 17:56 INFO     n_test: 10
+01-28 17:56 INFO     Epoch: 0 Loss: 2.798356
+01-28 17:56 INFO     Epoch: 1 Loss: 3.023540
+01-28 17:56 INFO     Epoch: 2 Loss: 2.810407
+01-28 17:56 INFO     Epoch: 3 Loss: 2.788491
+01-28 17:56 INFO     Epoch: 4 Loss: 2.907396
+01-28 17:56 INFO     Epoch: 5 Loss: 2.808582
+01-28 17:56 INFO     Epoch: 6 Loss: 2.696264
+01-28 17:56 INFO     Epoch: 7 Loss: 2.660584
+01-28 17:56 INFO     Epoch: 8 Loss: 2.805938
+01-28 17:56 INFO     Epoch: 9 Loss: 2.707025
+01-28 17:56 INFO      ** Training complete **
+01-28 17:56 INFO     Training network 5. n_training: 519
+01-28 17:56 INFO     Training network 5
+01-28 17:56 INFO     n_training: 2
+01-28 17:56 INFO     n_test: 10
+01-28 17:56 INFO     Epoch: 0 Loss: 2.838983
+01-28 17:56 INFO     Epoch: 1 Loss: 2.838440
+01-28 17:56 INFO     Epoch: 2 Loss: 2.688182
+01-28 17:56 INFO     Epoch: 3 Loss: 2.602564
+01-28 17:56 INFO     Epoch: 4 Loss: 2.633429
+01-28 17:56 INFO     Epoch: 5 Loss: 2.667249
+01-28 17:56 INFO     Epoch: 6 Loss: 2.592492
+01-28 17:56 INFO     Epoch: 7 Loss: 2.434995
+01-28 17:56 INFO     Epoch: 8 Loss: 2.344741
+01-28 17:56 INFO     Epoch: 9 Loss: 2.267620
+01-28 17:56 INFO      ** Training complete **
+01-28 17:56 INFO     Training network 6. n_training: 625
+01-28 17:56 INFO     Training network 6
+01-28 17:56 INFO     n_training: 2
+01-28 17:56 INFO     n_test: 10
+01-28 17:57 INFO     Epoch: 0 Loss: 2.920542
+01-28 17:57 INFO     Epoch: 1 Loss: 2.730177
+01-28 17:57 INFO     Epoch: 2 Loss: 2.845822
+01-28 17:57 INFO     Epoch: 3 Loss: 2.910140
+01-28 17:57 INFO     Epoch: 4 Loss: 2.728338
+01-28 17:57 INFO     Epoch: 5 Loss: 2.646820
+01-28 17:57 INFO     Epoch: 6 Loss: 2.524039
+01-28 17:57 INFO     Epoch: 7 Loss: 2.585184
+01-28 17:57 INFO     Epoch: 8 Loss: 2.577516
+01-28 17:57 INFO     Epoch: 9 Loss: 2.372617
+01-28 17:57 INFO      ** Training complete **
+01-28 17:57 INFO     Training network 7. n_training: 349
+01-28 17:57 INFO     Training network 7
+01-28 17:57 INFO     n_training: 1
+01-28 17:57 INFO     n_test: 10
+01-28 17:57 INFO     Epoch: 0 Loss: 2.835228
+01-28 17:57 INFO     Epoch: 1 Loss: 2.822070
+01-28 17:57 INFO     Epoch: 2 Loss: 2.729290
+01-28 17:57 INFO     Epoch: 3 Loss: 2.773261
+01-28 17:57 INFO     Epoch: 4 Loss: 2.579469
+01-28 17:57 INFO     Epoch: 5 Loss: 2.640164
+01-28 17:57 INFO     Epoch: 6 Loss: 2.656114
+01-28 17:57 INFO     Epoch: 7 Loss: 2.532550
+01-28 17:57 INFO     Epoch: 8 Loss: 2.522752
+01-28 17:57 INFO     Epoch: 9 Loss: 2.584485
+01-28 17:57 INFO      ** Training complete **
+01-28 17:57 INFO     Training network 8. n_training: 542
+01-28 17:57 INFO     Training network 8
+01-28 17:57 INFO     n_training: 2
+01-28 17:57 INFO     n_test: 10
+01-28 17:57 INFO     Epoch: 0 Loss: 2.903272
+01-28 17:57 INFO     Epoch: 1 Loss: 2.798964
+01-28 17:57 INFO     Epoch: 2 Loss: 2.779499
+01-28 17:57 INFO     Epoch: 3 Loss: 2.669029
+01-28 17:57 INFO     Epoch: 4 Loss: 2.668599
+01-28 17:57 INFO     Epoch: 5 Loss: 2.662596
+01-28 17:57 INFO     Epoch: 6 Loss: 2.558893
+01-28 17:57 INFO     Epoch: 7 Loss: 2.420138
+01-28 17:57 INFO     Epoch: 8 Loss: 2.361694
+01-28 17:57 INFO     Epoch: 9 Loss: 2.348194
+01-28 17:57 INFO      ** Training complete **
+01-28 17:57 INFO     Training network 9. n_training: 347
+01-28 17:57 INFO     Training network 9
+01-28 17:57 INFO     n_training: 1
+01-28 17:57 INFO     n_test: 10
+01-28 17:57 INFO     Epoch: 0 Loss: 2.856204
+01-28 17:57 INFO     Epoch: 1 Loss: 2.946882
+01-28 17:57 INFO     Epoch: 2 Loss: 2.884095
+01-28 17:57 INFO     Epoch: 3 Loss: 2.855006
+01-28 17:57 INFO     Epoch: 4 Loss: 2.770539
+01-28 17:57 INFO     Epoch: 5 Loss: 2.733468
+01-28 17:57 INFO     Epoch: 6 Loss: 2.686643
+01-28 17:57 INFO     Epoch: 7 Loss: 2.660646
+01-28 17:57 INFO     Epoch: 8 Loss: 2.815124
+01-28 17:57 INFO     Epoch: 9 Loss: 2.620407
+01-28 17:57 INFO      ** Training complete **
+01-28 18:00 INFO     >> Global Model Test accuracy Top1: 46.280000
+01-28 18:00 INFO     >> Global Model Test accuracy Top5: 91.220000
+01-28 18:00 INFO     in comm round:11
+01-28 18:00 INFO     Training network 0. n_training: 576
+01-28 18:00 INFO     Training network 0
+01-28 18:00 INFO     n_training: 2
+01-28 18:00 INFO     n_test: 10
+01-28 18:00 INFO     Epoch: 0 Loss: 2.413449
+01-28 18:00 INFO     Epoch: 1 Loss: 2.394410
+01-28 18:00 INFO     Epoch: 2 Loss: 2.355836
+01-28 18:00 INFO     Epoch: 3 Loss: 2.312859
+01-28 18:00 INFO     Epoch: 4 Loss: 2.291942
+01-28 18:00 INFO     Epoch: 5 Loss: 2.263176
+01-28 18:00 INFO     Epoch: 6 Loss: 2.202503
+01-28 18:00 INFO     Epoch: 7 Loss: 2.209162
+01-28 18:00 INFO     Epoch: 8 Loss: 2.082593
+01-28 18:00 INFO     Epoch: 9 Loss: 2.078462
+01-28 18:00 INFO      ** Training complete **
+01-28 18:00 INFO     Training network 1. n_training: 293
+01-28 18:00 INFO     Training network 1
+01-28 18:00 INFO     n_training: 1
+01-28 18:00 INFO     n_test: 10
+01-28 18:00 INFO     Epoch: 0 Loss: 2.504110
+01-28 18:00 INFO     Epoch: 1 Loss: 2.365526
+01-28 18:00 INFO     Epoch: 2 Loss: 2.454530
+01-28 18:00 INFO     Epoch: 3 Loss: 2.478132
+01-28 18:00 INFO     Epoch: 4 Loss: 2.468827
+01-28 18:00 INFO     Epoch: 5 Loss: 2.340267
+01-28 18:00 INFO     Epoch: 6 Loss: 2.256036
+01-28 18:00 INFO     Epoch: 7 Loss: 2.381007
+01-28 18:00 INFO     Epoch: 8 Loss: 2.306480
+01-28 18:00 INFO     Epoch: 9 Loss: 2.232479
+01-28 18:00 INFO      ** Training complete **
+01-28 18:00 INFO     Training network 2. n_training: 562
+01-28 18:00 INFO     Training network 2
+01-28 18:00 INFO     n_training: 2
+01-28 18:00 INFO     n_test: 10
+01-28 18:00 INFO     Epoch: 0 Loss: 2.502347
+01-28 18:00 INFO     Epoch: 1 Loss: 2.491651
+01-28 18:00 INFO     Epoch: 2 Loss: 2.481662
+01-28 18:00 INFO     Epoch: 3 Loss: 2.469822
+01-28 18:00 INFO     Epoch: 4 Loss: 2.415981
+01-28 18:00 INFO     Epoch: 5 Loss: 2.339875
+01-28 18:00 INFO     Epoch: 6 Loss: 2.364839
+01-28 18:00 INFO     Epoch: 7 Loss: 2.267398
+01-28 18:00 INFO     Epoch: 8 Loss: 2.176646
+01-28 18:00 INFO     Epoch: 9 Loss: 2.115671
+01-28 18:00 INFO      ** Training complete **
+01-28 18:00 INFO     Training network 3. n_training: 691
+01-28 18:00 INFO     Training network 3
+01-28 18:00 INFO     n_training: 2
+01-28 18:00 INFO     n_test: 10
+01-28 18:00 INFO     Epoch: 0 Loss: 2.475231
+01-28 18:01 INFO     Epoch: 1 Loss: 2.427835
+01-28 18:01 INFO     Epoch: 2 Loss: 2.463987
+01-28 18:01 INFO     Epoch: 3 Loss: 2.356182
+01-28 18:01 INFO     Epoch: 4 Loss: 2.336077
+01-28 18:01 INFO     Epoch: 5 Loss: 2.247523
+01-28 18:01 INFO     Epoch: 6 Loss: 2.291833
+01-28 18:01 INFO     Epoch: 7 Loss: 2.176721
+01-28 18:01 INFO     Epoch: 8 Loss: 2.236625
+01-28 18:01 INFO     Epoch: 9 Loss: 2.218439
+01-28 18:01 INFO      ** Training complete **
+01-28 18:01 INFO     Training network 4. n_training: 496
+01-28 18:01 INFO     Training network 4
+01-28 18:01 INFO     n_training: 1
+01-28 18:01 INFO     n_test: 10
+01-28 18:01 INFO     Epoch: 0 Loss: 2.651202
+01-28 18:01 INFO     Epoch: 1 Loss: 2.514968
+01-28 18:01 INFO     Epoch: 2 Loss: 2.495494
+01-28 18:01 INFO     Epoch: 3 Loss: 2.454527
+01-28 18:01 INFO     Epoch: 4 Loss: 2.461860
+01-28 18:01 INFO     Epoch: 5 Loss: 2.516539
+01-28 18:01 INFO     Epoch: 6 Loss: 2.495888
+01-28 18:01 INFO     Epoch: 7 Loss: 2.371288
+01-28 18:01 INFO     Epoch: 8 Loss: 2.389248
+01-28 18:01 INFO     Epoch: 9 Loss: 2.551544
+01-28 18:01 INFO      ** Training complete **
+01-28 18:01 INFO     Training network 5. n_training: 519
+01-28 18:01 INFO     Training network 5
+01-28 18:01 INFO     n_training: 2
+01-28 18:01 INFO     n_test: 10
+01-28 18:01 INFO     Epoch: 0 Loss: 2.542692
+01-28 18:01 INFO     Epoch: 1 Loss: 2.458123
+01-28 18:01 INFO     Epoch: 2 Loss: 2.384615
+01-28 18:01 INFO     Epoch: 3 Loss: 2.362405
+01-28 18:01 INFO     Epoch: 4 Loss: 2.271093
+01-28 18:01 INFO     Epoch: 5 Loss: 2.254787
+01-28 18:01 INFO     Epoch: 6 Loss: 2.278837
+01-28 18:01 INFO     Epoch: 7 Loss: 2.165820
+01-28 18:01 INFO     Epoch: 8 Loss: 2.093586
+01-28 18:01 INFO     Epoch: 9 Loss: 2.003991
+01-28 18:01 INFO      ** Training complete **
+01-28 18:01 INFO     Training network 6. n_training: 625
+01-28 18:01 INFO     Training network 6
+01-28 18:01 INFO     n_training: 2
+01-28 18:01 INFO     n_test: 10
+01-28 18:01 INFO     Epoch: 0 Loss: 2.473688
+01-28 18:01 INFO     Epoch: 1 Loss: 2.471359
+01-28 18:01 INFO     Epoch: 2 Loss: 2.367309
+01-28 18:01 INFO     Epoch: 3 Loss: 2.329744
+01-28 18:01 INFO     Epoch: 4 Loss: 2.316279
+01-28 18:01 INFO     Epoch: 5 Loss: 2.332515
+01-28 18:01 INFO     Epoch: 6 Loss: 2.234046
+01-28 18:02 INFO     Epoch: 7 Loss: 2.210379
+01-28 18:02 INFO     Epoch: 8 Loss: 2.101093
+01-28 18:02 INFO     Epoch: 9 Loss: 2.149499
+01-28 18:02 INFO      ** Training complete **
+01-28 18:02 INFO     Training network 7. n_training: 349
+01-28 18:02 INFO     Training network 7
+01-28 18:02 INFO     n_training: 1
+01-28 18:02 INFO     n_test: 10
+01-28 18:02 INFO     Epoch: 0 Loss: 2.431401
+01-28 18:02 INFO     Epoch: 1 Loss: 2.495194
+01-28 18:02 INFO     Epoch: 2 Loss: 2.526203
+01-28 18:02 INFO     Epoch: 3 Loss: 2.354902
+01-28 18:02 INFO     Epoch: 4 Loss: 2.356601
+01-28 18:02 INFO     Epoch: 5 Loss: 2.376860
+01-28 18:02 INFO     Epoch: 6 Loss: 2.451920
+01-28 18:02 INFO     Epoch: 7 Loss: 2.406233
+01-28 18:02 INFO     Epoch: 8 Loss: 2.302377
+01-28 18:02 INFO     Epoch: 9 Loss: 2.262189
+01-28 18:02 INFO      ** Training complete **
+01-28 18:02 INFO     Training network 8. n_training: 542
+01-28 18:02 INFO     Training network 8
+01-28 18:02 INFO     n_training: 2
+01-28 18:02 INFO     n_test: 10
+01-28 18:02 INFO     Epoch: 0 Loss: 2.554656
+01-28 18:02 INFO     Epoch: 1 Loss: 2.539593
+01-28 18:02 INFO     Epoch: 2 Loss: 2.436461
+01-28 18:02 INFO     Epoch: 3 Loss: 2.450730
+01-28 18:02 INFO     Epoch: 4 Loss: 2.349295
+01-28 18:02 INFO     Epoch: 5 Loss: 2.306490
+01-28 18:02 INFO     Epoch: 6 Loss: 2.265682
+01-28 18:02 INFO     Epoch: 7 Loss: 2.200443
+01-28 18:02 INFO     Epoch: 8 Loss: 2.137356
+01-28 18:02 INFO     Epoch: 9 Loss: 2.171007
+01-28 18:02 INFO      ** Training complete **
+01-28 18:02 INFO     Training network 9. n_training: 347
+01-28 18:02 INFO     Training network 9
+01-28 18:02 INFO     n_training: 1
+01-28 18:02 INFO     n_test: 10
+01-28 18:02 INFO     Epoch: 0 Loss: 2.584568
+01-28 18:02 INFO     Epoch: 1 Loss: 2.511547
+01-28 18:02 INFO     Epoch: 2 Loss: 2.535828
+01-28 18:02 INFO     Epoch: 3 Loss: 2.594653
+01-28 18:02 INFO     Epoch: 4 Loss: 2.512592
+01-28 18:02 INFO     Epoch: 5 Loss: 2.437419
+01-28 18:02 INFO     Epoch: 6 Loss: 2.496182
+01-28 18:02 INFO     Epoch: 7 Loss: 2.429319
+01-28 18:02 INFO     Epoch: 8 Loss: 2.377375
+01-28 18:02 INFO     Epoch: 9 Loss: 2.346725
+01-28 18:02 INFO      ** Training complete **
+01-28 18:04 INFO     >> Global Model Test accuracy Top1: 46.500000
+01-28 18:04 INFO     >> Global Model Test accuracy Top5: 91.080000
+01-28 18:04 INFO     in comm round:12
+01-28 18:04 INFO     Training network 0. n_training: 576
+01-28 18:04 INFO     Training network 0
+01-28 18:04 INFO     n_training: 2
+01-28 18:04 INFO     n_test: 10
+01-28 18:04 INFO     Epoch: 0 Loss: 2.136449
+01-28 18:05 INFO     Epoch: 1 Loss: 2.163941
+01-28 18:05 INFO     Epoch: 2 Loss: 2.154736
+01-28 18:05 INFO     Epoch: 3 Loss: 2.074184
+01-28 18:05 INFO     Epoch: 4 Loss: 2.088496
+01-28 18:05 INFO     Epoch: 5 Loss: 2.062410
+01-28 18:05 INFO     Epoch: 6 Loss: 1.992936
+01-28 18:05 INFO     Epoch: 7 Loss: 1.965530
+01-28 18:05 INFO     Epoch: 8 Loss: 1.949080
+01-28 18:05 INFO     Epoch: 9 Loss: 1.854923
+01-28 18:05 INFO      ** Training complete **
+01-28 18:05 INFO     Training network 1. n_training: 293
+01-28 18:05 INFO     Training network 1
+01-28 18:05 INFO     n_training: 1
+01-28 18:05 INFO     n_test: 10
+01-28 18:05 INFO     Epoch: 0 Loss: 2.216739
+01-28 18:05 INFO     Epoch: 1 Loss: 2.235705
+01-28 18:05 INFO     Epoch: 2 Loss: 2.243214
+01-28 18:05 INFO     Epoch: 3 Loss: 2.144333
+01-28 18:05 INFO     Epoch: 4 Loss: 2.090851
+01-28 18:05 INFO     Epoch: 5 Loss: 2.085471
+01-28 18:05 INFO     Epoch: 6 Loss: 2.060339
+01-28 18:05 INFO     Epoch: 7 Loss: 2.146164
+01-28 18:05 INFO     Epoch: 8 Loss: 1.926121
+01-28 18:05 INFO     Epoch: 9 Loss: 2.024772
+01-28 18:05 INFO      ** Training complete **
+01-28 18:05 INFO     Training network 2. n_training: 562
+01-28 18:05 INFO     Training network 2
+01-28 18:05 INFO     n_training: 2
+01-28 18:05 INFO     n_test: 10
+01-28 18:05 INFO     Epoch: 0 Loss: 2.182630
+01-28 18:05 INFO     Epoch: 1 Loss: 2.257116
+01-28 18:05 INFO     Epoch: 2 Loss: 2.109784
+01-28 18:05 INFO     Epoch: 3 Loss: 2.118651
+01-28 18:05 INFO     Epoch: 4 Loss: 2.089252
+01-28 18:05 INFO     Epoch: 5 Loss: 2.093247
+01-28 18:05 INFO     Epoch: 6 Loss: 2.035444
+01-28 18:05 INFO     Epoch: 7 Loss: 1.994794
+01-28 18:05 INFO     Epoch: 8 Loss: 1.901785
+01-28 18:05 INFO     Epoch: 9 Loss: 1.899722
+01-28 18:05 INFO      ** Training complete **
+01-28 18:05 INFO     Training network 3. n_training: 691
+01-28 18:05 INFO     Training network 3
+01-28 18:05 INFO     n_training: 2
+01-28 18:05 INFO     n_test: 10
+01-28 18:05 INFO     Epoch: 0 Loss: 2.206354
+01-28 18:05 INFO     Epoch: 1 Loss: 2.151174
+01-28 18:05 INFO     Epoch: 2 Loss: 2.230446
+01-28 18:05 INFO     Epoch: 3 Loss: 2.199584
+01-28 18:05 INFO     Epoch: 4 Loss: 2.082337
+01-28 18:05 INFO     Epoch: 5 Loss: 2.154697
+01-28 18:05 INFO     Epoch: 6 Loss: 1.996054
+01-28 18:06 INFO     Epoch: 7 Loss: 2.011013
+01-28 18:06 INFO     Epoch: 8 Loss: 1.973520
+01-28 18:06 INFO     Epoch: 9 Loss: 1.977094
+01-28 18:06 INFO      ** Training complete **
+01-28 18:06 INFO     Training network 4. n_training: 496
+01-28 18:06 INFO     Training network 4
+01-28 18:06 INFO     n_training: 1
+01-28 18:06 INFO     n_test: 10
+01-28 18:06 INFO     Epoch: 0 Loss: 2.357181
+01-28 18:06 INFO     Epoch: 1 Loss: 2.382050
+01-28 18:06 INFO     Epoch: 2 Loss: 2.170040
+01-28 18:06 INFO     Epoch: 3 Loss: 2.223125
+01-28 18:06 INFO     Epoch: 4 Loss: 2.270895
+01-28 18:06 INFO     Epoch: 5 Loss: 2.168970
+01-28 18:06 INFO     Epoch: 6 Loss: 2.183574
+01-28 18:06 INFO     Epoch: 7 Loss: 2.198821
+01-28 18:06 INFO     Epoch: 8 Loss: 2.124591
+01-28 18:06 INFO     Epoch: 9 Loss: 2.118634
+01-28 18:06 INFO      ** Training complete **
+01-28 18:06 INFO     Training network 5. n_training: 519
+01-28 18:06 INFO     Training network 5
+01-28 18:06 INFO     n_training: 2
+01-28 18:06 INFO     n_test: 10
+01-28 18:06 INFO     Epoch: 0 Loss: 2.167248
+01-28 18:06 INFO     Epoch: 1 Loss: 2.106756
+01-28 18:06 INFO     Epoch: 2 Loss: 2.056381
+01-28 18:06 INFO     Epoch: 3 Loss: 2.076518
+01-28 18:06 INFO     Epoch: 4 Loss: 2.083535
+01-28 18:06 INFO     Epoch: 5 Loss: 2.020158
+01-28 18:06 INFO     Epoch: 6 Loss: 1.961049
+01-28 18:06 INFO     Epoch: 7 Loss: 1.939073
+01-28 18:06 INFO     Epoch: 8 Loss: 1.853829
+01-28 18:06 INFO     Epoch: 9 Loss: 1.752904
+01-28 18:06 INFO      ** Training complete **
+01-28 18:06 INFO     Training network 6. n_training: 625
+01-28 18:06 INFO     Training network 6
+01-28 18:06 INFO     n_training: 2
+01-28 18:06 INFO     n_test: 10
+01-28 18:06 INFO     Epoch: 0 Loss: 2.302729
+01-28 18:06 INFO     Epoch: 1 Loss: 2.177826
+01-28 18:06 INFO     Epoch: 2 Loss: 2.246006
+01-28 18:06 INFO     Epoch: 3 Loss: 2.169888
+01-28 18:06 INFO     Epoch: 4 Loss: 2.186461
+01-28 18:06 INFO     Epoch: 5 Loss: 2.097432
+01-28 18:06 INFO     Epoch: 6 Loss: 2.132782
+01-28 18:06 INFO     Epoch: 7 Loss: 2.060282
+01-28 18:06 INFO     Epoch: 8 Loss: 1.969565
+01-28 18:06 INFO     Epoch: 9 Loss: 1.915403
+01-28 18:06 INFO      ** Training complete **
+01-28 18:06 INFO     Training network 7. n_training: 349
+01-28 18:06 INFO     Training network 7
+01-28 18:06 INFO     n_training: 1
+01-28 18:06 INFO     n_test: 10
+01-28 18:06 INFO     Epoch: 0 Loss: 2.355152
+01-28 18:06 INFO     Epoch: 1 Loss: 2.255233
+01-28 18:06 INFO     Epoch: 2 Loss: 2.200234
+01-28 18:06 INFO     Epoch: 3 Loss: 2.199986
+01-28 18:06 INFO     Epoch: 4 Loss: 2.154217
+01-28 18:07 INFO     Epoch: 5 Loss: 2.064480
+01-28 18:07 INFO     Epoch: 6 Loss: 2.077959
+01-28 18:07 INFO     Epoch: 7 Loss: 2.050684
+01-28 18:07 INFO     Epoch: 8 Loss: 2.084695
+01-28 18:07 INFO     Epoch: 9 Loss: 2.036427
+01-28 18:07 INFO      ** Training complete **
+01-28 18:07 INFO     Training network 8. n_training: 542
+01-28 18:07 INFO     Training network 8
+01-28 18:07 INFO     n_training: 2
+01-28 18:07 INFO     n_test: 10
+01-28 18:07 INFO     Epoch: 0 Loss: 2.295447
+01-28 18:07 INFO     Epoch: 1 Loss: 2.281142
+01-28 18:07 INFO     Epoch: 2 Loss: 2.230811
+01-28 18:07 INFO     Epoch: 3 Loss: 2.283541
+01-28 18:07 INFO     Epoch: 4 Loss: 2.095149
+01-28 18:07 INFO     Epoch: 5 Loss: 2.098812
+01-28 18:07 INFO     Epoch: 6 Loss: 2.071908
+01-28 18:07 INFO     Epoch: 7 Loss: 1.993869
+01-28 18:07 INFO     Epoch: 8 Loss: 1.993277
+01-28 18:07 INFO     Epoch: 9 Loss: 1.836028
+01-28 18:07 INFO      ** Training complete **
+01-28 18:07 INFO     Training network 9. n_training: 347
+01-28 18:07 INFO     Training network 9
+01-28 18:07 INFO     n_training: 1
+01-28 18:07 INFO     n_test: 10
+01-28 18:07 INFO     Epoch: 0 Loss: 2.424912
+01-28 18:07 INFO     Epoch: 1 Loss: 2.260192
+01-28 18:07 INFO     Epoch: 2 Loss: 2.352410
+01-28 18:07 INFO     Epoch: 3 Loss: 2.222004
+01-28 18:07 INFO     Epoch: 4 Loss: 2.132251
+01-28 18:07 INFO     Epoch: 5 Loss: 2.209586
+01-28 18:07 INFO     Epoch: 6 Loss: 2.190157
+01-28 18:07 INFO     Epoch: 7 Loss: 2.263092
+01-28 18:07 INFO     Epoch: 8 Loss: 2.154463
+01-28 18:07 INFO     Epoch: 9 Loss: 2.133295
+01-28 18:07 INFO      ** Training complete **
+01-28 18:09 INFO     >> Global Model Test accuracy Top1: 46.920000
+01-28 18:09 INFO     >> Global Model Test accuracy Top5: 91.220000
+01-28 18:09 INFO     in comm round:13
+01-28 18:09 INFO     Training network 0. n_training: 576
+01-28 18:09 INFO     Training network 0
+01-28 18:09 INFO     n_training: 2
+01-28 18:09 INFO     n_test: 10
+01-28 18:09 INFO     Epoch: 0 Loss: 1.940704
+01-28 18:09 INFO     Epoch: 1 Loss: 1.965874
+01-28 18:09 INFO     Epoch: 2 Loss: 1.942331
+01-28 18:09 INFO     Epoch: 3 Loss: 1.861698
+01-28 18:09 INFO     Epoch: 4 Loss: 1.903782
+01-28 18:09 INFO     Epoch: 5 Loss: 1.791428
+01-28 18:09 INFO     Epoch: 6 Loss: 1.800873
+01-28 18:10 INFO     Epoch: 7 Loss: 1.744126
+01-28 18:10 INFO     Epoch: 8 Loss: 1.778066
+01-28 18:10 INFO     Epoch: 9 Loss: 1.658298
+01-28 18:10 INFO      ** Training complete **
+01-28 18:10 INFO     Training network 1. n_training: 293
+01-28 18:10 INFO     Training network 1
+01-28 18:10 INFO     n_training: 1
+01-28 18:10 INFO     n_test: 10
+01-28 18:10 INFO     Epoch: 0 Loss: 2.114703
+01-28 18:10 INFO     Epoch: 1 Loss: 2.004140
+01-28 18:10 INFO     Epoch: 2 Loss: 2.029238
+01-28 18:10 INFO     Epoch: 3 Loss: 2.106569
+01-28 18:10 INFO     Epoch: 4 Loss: 1.958148
+01-28 18:10 INFO     Epoch: 5 Loss: 1.902402
+01-28 18:10 INFO     Epoch: 6 Loss: 1.920217
+01-28 18:10 INFO     Epoch: 7 Loss: 1.812942
+01-28 18:20 INFO     Epoch: 8 Loss: 1.855401
+01-28 18:20 INFO     Epoch: 9 Loss: 1.796940
+01-28 18:20 INFO      ** Training complete **
+01-28 18:20 INFO     Training network 2. n_training: 562
+01-28 18:20 INFO     Training network 2
+01-28 18:20 INFO     n_training: 2
+01-28 18:20 INFO     n_test: 10
+01-28 18:20 INFO     Epoch: 0 Loss: 2.065331
+01-28 18:20 INFO     Epoch: 1 Loss: 1.982462
+01-28 18:20 INFO     Epoch: 2 Loss: 1.983398
+01-28 18:20 INFO     Epoch: 3 Loss: 1.928873
+01-28 18:20 INFO     Epoch: 4 Loss: 1.990239
+01-28 18:20 INFO     Epoch: 5 Loss: 1.892267
+01-28 18:20 INFO     Epoch: 6 Loss: 1.777562
+01-28 18:20 INFO     Epoch: 7 Loss: 1.766258
+01-28 18:20 INFO     Epoch: 8 Loss: 1.806682
+01-28 18:20 INFO     Epoch: 9 Loss: 1.699616
+01-28 18:20 INFO      ** Training complete **
+01-28 18:20 INFO     Training network 3. n_training: 691
+01-28 18:20 INFO     Training network 3
+01-28 18:20 INFO     n_training: 2
+01-28 18:20 INFO     n_test: 10
+01-28 18:20 INFO     Epoch: 0 Loss: 1.999278
+01-28 18:20 INFO     Epoch: 1 Loss: 2.014976
+01-28 18:20 INFO     Epoch: 2 Loss: 2.001409
+01-28 18:20 INFO     Epoch: 3 Loss: 2.048976
+01-28 18:20 INFO     Epoch: 4 Loss: 2.005613
+01-28 18:20 INFO     Epoch: 5 Loss: 2.006743
+01-28 18:20 INFO     Epoch: 6 Loss: 1.898224
+01-28 18:20 INFO     Epoch: 7 Loss: 1.835089
+01-28 18:20 INFO     Epoch: 8 Loss: 1.885593
+01-28 18:20 INFO     Epoch: 9 Loss: 1.789676
+01-28 18:20 INFO      ** Training complete **
+01-28 18:20 INFO     Training network 4. n_training: 496
+01-28 18:20 INFO     Training network 4
+01-28 18:20 INFO     n_training: 1
+01-28 18:20 INFO     n_test: 10
+01-28 18:20 INFO     Epoch: 0 Loss: 2.093029
+01-28 18:20 INFO     Epoch: 1 Loss: 2.013572
+01-28 18:20 INFO     Epoch: 2 Loss: 1.971256
+01-28 18:20 INFO     Epoch: 3 Loss: 2.114357
+01-28 18:20 INFO     Epoch: 4 Loss: 1.995594
+01-28 18:20 INFO     Epoch: 5 Loss: 1.975459
+01-28 18:20 INFO     Epoch: 6 Loss: 2.094047
+01-28 18:20 INFO     Epoch: 7 Loss: 2.036223
+01-28 18:20 INFO     Epoch: 8 Loss: 1.947174
+01-28 18:20 INFO     Epoch: 9 Loss: 1.993211
+01-28 18:20 INFO      ** Training complete **
+01-28 18:20 INFO     Training network 5. n_training: 519
+01-28 18:20 INFO     Training network 5
+01-28 18:20 INFO     n_training: 2
+01-28 18:20 INFO     n_test: 10
+01-28 18:20 INFO     Epoch: 0 Loss: 1.949620
+01-28 18:20 INFO     Epoch: 1 Loss: 1.917575
+01-28 18:20 INFO     Epoch: 2 Loss: 1.926782
+01-28 18:21 INFO     Epoch: 3 Loss: 1.969111
+01-28 18:21 INFO     Epoch: 4 Loss: 1.929582
+01-28 18:21 INFO     Epoch: 5 Loss: 1.837411
+01-28 18:21 INFO     Epoch: 6 Loss: 1.809236
+01-28 18:21 INFO     Epoch: 7 Loss: 1.742968
+01-28 18:21 INFO     Epoch: 8 Loss: 1.691268
+01-28 18:21 INFO     Epoch: 9 Loss: 1.622456
+01-28 18:21 INFO      ** Training complete **
+01-28 18:21 INFO     Training network 6. n_training: 625
+01-28 18:21 INFO     Training network 6
+01-28 18:21 INFO     n_training: 2
+01-28 18:21 INFO     n_test: 10
+01-28 18:21 INFO     Epoch: 0 Loss: 2.134905
+01-28 18:21 INFO     Epoch: 1 Loss: 2.034595
+01-28 18:21 INFO     Epoch: 2 Loss: 2.001863
+01-28 18:21 INFO     Epoch: 3 Loss: 1.974673
+01-28 18:21 INFO     Epoch: 4 Loss: 1.968873
+01-28 18:21 INFO     Epoch: 5 Loss: 1.946733
+01-28 18:21 INFO     Epoch: 6 Loss: 1.886568
+01-28 18:21 INFO     Epoch: 7 Loss: 1.917748
+01-28 18:21 INFO     Epoch: 8 Loss: 1.866707
+01-28 18:21 INFO     Epoch: 9 Loss: 1.822789
+01-28 18:21 INFO      ** Training complete **
+01-28 18:21 INFO     Training network 7. n_training: 349
+01-28 18:21 INFO     Training network 7
+01-28 18:21 INFO     n_training: 1
+01-28 18:21 INFO     n_test: 10
+01-28 18:21 INFO     Epoch: 0 Loss: 2.131940
+01-28 18:21 INFO     Epoch: 1 Loss: 1.945535
+01-28 18:21 INFO     Epoch: 2 Loss: 2.093390
+01-28 18:21 INFO     Epoch: 3 Loss: 2.045807
+01-28 18:21 INFO     Epoch: 4 Loss: 1.910088
+01-28 18:21 INFO     Epoch: 5 Loss: 2.028064
+01-28 18:21 INFO     Epoch: 6 Loss: 1.880490
+01-28 18:21 INFO     Epoch: 7 Loss: 1.867397
+01-28 18:21 INFO     Epoch: 8 Loss: 1.827334
+01-28 18:21 INFO     Epoch: 9 Loss: 1.854343
+01-28 18:21 INFO      ** Training complete **
+01-28 18:21 INFO     Training network 8. n_training: 542
+01-28 18:21 INFO     Training network 8
+01-28 18:21 INFO     n_training: 2
+01-28 18:21 INFO     n_test: 10
+01-28 18:21 INFO     Epoch: 0 Loss: 2.095180
+01-28 18:21 INFO     Epoch: 1 Loss: 2.083987
+01-28 18:21 INFO     Epoch: 2 Loss: 2.031522
+01-28 18:21 INFO     Epoch: 3 Loss: 1.961840
+01-28 18:21 INFO     Epoch: 4 Loss: 1.942588
+01-28 18:21 INFO     Epoch: 5 Loss: 1.885823
+01-28 18:21 INFO     Epoch: 6 Loss: 1.963106
+01-28 18:21 INFO     Epoch: 7 Loss: 1.948639
+01-28 18:22 INFO     Epoch: 8 Loss: 1.811111
+01-28 18:22 INFO     Epoch: 9 Loss: 1.821257
+01-28 18:22 INFO      ** Training complete **
+01-28 18:22 INFO     Training network 9. n_training: 347
+01-28 18:22 INFO     Training network 9
+01-28 18:22 INFO     n_training: 1
+01-28 18:22 INFO     n_test: 10
+01-28 18:22 INFO     Epoch: 0 Loss: 2.164681
+01-28 18:22 INFO     Epoch: 1 Loss: 2.086261
+01-28 18:22 INFO     Epoch: 2 Loss: 2.174164
+01-28 18:22 INFO     Epoch: 3 Loss: 1.995558
+01-28 18:22 INFO     Epoch: 4 Loss: 2.031825
+01-28 18:22 INFO     Epoch: 5 Loss: 2.007020
+01-28 18:22 INFO     Epoch: 6 Loss: 2.031608
+01-28 18:22 INFO     Epoch: 7 Loss: 2.055859
+01-28 18:22 INFO     Epoch: 8 Loss: 1.882950
+01-28 18:22 INFO     Epoch: 9 Loss: 1.925772
+01-28 18:22 INFO      ** Training complete **
+01-28 18:24 INFO     >> Global Model Test accuracy Top1: 46.780000
+01-28 18:24 INFO     >> Global Model Test accuracy Top5: 91.500000
+01-28 18:24 INFO     in comm round:14
+01-28 18:24 INFO     Training network 0. n_training: 576
+01-28 18:24 INFO     Training network 0
+01-28 18:24 INFO     n_training: 2
+01-28 18:24 INFO     n_test: 10
+01-28 18:24 INFO     Epoch: 0 Loss: 1.866523
+01-28 18:24 INFO     Epoch: 1 Loss: 1.828232
+01-28 18:24 INFO     Epoch: 2 Loss: 1.833607
+01-28 18:24 INFO     Epoch: 3 Loss: 1.741272
+01-28 18:24 INFO     Epoch: 4 Loss: 1.748590
+01-28 18:24 INFO     Epoch: 5 Loss: 1.779883
+01-28 18:24 INFO     Epoch: 6 Loss: 1.707712
+01-28 18:24 INFO     Epoch: 7 Loss: 1.610197
+01-28 18:24 INFO     Epoch: 8 Loss: 1.552217
+01-28 18:24 INFO     Epoch: 9 Loss: 1.623779
+01-28 18:24 INFO      ** Training complete **
+01-28 18:24 INFO     Training network 1. n_training: 293
+01-28 18:24 INFO     Training network 1
+01-28 18:24 INFO     n_training: 1
+01-28 18:24 INFO     n_test: 10
+01-28 18:24 INFO     Epoch: 0 Loss: 1.919587
+01-28 18:24 INFO     Epoch: 1 Loss: 1.831846
+01-28 18:24 INFO     Epoch: 2 Loss: 1.853313
+01-28 18:24 INFO     Epoch: 3 Loss: 1.838699
+01-28 18:24 INFO     Epoch: 4 Loss: 1.808674
+01-28 18:24 INFO     Epoch: 5 Loss: 1.773869
+01-28 18:24 INFO     Epoch: 6 Loss: 1.698408
+01-28 18:24 INFO     Epoch: 7 Loss: 1.757770
+01-28 18:24 INFO     Epoch: 8 Loss: 1.609082
+01-28 18:24 INFO     Epoch: 9 Loss: 1.583159
+01-28 18:24 INFO      ** Training complete **
+01-28 18:24 INFO     Training network 2. n_training: 562
+01-28 18:24 INFO     Training network 2
+01-28 18:24 INFO     n_training: 2
+01-28 18:24 INFO     n_test: 10
+01-28 18:24 INFO     Epoch: 0 Loss: 1.945895
+01-28 18:24 INFO     Epoch: 1 Loss: 1.867460
+01-28 18:25 INFO     Epoch: 2 Loss: 1.743929
+01-28 18:25 INFO     Epoch: 3 Loss: 1.827841
+01-28 18:25 INFO     Epoch: 4 Loss: 1.725015
+01-28 18:25 INFO     Epoch: 5 Loss: 1.734413
+01-28 18:25 INFO     Epoch: 6 Loss: 1.697214
+01-28 18:25 INFO     Epoch: 7 Loss: 1.692003
+01-28 18:25 INFO     Epoch: 8 Loss: 1.605535
+01-28 18:25 INFO     Epoch: 9 Loss: 1.562688
+01-28 18:25 INFO      ** Training complete **
+01-28 18:25 INFO     Training network 3. n_training: 691
+01-28 18:25 INFO     Training network 3
+01-28 18:25 INFO     n_training: 2
+01-28 18:25 INFO     n_test: 10
+01-28 18:25 INFO     Epoch: 0 Loss: 1.848951
+01-28 18:25 INFO     Epoch: 1 Loss: 1.832271
+01-28 18:25 INFO     Epoch: 2 Loss: 1.805602
+01-28 18:25 INFO     Epoch: 3 Loss: 1.825057
+01-28 18:25 INFO     Epoch: 4 Loss: 1.784808
+01-28 18:25 INFO     Epoch: 5 Loss: 1.745198
+01-28 18:25 INFO     Epoch: 6 Loss: 1.752090
+01-28 18:25 INFO     Epoch: 7 Loss: 1.682261
+01-28 18:25 INFO     Epoch: 8 Loss: 1.662354
+01-28 18:25 INFO     Epoch: 9 Loss: 1.622319
+01-28 18:25 INFO      ** Training complete **
+01-28 18:25 INFO     Training network 4. n_training: 496
+01-28 18:25 INFO     Training network 4
+01-28 18:25 INFO     n_training: 1
+01-28 18:25 INFO     n_test: 10
+01-28 18:25 INFO     Epoch: 0 Loss: 1.945794
+01-28 18:25 INFO     Epoch: 1 Loss: 1.765767
+01-28 18:25 INFO     Epoch: 2 Loss: 1.912359
+01-28 18:25 INFO     Epoch: 3 Loss: 1.896631
+01-28 18:25 INFO     Epoch: 4 Loss: 1.882948
+01-28 18:25 INFO     Epoch: 5 Loss: 1.986429
+01-28 18:25 INFO     Epoch: 6 Loss: 1.891831
+01-28 18:25 INFO     Epoch: 7 Loss: 1.857611
+01-28 18:25 INFO     Epoch: 8 Loss: 1.891523
+01-28 18:25 INFO     Epoch: 9 Loss: 1.756302
+01-28 18:25 INFO      ** Training complete **
+01-28 18:25 INFO     Training network 5. n_training: 519
+01-28 18:25 INFO     Training network 5
+01-28 18:25 INFO     n_training: 2
+01-28 18:25 INFO     n_test: 10
+01-28 18:25 INFO     Epoch: 0 Loss: 1.852013
+01-28 18:25 INFO     Epoch: 1 Loss: 1.763276
+01-28 18:25 INFO     Epoch: 2 Loss: 1.689447
+01-28 18:25 INFO     Epoch: 3 Loss: 1.727484
+01-28 18:25 INFO     Epoch: 4 Loss: 1.673652
+01-28 18:25 INFO     Epoch: 5 Loss: 1.698408
+01-28 18:25 INFO     Epoch: 6 Loss: 1.660459
+01-28 18:26 INFO     Epoch: 7 Loss: 1.687191
+01-28 18:26 INFO     Epoch: 8 Loss: 1.582660
+01-28 18:26 INFO     Epoch: 9 Loss: 1.508080
+01-28 18:26 INFO      ** Training complete **
+01-28 18:26 INFO     Training network 6. n_training: 625
+01-28 18:26 INFO     Training network 6
+01-28 18:26 INFO     n_training: 2
+01-28 18:26 INFO     n_test: 10
+01-28 18:26 INFO     Epoch: 0 Loss: 1.868043
+01-28 18:26 INFO     Epoch: 1 Loss: 1.794489
+01-28 18:26 INFO     Epoch: 2 Loss: 1.711750
+01-28 18:26 INFO     Epoch: 3 Loss: 1.799590
+01-28 18:26 INFO     Epoch: 4 Loss: 1.784290
+01-28 18:26 INFO     Epoch: 5 Loss: 1.674552
+01-28 18:26 INFO     Epoch: 6 Loss: 1.794746
+01-28 18:26 INFO     Epoch: 7 Loss: 1.743837
+01-28 18:26 INFO     Epoch: 8 Loss: 1.699075
+01-28 18:26 INFO     Epoch: 9 Loss: 1.689893
+01-28 18:26 INFO      ** Training complete **
+01-28 18:26 INFO     Training network 7. n_training: 349
+01-28 18:26 INFO     Training network 7
+01-28 18:26 INFO     n_training: 1
+01-28 18:26 INFO     n_test: 10
+01-28 18:26 INFO     Epoch: 0 Loss: 1.898723
+01-28 18:26 INFO     Epoch: 1 Loss: 1.862084
+01-28 18:26 INFO     Epoch: 2 Loss: 1.795230
+01-28 18:26 INFO     Epoch: 3 Loss: 1.839292
+01-28 18:26 INFO     Epoch: 4 Loss: 1.800944
+01-28 18:26 INFO     Epoch: 5 Loss: 1.842682
+01-28 18:26 INFO     Epoch: 6 Loss: 1.785890
+01-28 18:26 INFO     Epoch: 7 Loss: 1.808813
+01-28 18:26 INFO     Epoch: 8 Loss: 1.685296
+01-28 18:26 INFO     Epoch: 9 Loss: 1.633071
+01-28 18:26 INFO      ** Training complete **
+01-28 18:26 INFO     Training network 8. n_training: 542
+01-28 18:26 INFO     Training network 8
+01-28 18:26 INFO     n_training: 2
+01-28 18:26 INFO     n_test: 10
+01-28 18:26 INFO     Epoch: 0 Loss: 1.847216
+01-28 18:26 INFO     Epoch: 1 Loss: 1.810935
+01-28 18:26 INFO     Epoch: 2 Loss: 1.819969
+01-28 18:26 INFO     Epoch: 3 Loss: 1.865084
+01-28 18:26 INFO     Epoch: 4 Loss: 1.795547
+01-28 18:26 INFO     Epoch: 5 Loss: 1.876092
+01-28 18:26 INFO     Epoch: 6 Loss: 1.743520
+01-28 18:26 INFO     Epoch: 7 Loss: 1.697660
+01-28 18:26 INFO     Epoch: 8 Loss: 1.627121
+01-28 18:26 INFO     Epoch: 9 Loss: 1.632005
+01-28 18:26 INFO      ** Training complete **
+01-28 18:26 INFO     Training network 9. n_training: 347
+01-28 18:26 INFO     Training network 9
+01-28 18:26 INFO     n_training: 1
+01-28 18:26 INFO     n_test: 10
+01-28 18:26 INFO     Epoch: 0 Loss: 1.989382
+01-28 18:26 INFO     Epoch: 1 Loss: 1.932877
+01-28 18:26 INFO     Epoch: 2 Loss: 1.852652
+01-28 18:26 INFO     Epoch: 3 Loss: 1.913827
+01-28 18:27 INFO     Epoch: 4 Loss: 1.868527
+01-28 18:27 INFO     Epoch: 5 Loss: 1.776601
+01-28 18:27 INFO     Epoch: 6 Loss: 1.848785
+01-28 18:27 INFO     Epoch: 7 Loss: 1.807558
+01-28 18:27 INFO     Epoch: 8 Loss: 1.783559
+01-28 18:27 INFO     Epoch: 9 Loss: 1.668261
+01-28 18:27 INFO      ** Training complete **
+01-28 18:29 INFO     >> Global Model Test accuracy Top1: 46.180000
+01-28 18:29 INFO     >> Global Model Test accuracy Top5: 91.410000
+01-28 18:29 INFO     in comm round:15
+01-28 18:29 INFO     Training network 0. n_training: 576
+01-28 18:29 INFO     Training network 0
+01-28 18:29 INFO     n_training: 2
+01-28 18:29 INFO     n_test: 10
+01-28 18:29 INFO     Epoch: 0 Loss: 1.615817
+01-28 18:29 INFO     Epoch: 1 Loss: 1.566799
+01-28 18:29 INFO     Epoch: 2 Loss: 1.572785
+01-28 18:29 INFO     Epoch: 3 Loss: 1.588416
+01-28 18:29 INFO     Epoch: 4 Loss: 1.573277
+01-28 18:29 INFO     Epoch: 5 Loss: 1.585064
+01-28 18:29 INFO     Epoch: 6 Loss: 1.550784
+01-28 18:29 INFO     Epoch: 7 Loss: 1.473053
+01-28 18:29 INFO     Epoch: 8 Loss: 1.466015
+01-28 18:29 INFO     Epoch: 9 Loss: 1.469192
+01-28 18:29 INFO      ** Training complete **
+01-28 18:29 INFO     Training network 1. n_training: 293
+01-28 18:29 INFO     Training network 1
+01-28 18:29 INFO     n_training: 1
+01-28 18:29 INFO     n_test: 10
+01-28 18:29 INFO     Epoch: 0 Loss: 1.707383
+01-28 18:29 INFO     Epoch: 1 Loss: 1.605222
+01-28 18:29 INFO     Epoch: 2 Loss: 1.623769
+01-28 18:29 INFO     Epoch: 3 Loss: 1.640332
+01-28 18:29 INFO     Epoch: 4 Loss: 1.558122
+01-28 18:29 INFO     Epoch: 5 Loss: 1.655370
+01-28 18:29 INFO     Epoch: 6 Loss: 1.601201
+01-28 18:29 INFO     Epoch: 7 Loss: 1.471147
+01-28 18:29 INFO     Epoch: 8 Loss: 1.551675
+01-28 18:29 INFO     Epoch: 9 Loss: 1.440956
+01-28 18:29 INFO      ** Training complete **
+01-28 18:29 INFO     Training network 2. n_training: 562
+01-28 18:29 INFO     Training network 2
+01-28 18:29 INFO     n_training: 2
+01-28 18:29 INFO     n_test: 10
+01-28 18:29 INFO     Epoch: 0 Loss: 1.634352
+01-28 18:29 INFO     Epoch: 1 Loss: 1.627089
+01-28 18:29 INFO     Epoch: 2 Loss: 1.704276
+01-28 18:29 INFO     Epoch: 3 Loss: 1.761617
+01-28 18:29 INFO     Epoch: 4 Loss: 1.641334
+01-28 18:29 INFO     Epoch: 5 Loss: 1.632139
+01-28 18:30 INFO     Epoch: 6 Loss: 1.534996
+01-28 18:30 INFO     Epoch: 7 Loss: 1.565538
+01-28 18:30 INFO     Epoch: 8 Loss: 1.459324
+01-28 18:30 INFO     Epoch: 9 Loss: 1.429262
+01-28 18:30 INFO      ** Training complete **
+01-28 18:30 INFO     Training network 3. n_training: 691
+01-28 18:30 INFO     Training network 3
+01-28 18:30 INFO     n_training: 2
+01-28 18:30 INFO     n_test: 10
+01-28 18:30 INFO     Epoch: 0 Loss: 1.584661
+01-28 18:30 INFO     Epoch: 1 Loss: 1.677756
+01-28 18:30 INFO     Epoch: 2 Loss: 1.671997
+01-28 18:30 INFO     Epoch: 3 Loss: 1.637001
+01-28 18:30 INFO     Epoch: 4 Loss: 1.659639
+01-28 18:30 INFO     Epoch: 5 Loss: 1.586701
+01-28 18:30 INFO     Epoch: 6 Loss: 1.563013
+01-28 18:30 INFO     Epoch: 7 Loss: 1.541170
+01-28 18:30 INFO     Epoch: 8 Loss: 1.484743
+01-28 18:30 INFO     Epoch: 9 Loss: 1.484872
+01-28 18:30 INFO      ** Training complete **
+01-28 18:30 INFO     Training network 4. n_training: 496
+01-28 18:30 INFO     Training network 4
+01-28 18:30 INFO     n_training: 1
+01-28 18:30 INFO     n_test: 10
+01-28 18:30 INFO     Epoch: 0 Loss: 1.789324
+01-28 18:30 INFO     Epoch: 1 Loss: 1.704230
+01-28 18:30 INFO     Epoch: 2 Loss: 1.766227
+01-28 18:30 INFO     Epoch: 3 Loss: 1.627786
+01-28 18:30 INFO     Epoch: 4 Loss: 1.750453
+01-28 18:30 INFO     Epoch: 5 Loss: 1.707119
+01-28 18:30 INFO     Epoch: 6 Loss: 1.709202
+01-28 18:30 INFO     Epoch: 7 Loss: 1.637985
+01-28 18:30 INFO     Epoch: 8 Loss: 1.602426
+01-28 18:30 INFO     Epoch: 9 Loss: 1.731544
+01-28 18:30 INFO      ** Training complete **
+01-28 18:30 INFO     Training network 5. n_training: 519
+01-28 18:30 INFO     Training network 5
+01-28 18:30 INFO     n_training: 2
+01-28 18:30 INFO     n_test: 10
+01-28 18:30 INFO     Epoch: 0 Loss: 1.606914
+01-28 18:30 INFO     Epoch: 1 Loss: 1.570917
+01-28 18:30 INFO     Epoch: 2 Loss: 1.635193
+01-28 18:30 INFO     Epoch: 3 Loss: 1.576000
+01-28 18:30 INFO     Epoch: 4 Loss: 1.531374
+01-28 18:30 INFO     Epoch: 5 Loss: 1.539359
+01-28 18:30 INFO     Epoch: 6 Loss: 1.469719
+01-28 18:31 INFO     Epoch: 7 Loss: 1.460348
+01-28 18:31 INFO     Epoch: 8 Loss: 1.383115
+01-28 18:31 INFO     Epoch: 9 Loss: 1.403063
+01-28 18:31 INFO      ** Training complete **
+01-28 18:31 INFO     Training network 6. n_training: 625
+01-28 18:31 INFO     Training network 6
+01-28 18:31 INFO     n_training: 2
+01-28 18:31 INFO     n_test: 10
+01-28 18:31 INFO     Epoch: 0 Loss: 1.615956
+01-28 18:31 INFO     Epoch: 1 Loss: 1.656710
+01-28 18:31 INFO     Epoch: 2 Loss: 1.664924
+01-28 18:31 INFO     Epoch: 3 Loss: 1.676206
+01-28 18:31 INFO     Epoch: 4 Loss: 1.607593
+01-28 18:31 INFO     Epoch: 5 Loss: 1.630121
+01-28 18:31 INFO     Epoch: 6 Loss: 1.590136
+01-28 18:31 INFO     Epoch: 7 Loss: 1.600492
+01-28 18:31 INFO     Epoch: 8 Loss: 1.501214
+01-28 18:31 INFO     Epoch: 9 Loss: 1.418453
+01-28 18:31 INFO      ** Training complete **
+01-28 18:31 INFO     Training network 7. n_training: 349
+01-28 18:31 INFO     Training network 7
+01-28 18:31 INFO     n_training: 1
+01-28 18:31 INFO     n_test: 10
+01-28 18:31 INFO     Epoch: 0 Loss: 1.667892
+01-28 18:31 INFO     Epoch: 1 Loss: 1.687011
+01-28 18:31 INFO     Epoch: 2 Loss: 1.583849
+01-28 18:31 INFO     Epoch: 3 Loss: 1.656129
+01-28 18:31 INFO     Epoch: 4 Loss: 1.625265
+01-28 18:31 INFO     Epoch: 5 Loss: 1.584338
+01-28 18:31 INFO     Epoch: 6 Loss: 1.674665
+01-28 18:31 INFO     Epoch: 7 Loss: 1.545276
+01-28 18:31 INFO     Epoch: 8 Loss: 1.561440
+01-28 18:31 INFO     Epoch: 9 Loss: 1.469412
+01-28 18:31 INFO      ** Training complete **
+01-28 18:31 INFO     Training network 8. n_training: 542
+01-28 18:31 INFO     Training network 8
+01-28 18:31 INFO     n_training: 2
+01-28 18:31 INFO     n_test: 10
+01-28 18:31 INFO     Epoch: 0 Loss: 1.664917
+01-28 18:31 INFO     Epoch: 1 Loss: 1.662934
+01-28 18:31 INFO     Epoch: 2 Loss: 1.730445
+01-28 18:31 INFO     Epoch: 3 Loss: 1.743127
+01-28 18:31 INFO     Epoch: 4 Loss: 1.671063
+01-28 18:31 INFO     Epoch: 5 Loss: 1.628941
+01-28 18:31 INFO     Epoch: 6 Loss: 1.607191
+01-28 18:32 INFO     Epoch: 7 Loss: 1.471770
+01-28 18:32 INFO     Epoch: 8 Loss: 1.549539
+01-28 18:32 INFO     Epoch: 9 Loss: 1.533476
+01-28 18:32 INFO      ** Training complete **
+01-28 18:32 INFO     Training network 9. n_training: 347
+01-28 18:32 INFO     Training network 9
+01-28 18:32 INFO     n_training: 1
+01-28 18:32 INFO     n_test: 10
+01-28 18:32 INFO     Epoch: 0 Loss: 1.800708
+01-28 18:32 INFO     Epoch: 1 Loss: 1.749832
+01-28 18:32 INFO     Epoch: 2 Loss: 1.755067
+01-28 18:32 INFO     Epoch: 3 Loss: 1.727624
+01-28 18:32 INFO     Epoch: 4 Loss: 1.681504
+01-28 18:32 INFO     Epoch: 5 Loss: 1.596834
+01-28 18:32 INFO     Epoch: 6 Loss: 1.697372
+01-28 18:32 INFO     Epoch: 7 Loss: 1.681348
+01-28 18:32 INFO     Epoch: 8 Loss: 1.585514
+01-28 18:32 INFO     Epoch: 9 Loss: 1.609689
+01-28 18:32 INFO      ** Training complete **
+01-28 18:34 INFO     >> Global Model Test accuracy Top1: 47.220000
+01-28 18:34 INFO     >> Global Model Test accuracy Top5: 91.500000
+01-28 18:34 INFO     in comm round:16
+01-28 18:34 INFO     Training network 0. n_training: 576
+01-28 18:34 INFO     Training network 0
+01-28 18:34 INFO     n_training: 2
+01-28 18:34 INFO     n_test: 10
+01-28 18:34 INFO     Epoch: 0 Loss: 1.435858
+01-28 18:34 INFO     Epoch: 1 Loss: 1.458386
+01-28 18:34 INFO     Epoch: 2 Loss: 1.497522
+01-28 18:34 INFO     Epoch: 3 Loss: 1.524629
+01-28 18:34 INFO     Epoch: 4 Loss: 1.419123
+01-28 18:34 INFO     Epoch: 5 Loss: 1.465669
+01-28 18:34 INFO     Epoch: 6 Loss: 1.393376
+01-28 18:34 INFO     Epoch: 7 Loss: 1.361633
+01-28 18:34 INFO     Epoch: 8 Loss: 1.347443
+01-28 18:34 INFO     Epoch: 9 Loss: 1.294939
+01-28 18:34 INFO      ** Training complete **
+01-28 18:34 INFO     Training network 1. n_training: 293
+01-28 18:34 INFO     Training network 1
+01-28 18:34 INFO     n_training: 1
+01-28 18:34 INFO     n_test: 10
+01-28 18:34 INFO     Epoch: 0 Loss: 1.650515
+01-28 18:34 INFO     Epoch: 1 Loss: 1.641295
+01-28 18:34 INFO     Epoch: 2 Loss: 1.563211
+01-28 18:34 INFO     Epoch: 3 Loss: 1.530128
+01-28 18:34 INFO     Epoch: 4 Loss: 1.533863
+01-28 18:34 INFO     Epoch: 5 Loss: 1.503382
+01-28 18:34 INFO     Epoch: 6 Loss: 1.476005
+01-28 18:34 INFO     Epoch: 7 Loss: 1.378283
+01-28 18:34 INFO     Epoch: 8 Loss: 1.421893
+01-28 18:34 INFO     Epoch: 9 Loss: 1.423783
+01-28 18:34 INFO      ** Training complete **
+01-28 18:34 INFO     Training network 2. n_training: 562
+01-28 18:34 INFO     Training network 2
+01-28 18:34 INFO     n_training: 2
+01-28 18:34 INFO     n_test: 10
+01-28 18:34 INFO     Epoch: 0 Loss: 1.486030
+01-28 18:34 INFO     Epoch: 1 Loss: 1.490780
+01-28 18:35 INFO     Epoch: 2 Loss: 1.501999
+01-28 18:35 INFO     Epoch: 3 Loss: 1.538210
+01-28 18:35 INFO     Epoch: 4 Loss: 1.570157
+01-28 18:35 INFO     Epoch: 5 Loss: 1.495215
+01-28 18:35 INFO     Epoch: 6 Loss: 1.424928
+01-28 18:35 INFO     Epoch: 7 Loss: 1.460259
+01-28 18:35 INFO     Epoch: 8 Loss: 1.399599
+01-28 18:35 INFO     Epoch: 9 Loss: 1.349199
+01-28 18:35 INFO      ** Training complete **
+01-28 18:35 INFO     Training network 3. n_training: 691
+01-28 18:35 INFO     Training network 3
+01-28 18:35 INFO     n_training: 2
+01-28 18:35 INFO     n_test: 10
+01-28 18:35 INFO     Epoch: 0 Loss: 1.474134
+01-28 18:35 INFO     Epoch: 1 Loss: 1.471991
+01-28 18:35 INFO     Epoch: 2 Loss: 1.490984
+01-28 18:35 INFO     Epoch: 3 Loss: 1.469823
+01-28 18:35 INFO     Epoch: 4 Loss: 1.584411
+01-28 18:35 INFO     Epoch: 5 Loss: 1.543918
+01-28 18:35 INFO     Epoch: 6 Loss: 1.475372
+01-28 18:35 INFO     Epoch: 7 Loss: 1.406859
+01-28 18:35 INFO     Epoch: 8 Loss: 1.379625
+01-28 18:35 INFO     Epoch: 9 Loss: 1.409222
+01-28 18:35 INFO      ** Training complete **
+01-28 18:35 INFO     Training network 4. n_training: 496
+01-28 18:35 INFO     Training network 4
+01-28 18:35 INFO     n_training: 1
+01-28 18:35 INFO     n_test: 10
+01-28 18:35 INFO     Epoch: 0 Loss: 1.655126
+01-28 18:35 INFO     Epoch: 1 Loss: 1.616404
+01-28 18:35 INFO     Epoch: 2 Loss: 1.484723
+01-28 18:35 INFO     Epoch: 3 Loss: 1.592306
+01-28 18:35 INFO     Epoch: 4 Loss: 1.554635
+01-28 18:35 INFO     Epoch: 5 Loss: 1.521546
+01-28 18:35 INFO     Epoch: 6 Loss: 1.497706
+01-28 18:35 INFO     Epoch: 7 Loss: 1.597625
+01-28 18:35 INFO     Epoch: 8 Loss: 1.619531
+01-28 18:35 INFO     Epoch: 9 Loss: 1.523322
+01-28 18:35 INFO      ** Training complete **
+01-28 18:35 INFO     Training network 5. n_training: 519
+01-28 18:35 INFO     Training network 5
+01-28 18:35 INFO     n_training: 2
+01-28 18:35 INFO     n_test: 10
+01-28 18:35 INFO     Epoch: 0 Loss: 1.502933
+01-28 18:35 INFO     Epoch: 1 Loss: 1.513421
+01-28 18:35 INFO     Epoch: 2 Loss: 1.583798
+01-28 18:35 INFO     Epoch: 3 Loss: 1.468157
+01-28 18:35 INFO     Epoch: 4 Loss: 1.490813
+01-28 18:35 INFO     Epoch: 5 Loss: 1.423296
+01-28 18:35 INFO     Epoch: 6 Loss: 1.440740
+01-28 18:36 INFO     Epoch: 7 Loss: 1.417086
+01-28 18:36 INFO     Epoch: 8 Loss: 1.363090
+01-28 18:36 INFO     Epoch: 9 Loss: 1.315911
+01-28 18:36 INFO      ** Training complete **
+01-28 18:36 INFO     Training network 6. n_training: 625
+01-28 18:36 INFO     Training network 6
+01-28 18:36 INFO     n_training: 2
+01-28 18:36 INFO     n_test: 10
+01-28 18:36 INFO     Epoch: 0 Loss: 1.530910
+01-28 18:36 INFO     Epoch: 1 Loss: 1.539907
+01-28 18:36 INFO     Epoch: 2 Loss: 1.521999
+01-28 18:36 INFO     Epoch: 3 Loss: 1.513558
+01-28 18:36 INFO     Epoch: 4 Loss: 1.540088
+01-28 18:36 INFO     Epoch: 5 Loss: 1.539664
+01-28 18:36 INFO     Epoch: 6 Loss: 1.439865
+01-28 18:36 INFO     Epoch: 7 Loss: 1.463226
+01-28 18:36 INFO     Epoch: 8 Loss: 1.440783
+01-28 18:36 INFO     Epoch: 9 Loss: 1.353653
+01-28 18:36 INFO      ** Training complete **
+01-28 18:36 INFO     Training network 7. n_training: 349
+01-28 18:36 INFO     Training network 7
+01-28 18:36 INFO     n_training: 1
+01-28 18:36 INFO     n_test: 10
+01-28 18:36 INFO     Epoch: 0 Loss: 1.742526
+01-28 18:36 INFO     Epoch: 1 Loss: 1.489724
+01-28 18:36 INFO     Epoch: 2 Loss: 1.531021
+01-28 18:36 INFO     Epoch: 3 Loss: 1.545868
+01-28 18:36 INFO     Epoch: 4 Loss: 1.571126
+01-28 18:36 INFO     Epoch: 5 Loss: 1.489458
+01-28 18:36 INFO     Epoch: 6 Loss: 1.426309
+01-28 18:36 INFO     Epoch: 7 Loss: 1.476662
+01-28 18:36 INFO     Epoch: 8 Loss: 1.352410
+01-28 18:36 INFO     Epoch: 9 Loss: 1.498912
+01-28 18:36 INFO      ** Training complete **
+01-28 18:36 INFO     Training network 8. n_training: 542
+01-28 18:36 INFO     Training network 8
+01-28 18:36 INFO     n_training: 2
+01-28 18:36 INFO     n_test: 10
+01-28 18:36 INFO     Epoch: 0 Loss: 1.512612
+01-28 18:36 INFO     Epoch: 1 Loss: 1.546528
+01-28 18:36 INFO     Epoch: 2 Loss: 1.523500
+01-28 18:36 INFO     Epoch: 3 Loss: 1.489937
+01-28 18:36 INFO     Epoch: 4 Loss: 1.491238
+01-28 18:36 INFO     Epoch: 5 Loss: 1.476304
+01-28 18:36 INFO     Epoch: 6 Loss: 1.519798
+01-28 18:36 INFO     Epoch: 7 Loss: 1.379272
+01-28 18:36 INFO     Epoch: 8 Loss: 1.412060
+01-28 18:36 INFO     Epoch: 9 Loss: 1.373200
+01-28 18:36 INFO      ** Training complete **
+01-28 18:36 INFO     Training network 9. n_training: 347
+01-28 18:36 INFO     Training network 9
+01-28 18:36 INFO     n_training: 1
+01-28 18:36 INFO     n_test: 10
+01-28 18:36 INFO     Epoch: 0 Loss: 1.672393
+01-28 18:36 INFO     Epoch: 1 Loss: 1.642227
+01-28 18:36 INFO     Epoch: 2 Loss: 1.577660
+01-28 18:36 INFO     Epoch: 3 Loss: 1.586896
+01-28 18:36 INFO     Epoch: 4 Loss: 1.606955
+01-28 18:37 INFO     Epoch: 5 Loss: 1.556423
+01-28 18:37 INFO     Epoch: 6 Loss: 1.559701
+01-28 18:37 INFO     Epoch: 7 Loss: 1.585718
+01-28 18:37 INFO     Epoch: 8 Loss: 1.534009
+01-28 18:37 INFO     Epoch: 9 Loss: 1.494146
+01-28 18:37 INFO      ** Training complete **
+01-28 18:39 INFO     >> Global Model Test accuracy Top1: 46.940000
+01-28 18:39 INFO     >> Global Model Test accuracy Top5: 91.470000
+01-28 18:39 INFO     in comm round:17
+01-28 18:39 INFO     Training network 0. n_training: 576
+01-28 18:39 INFO     Training network 0
+01-28 18:39 INFO     n_training: 2
+01-28 18:39 INFO     n_test: 10
+01-28 18:39 INFO     Epoch: 0 Loss: 1.363870
+01-28 18:39 INFO     Epoch: 1 Loss: 1.384522
+01-28 18:39 INFO     Epoch: 2 Loss: 1.393906
+01-28 18:39 INFO     Epoch: 3 Loss: 1.373888
+01-28 18:39 INFO     Epoch: 4 Loss: 1.353127
+01-28 18:39 INFO     Epoch: 5 Loss: 1.333607
+01-28 18:39 INFO     Epoch: 6 Loss: 1.282542
+01-28 18:39 INFO     Epoch: 7 Loss: 1.280325
+01-28 18:39 INFO     Epoch: 8 Loss: 1.246359
+01-28 18:39 INFO     Epoch: 9 Loss: 1.227149
+01-28 18:39 INFO      ** Training complete **
+01-28 18:39 INFO     Training network 1. n_training: 293
+01-28 18:39 INFO     Training network 1
+01-28 18:39 INFO     n_training: 1
+01-28 18:39 INFO     n_test: 10
+01-28 18:39 INFO     Epoch: 0 Loss: 1.515156
+01-28 18:39 INFO     Epoch: 1 Loss: 1.451411
+01-28 18:39 INFO     Epoch: 2 Loss: 1.495908
+01-28 18:39 INFO     Epoch: 3 Loss: 1.434314
+01-28 18:39 INFO     Epoch: 4 Loss: 1.332099
+01-28 18:39 INFO     Epoch: 5 Loss: 1.382637
+01-28 18:39 INFO     Epoch: 6 Loss: 1.404301
+01-28 18:39 INFO     Epoch: 7 Loss: 1.297325
+01-28 18:39 INFO     Epoch: 8 Loss: 1.353133
+01-28 18:39 INFO     Epoch: 9 Loss: 1.278406
+01-28 18:39 INFO      ** Training complete **
+01-28 18:39 INFO     Training network 2. n_training: 562
+01-28 18:39 INFO     Training network 2
+01-28 18:39 INFO     n_training: 2
+01-28 18:39 INFO     n_test: 10
+01-28 18:39 INFO     Epoch: 0 Loss: 1.454522
+01-28 18:39 INFO     Epoch: 1 Loss: 1.411389
+01-28 18:39 INFO     Epoch: 2 Loss: 1.435836
+01-28 18:39 INFO     Epoch: 3 Loss: 1.379495
+01-28 18:39 INFO     Epoch: 4 Loss: 1.396665
+01-28 18:39 INFO     Epoch: 5 Loss: 1.387358
+01-28 18:39 INFO     Epoch: 6 Loss: 1.315562
+01-28 18:40 INFO     Epoch: 7 Loss: 1.338463
+01-28 18:40 INFO     Epoch: 8 Loss: 1.273414
+01-28 18:40 INFO     Epoch: 9 Loss: 1.265233
+01-28 18:40 INFO      ** Training complete **
+01-28 18:40 INFO     Training network 3. n_training: 691
+01-28 18:40 INFO     Training network 3
+01-28 18:40 INFO     n_training: 2
+01-28 18:40 INFO     n_test: 10
+01-28 18:40 INFO     Epoch: 0 Loss: 1.383109
+01-28 18:40 INFO     Epoch: 1 Loss: 1.447648
+01-28 18:40 INFO     Epoch: 2 Loss: 1.396457
+01-28 18:40 INFO     Epoch: 3 Loss: 1.449789
+01-28 18:40 INFO     Epoch: 4 Loss: 1.499879
+01-28 18:40 INFO     Epoch: 5 Loss: 1.406959
+01-28 18:40 INFO     Epoch: 6 Loss: 1.335731
+01-28 18:40 INFO     Epoch: 7 Loss: 1.367161
+01-28 18:40 INFO     Epoch: 8 Loss: 1.288787
+01-28 18:40 INFO     Epoch: 9 Loss: 1.328144
+01-28 18:40 INFO      ** Training complete **
+01-28 18:40 INFO     Training network 4. n_training: 496
+01-28 18:40 INFO     Training network 4
+01-28 18:40 INFO     n_training: 1
+01-28 18:40 INFO     n_test: 10
+01-28 18:40 INFO     Epoch: 0 Loss: 1.489053
+01-28 18:40 INFO     Epoch: 1 Loss: 1.440385
+01-28 18:40 INFO     Epoch: 2 Loss: 1.512918
+01-28 18:40 INFO     Epoch: 3 Loss: 1.366388
+01-28 18:40 INFO     Epoch: 4 Loss: 1.461089
+01-28 18:40 INFO     Epoch: 5 Loss: 1.492757
+01-28 18:40 INFO     Epoch: 6 Loss: 1.416884
+01-28 18:40 INFO     Epoch: 7 Loss: 1.400031
+01-28 18:40 INFO     Epoch: 8 Loss: 1.315891
+01-28 18:40 INFO     Epoch: 9 Loss: 1.371476
+01-28 18:40 INFO      ** Training complete **
+01-28 18:40 INFO     Training network 5. n_training: 519
+01-28 18:40 INFO     Training network 5
+01-28 18:40 INFO     n_training: 2
+01-28 18:40 INFO     n_test: 10
+01-28 18:40 INFO     Epoch: 0 Loss: 1.431667
+01-28 18:40 INFO     Epoch: 1 Loss: 1.398330
+01-28 18:40 INFO     Epoch: 2 Loss: 1.341166
+01-28 18:40 INFO     Epoch: 3 Loss: 1.344678
+01-28 18:40 INFO     Epoch: 4 Loss: 1.305285
+01-28 18:40 INFO     Epoch: 5 Loss: 1.313565
+01-28 18:40 INFO     Epoch: 6 Loss: 1.273172
+01-28 18:40 INFO     Epoch: 7 Loss: 1.238824
+01-28 18:40 INFO     Epoch: 8 Loss: 1.224855
+01-28 18:40 INFO     Epoch: 9 Loss: 1.173407
+01-28 18:40 INFO      ** Training complete **
+01-28 18:40 INFO     Training network 6. n_training: 625
+01-28 18:40 INFO     Training network 6
+01-28 18:40 INFO     n_training: 2
+01-28 18:40 INFO     n_test: 10
+01-28 18:40 INFO     Epoch: 0 Loss: 1.428648
+01-28 18:40 INFO     Epoch: 1 Loss: 1.432817
+01-28 18:41 INFO     Epoch: 2 Loss: 1.450201
+01-28 18:41 INFO     Epoch: 3 Loss: 1.403307
+01-28 18:41 INFO     Epoch: 4 Loss: 1.412525
+01-28 18:41 INFO     Epoch: 5 Loss: 1.402505
+01-28 18:41 INFO     Epoch: 6 Loss: 1.363091
+01-28 18:41 INFO     Epoch: 7 Loss: 1.401680
+01-28 18:41 INFO     Epoch: 8 Loss: 1.294948
+01-28 18:41 INFO     Epoch: 9 Loss: 1.265845
+01-28 18:41 INFO      ** Training complete **
+01-28 18:41 INFO     Training network 7. n_training: 349
+01-28 18:41 INFO     Training network 7
+01-28 18:41 INFO     n_training: 1
+01-28 18:41 INFO     n_test: 10
+01-28 18:41 INFO     Epoch: 0 Loss: 1.430840
+01-28 18:41 INFO     Epoch: 1 Loss: 1.440547
+01-28 18:41 INFO     Epoch: 2 Loss: 1.368738
+01-28 18:41 INFO     Epoch: 3 Loss: 1.349330
+01-28 18:41 INFO     Epoch: 4 Loss: 1.432969
+01-28 18:41 INFO     Epoch: 5 Loss: 1.293690
+01-28 18:41 INFO     Epoch: 6 Loss: 1.355865
+01-28 18:41 INFO     Epoch: 7 Loss: 1.298142
+01-28 18:41 INFO     Epoch: 8 Loss: 1.347367
+01-28 18:41 INFO     Epoch: 9 Loss: 1.320602
+01-28 18:41 INFO      ** Training complete **
+01-28 18:41 INFO     Training network 8. n_training: 542
+01-28 18:41 INFO     Training network 8
+01-28 18:41 INFO     n_training: 2
+01-28 18:41 INFO     n_test: 10
+01-28 18:41 INFO     Epoch: 0 Loss: 1.364328
+01-28 18:41 INFO     Epoch: 1 Loss: 1.409306
+01-28 18:41 INFO     Epoch: 2 Loss: 1.367573
+01-28 18:41 INFO     Epoch: 3 Loss: 1.417499
+01-28 18:41 INFO     Epoch: 4 Loss: 1.361988
+01-28 18:41 INFO     Epoch: 5 Loss: 1.318771
+01-28 18:41 INFO     Epoch: 6 Loss: 1.321894
+01-28 18:41 INFO     Epoch: 7 Loss: 1.315025
+01-28 18:41 INFO     Epoch: 8 Loss: 1.373018
+01-28 18:41 INFO     Epoch: 9 Loss: 1.267369
+01-28 18:41 INFO      ** Training complete **
+01-28 18:41 INFO     Training network 9. n_training: 347
+01-28 18:41 INFO     Training network 9
+01-28 18:41 INFO     n_training: 1
+01-28 18:41 INFO     n_test: 10
+01-28 18:41 INFO     Epoch: 0 Loss: 1.543602
+01-28 18:41 INFO     Epoch: 1 Loss: 1.518531
+01-28 18:41 INFO     Epoch: 2 Loss: 1.461491
+01-28 18:41 INFO     Epoch: 3 Loss: 1.529668
+01-28 18:41 INFO     Epoch: 4 Loss: 1.456336
+01-28 18:41 INFO     Epoch: 5 Loss: 1.502156
+01-28 18:41 INFO     Epoch: 6 Loss: 1.343022
+01-28 18:41 INFO     Epoch: 7 Loss: 1.454659
+01-28 18:41 INFO     Epoch: 8 Loss: 1.428101
+01-28 18:41 INFO     Epoch: 9 Loss: 1.350857
+01-28 18:41 INFO      ** Training complete **
+01-28 18:44 INFO     >> Global Model Test accuracy Top1: 47.010000
+01-28 18:44 INFO     >> Global Model Test accuracy Top5: 91.220000
+01-28 18:44 INFO     in comm round:18
+01-28 18:44 INFO     Training network 0. n_training: 576
+01-28 18:44 INFO     Training network 0
+01-28 18:44 INFO     n_training: 2
+01-28 18:44 INFO     n_test: 10
+01-28 18:44 INFO     Epoch: 0 Loss: 1.315799
+01-28 18:44 INFO     Epoch: 1 Loss: 1.205399
+01-28 18:44 INFO     Epoch: 2 Loss: 1.254190
+01-28 18:44 INFO     Epoch: 3 Loss: 1.326471
+01-28 18:44 INFO     Epoch: 4 Loss: 1.288714
+01-28 18:44 INFO     Epoch: 5 Loss: 1.248967
+01-28 18:44 INFO     Epoch: 6 Loss: 1.168642
+01-28 18:44 INFO     Epoch: 7 Loss: 1.192792
+01-28 18:44 INFO     Epoch: 8 Loss: 1.141343
+01-28 18:44 INFO     Epoch: 9 Loss: 1.117659
+01-28 18:44 INFO      ** Training complete **
+01-28 18:44 INFO     Training network 1. n_training: 293
+01-28 18:44 INFO     Training network 1
+01-28 18:44 INFO     n_training: 1
+01-28 18:44 INFO     n_test: 10
+01-28 18:44 INFO     Epoch: 0 Loss: 1.350652
+01-28 18:44 INFO     Epoch: 1 Loss: 1.313584
+01-28 18:44 INFO     Epoch: 2 Loss: 1.391796
+01-28 18:44 INFO     Epoch: 3 Loss: 1.281528
+01-28 18:44 INFO     Epoch: 4 Loss: 1.260607
+01-28 18:44 INFO     Epoch: 5 Loss: 1.310651
+01-28 18:44 INFO     Epoch: 6 Loss: 1.204740
+01-28 18:44 INFO     Epoch: 7 Loss: 1.235482
+01-28 18:44 INFO     Epoch: 8 Loss: 1.207883
+01-28 18:44 INFO     Epoch: 9 Loss: 1.140403
+01-28 18:44 INFO      ** Training complete **
+01-28 18:44 INFO     Training network 2. n_training: 562
+01-28 18:44 INFO     Training network 2
+01-28 18:44 INFO     n_training: 2
+01-28 18:44 INFO     n_test: 10
+01-28 18:44 INFO     Epoch: 0 Loss: 1.263852
+01-28 18:44 INFO     Epoch: 1 Loss: 1.275290
+01-28 18:44 INFO     Epoch: 2 Loss: 1.310135
+01-28 18:44 INFO     Epoch: 3 Loss: 1.287931
+01-28 18:44 INFO     Epoch: 4 Loss: 1.309178
+01-28 18:44 INFO     Epoch: 5 Loss: 1.349893
+01-28 18:44 INFO     Epoch: 6 Loss: 1.196058
+01-28 18:44 INFO     Epoch: 7 Loss: 1.222398
+01-28 18:44 INFO     Epoch: 8 Loss: 1.217394
+01-28 18:44 INFO     Epoch: 9 Loss: 1.171281
+01-28 18:44 INFO      ** Training complete **
+01-28 18:44 INFO     Training network 3. n_training: 691
+01-28 18:44 INFO     Training network 3
+01-28 18:44 INFO     n_training: 2
+01-28 18:44 INFO     n_test: 10
+01-28 18:44 INFO     Epoch: 0 Loss: 1.255859
+01-28 18:45 INFO     Epoch: 1 Loss: 1.264726
+01-28 18:45 INFO     Epoch: 2 Loss: 1.242264
+01-28 18:45 INFO     Epoch: 3 Loss: 1.331510
+01-28 18:45 INFO     Epoch: 4 Loss: 1.351225
+01-28 18:45 INFO     Epoch: 5 Loss: 1.292922
+01-28 18:45 INFO     Epoch: 6 Loss: 1.337861
+01-28 18:45 INFO     Epoch: 7 Loss: 1.308654
+01-28 18:45 INFO     Epoch: 8 Loss: 1.250835
+01-28 18:45 INFO     Epoch: 9 Loss: 1.232353
+01-28 18:45 INFO      ** Training complete **
+01-28 18:45 INFO     Training network 4. n_training: 496
+01-28 18:45 INFO     Training network 4
+01-28 18:45 INFO     n_training: 1
+01-28 18:45 INFO     n_test: 10
+01-28 18:45 INFO     Epoch: 0 Loss: 1.328707
+01-28 18:45 INFO     Epoch: 1 Loss: 1.465182
+01-28 18:45 INFO     Epoch: 2 Loss: 1.384847
+01-28 18:45 INFO     Epoch: 3 Loss: 1.404822
+01-28 18:45 INFO     Epoch: 4 Loss: 1.425964
+01-28 18:45 INFO     Epoch: 5 Loss: 1.364160
+01-28 18:45 INFO     Epoch: 6 Loss: 1.369307
+01-28 18:45 INFO     Epoch: 7 Loss: 1.423119
+01-28 18:45 INFO     Epoch: 8 Loss: 1.379700
+01-28 18:45 INFO     Epoch: 9 Loss: 1.323798
+01-28 18:45 INFO      ** Training complete **
+01-28 18:45 INFO     Training network 5. n_training: 519
+01-28 18:45 INFO     Training network 5
+01-28 18:45 INFO     n_training: 2
+01-28 18:45 INFO     n_test: 10
+01-28 18:45 INFO     Epoch: 0 Loss: 1.267953
+01-28 18:45 INFO     Epoch: 1 Loss: 1.288972
+01-28 18:45 INFO     Epoch: 2 Loss: 1.270702
+01-28 18:45 INFO     Epoch: 3 Loss: 1.275350
+01-28 18:45 INFO     Epoch: 4 Loss: 1.267052
+01-28 18:45 INFO     Epoch: 5 Loss: 1.200757
+01-28 18:45 INFO     Epoch: 6 Loss: 1.174006
+01-28 18:45 INFO     Epoch: 7 Loss: 1.168217
+01-28 18:45 INFO     Epoch: 8 Loss: 1.154974
+01-28 18:45 INFO     Epoch: 9 Loss: 1.190312
+01-28 18:45 INFO      ** Training complete **
+01-28 18:45 INFO     Training network 6. n_training: 625
+01-28 18:45 INFO     Training network 6
+01-28 18:45 INFO     n_training: 2
+01-28 18:45 INFO     n_test: 10
+01-28 18:45 INFO     Epoch: 0 Loss: 1.325443
+01-28 18:45 INFO     Epoch: 1 Loss: 1.284837
+01-28 18:45 INFO     Epoch: 2 Loss: 1.345330
+01-28 18:45 INFO     Epoch: 3 Loss: 1.290285
+01-28 18:45 INFO     Epoch: 4 Loss: 1.226309
+01-28 18:45 INFO     Epoch: 5 Loss: 1.313159
+01-28 18:46 INFO     Epoch: 6 Loss: 1.306545
+01-28 18:46 INFO     Epoch: 7 Loss: 1.245429
+01-28 18:46 INFO     Epoch: 8 Loss: 1.217729
+01-28 18:46 INFO     Epoch: 9 Loss: 1.173067
+01-28 18:46 INFO      ** Training complete **
+01-28 18:46 INFO     Training network 7. n_training: 349
+01-28 18:46 INFO     Training network 7
+01-28 18:46 INFO     n_training: 1
+01-28 18:46 INFO     n_test: 10
+01-28 18:46 INFO     Epoch: 0 Loss: 1.312094
+01-28 18:46 INFO     Epoch: 1 Loss: 1.304030
+01-28 18:46 INFO     Epoch: 2 Loss: 1.212162
+01-28 18:46 INFO     Epoch: 3 Loss: 1.273298
+01-28 18:46 INFO     Epoch: 4 Loss: 1.261487
+01-28 18:46 INFO     Epoch: 5 Loss: 1.308199
+01-28 18:46 INFO     Epoch: 6 Loss: 1.263600
+01-28 18:46 INFO     Epoch: 7 Loss: 1.241090
+01-28 18:46 INFO     Epoch: 8 Loss: 1.259965
+01-28 18:46 INFO     Epoch: 9 Loss: 1.181054
+01-28 18:46 INFO      ** Training complete **
+01-28 18:46 INFO     Training network 8. n_training: 542
+01-28 18:46 INFO     Training network 8
+01-28 18:46 INFO     n_training: 2
+01-28 18:46 INFO     n_test: 10
+01-28 18:46 INFO     Epoch: 0 Loss: 1.307451
+01-28 18:46 INFO     Epoch: 1 Loss: 1.290168
+01-28 18:46 INFO     Epoch: 2 Loss: 1.335562
+01-28 18:46 INFO     Epoch: 3 Loss: 1.251692
+01-28 18:46 INFO     Epoch: 4 Loss: 1.328533
+01-28 18:46 INFO     Epoch: 5 Loss: 1.281287
+01-28 18:46 INFO     Epoch: 6 Loss: 1.237093
+01-28 18:46 INFO     Epoch: 7 Loss: 1.172262
+01-28 18:46 INFO     Epoch: 8 Loss: 1.252336
+01-28 18:46 INFO     Epoch: 9 Loss: 1.179743
+01-28 18:46 INFO      ** Training complete **
+01-28 18:46 INFO     Training network 9. n_training: 347
+01-28 18:46 INFO     Training network 9
+01-28 18:46 INFO     n_training: 1
+01-28 18:46 INFO     n_test: 10
+01-28 18:46 INFO     Epoch: 0 Loss: 1.336174
+01-28 18:46 INFO     Epoch: 1 Loss: 1.423358
+01-28 18:46 INFO     Epoch: 2 Loss: 1.326844
+01-28 18:46 INFO     Epoch: 3 Loss: 1.445294
+01-28 18:46 INFO     Epoch: 4 Loss: 1.314484
+01-28 18:46 INFO     Epoch: 5 Loss: 1.365065
+01-28 18:46 INFO     Epoch: 6 Loss: 1.317109
+01-28 18:46 INFO     Epoch: 7 Loss: 1.348480
+01-28 18:46 INFO     Epoch: 8 Loss: 1.284949
+01-28 18:46 INFO     Epoch: 9 Loss: 1.273096
+01-28 18:46 INFO      ** Training complete **
+01-28 18:48 INFO     >> Global Model Test accuracy Top1: 47.900000
+01-28 18:48 INFO     >> Global Model Test accuracy Top5: 91.770000
+01-28 18:48 INFO     in comm round:19
+01-28 18:48 INFO     Training network 0. n_training: 576
+01-28 18:48 INFO     Training network 0
+01-28 18:48 INFO     n_training: 2
+01-28 18:48 INFO     n_test: 10
+01-28 18:49 INFO     Epoch: 0 Loss: 1.162876
+01-28 18:49 INFO     Epoch: 1 Loss: 1.176793
+01-28 18:49 INFO     Epoch: 2 Loss: 1.217105
+01-28 18:49 INFO     Epoch: 3 Loss: 1.150417
+01-28 18:49 INFO     Epoch: 4 Loss: 1.132053
+01-28 18:49 INFO     Epoch: 5 Loss: 1.147278
+01-28 18:49 INFO     Epoch: 6 Loss: 1.198712
+01-28 18:49 INFO     Epoch: 7 Loss: 1.076436
+01-28 18:49 INFO     Epoch: 8 Loss: 1.057521
+01-28 18:49 INFO     Epoch: 9 Loss: 1.080684
+01-28 18:49 INFO      ** Training complete **
+01-28 18:49 INFO     Training network 1. n_training: 293
+01-28 18:49 INFO     Training network 1
+01-28 18:49 INFO     n_training: 1
+01-28 18:49 INFO     n_test: 10
+01-28 18:49 INFO     Epoch: 0 Loss: 1.217769
+01-28 18:49 INFO     Epoch: 1 Loss: 1.334744
+01-28 18:49 INFO     Epoch: 2 Loss: 1.295096
+01-28 18:49 INFO     Epoch: 3 Loss: 1.270409
+01-28 18:49 INFO     Epoch: 4 Loss: 1.223779
+01-28 18:49 INFO     Epoch: 5 Loss: 1.138909
+01-28 18:49 INFO     Epoch: 6 Loss: 1.121822
+01-28 18:49 INFO     Epoch: 7 Loss: 1.158087
+01-28 18:49 INFO     Epoch: 8 Loss: 1.090009
+01-28 18:49 INFO     Epoch: 9 Loss: 1.129230
+01-28 18:49 INFO      ** Training complete **
+01-28 18:49 INFO     Training network 2. n_training: 562
+01-28 18:49 INFO     Training network 2
+01-28 18:49 INFO     n_training: 2
+01-28 18:49 INFO     n_test: 10
+01-28 18:49 INFO     Epoch: 0 Loss: 1.210701
+01-28 18:49 INFO     Epoch: 1 Loss: 1.212898
+01-28 18:49 INFO     Epoch: 2 Loss: 1.265916
+01-28 18:49 INFO     Epoch: 3 Loss: 1.174717
+01-28 18:49 INFO     Epoch: 4 Loss: 1.175112
+01-28 18:49 INFO     Epoch: 5 Loss: 1.158028
+01-28 18:49 INFO     Epoch: 6 Loss: 1.178415
+01-28 18:49 INFO     Epoch: 7 Loss: 1.148107
+01-28 18:49 INFO     Epoch: 8 Loss: 1.111384
+01-28 18:49 INFO     Epoch: 9 Loss: 1.108162
+01-28 18:49 INFO      ** Training complete **
+01-28 18:49 INFO     Training network 3. n_training: 691
+01-28 18:49 INFO     Training network 3
+01-28 18:49 INFO     n_training: 2
+01-28 18:49 INFO     n_test: 10
+01-28 18:49 INFO     Epoch: 0 Loss: 1.274572
+01-28 18:49 INFO     Epoch: 1 Loss: 1.273600
+01-28 18:49 INFO     Epoch: 2 Loss: 1.303541
+01-28 18:49 INFO     Epoch: 3 Loss: 1.230685
+01-28 18:49 INFO     Epoch: 4 Loss: 1.254908
+01-28 18:50 INFO     Epoch: 5 Loss: 1.214499
+01-28 18:50 INFO     Epoch: 6 Loss: 1.206749
+01-28 18:50 INFO     Epoch: 7 Loss: 1.216810
+01-28 18:50 INFO     Epoch: 8 Loss: 1.236387
+01-28 18:50 INFO     Epoch: 9 Loss: 1.180797
+01-28 18:50 INFO      ** Training complete **
+01-28 18:50 INFO     Training network 4. n_training: 496
+01-28 18:50 INFO     Training network 4
+01-28 18:50 INFO     n_training: 1
+01-28 18:50 INFO     n_test: 10
+01-28 18:50 INFO     Epoch: 0 Loss: 1.317201
+01-28 18:50 INFO     Epoch: 1 Loss: 1.401249
+01-28 18:50 INFO     Epoch: 2 Loss: 1.199599
+01-28 18:50 INFO     Epoch: 3 Loss: 1.293295
+01-28 18:50 INFO     Epoch: 4 Loss: 1.271537
+01-28 18:50 INFO     Epoch: 5 Loss: 1.251998
+01-28 18:50 INFO     Epoch: 6 Loss: 1.437103
+01-28 18:50 INFO     Epoch: 7 Loss: 1.270277
+01-28 18:50 INFO     Epoch: 8 Loss: 1.276784
+01-28 18:50 INFO     Epoch: 9 Loss: 1.211147
+01-28 18:50 INFO      ** Training complete **
+01-28 18:50 INFO     Training network 5. n_training: 519
+01-28 18:50 INFO     Training network 5
+01-28 18:50 INFO     n_training: 2
+01-28 18:50 INFO     n_test: 10
+01-28 18:50 INFO     Epoch: 0 Loss: 1.175981
+01-28 18:50 INFO     Epoch: 1 Loss: 1.134440
+01-28 18:50 INFO     Epoch: 2 Loss: 1.170045
+01-28 18:50 INFO     Epoch: 3 Loss: 1.120386
+01-28 18:50 INFO     Epoch: 4 Loss: 1.146568
+01-28 18:50 INFO     Epoch: 5 Loss: 1.128446
+01-28 18:50 INFO     Epoch: 6 Loss: 1.100333
+01-28 18:50 INFO     Epoch: 7 Loss: 1.095370
+01-28 18:50 INFO     Epoch: 8 Loss: 1.055823
+01-28 18:50 INFO     Epoch: 9 Loss: 1.027738
+01-28 18:50 INFO      ** Training complete **
+01-28 18:50 INFO     Training network 6. n_training: 625
+01-28 18:50 INFO     Training network 6
+01-28 18:50 INFO     n_training: 2
+01-28 18:50 INFO     n_test: 10
+01-28 18:50 INFO     Epoch: 0 Loss: 1.235715
+01-28 18:50 INFO     Epoch: 1 Loss: 1.192738
+01-28 18:50 INFO     Epoch: 2 Loss: 1.290593
+01-28 18:50 INFO     Epoch: 3 Loss: 1.192087
+01-28 18:50 INFO     Epoch: 4 Loss: 1.211953
+01-28 18:50 INFO     Epoch: 5 Loss: 1.234863
+01-28 18:50 INFO     Epoch: 6 Loss: 1.169805
+01-28 18:50 INFO     Epoch: 7 Loss: 1.205518
+01-28 18:50 INFO     Epoch: 8 Loss: 1.105830
+01-28 18:50 INFO     Epoch: 9 Loss: 1.103932
+01-28 18:50 INFO      ** Training complete **
+01-28 18:50 INFO     Training network 7. n_training: 349
+01-28 18:50 INFO     Training network 7
+01-28 18:50 INFO     n_training: 1
+01-28 18:50 INFO     n_test: 10
+01-28 18:50 INFO     Epoch: 0 Loss: 1.256955
+01-28 18:51 INFO     Epoch: 1 Loss: 1.140614
+01-28 18:51 INFO     Epoch: 2 Loss: 1.222191
+01-28 18:51 INFO     Epoch: 3 Loss: 1.172656
+01-28 18:51 INFO     Epoch: 4 Loss: 1.198765
+01-28 18:51 INFO     Epoch: 5 Loss: 1.191172
+01-28 18:51 INFO     Epoch: 6 Loss: 1.205968
+01-28 18:51 INFO     Epoch: 7 Loss: 1.203121
+01-28 18:51 INFO     Epoch: 8 Loss: 1.172294
+01-28 18:51 INFO     Epoch: 9 Loss: 1.156157
+01-28 18:51 INFO      ** Training complete **
+01-28 18:51 INFO     Training network 8. n_training: 542
+01-28 18:51 INFO     Training network 8
+01-28 18:51 INFO     n_training: 2
+01-28 18:51 INFO     n_test: 10
+01-28 18:51 INFO     Epoch: 0 Loss: 1.244046
+01-28 18:51 INFO     Epoch: 1 Loss: 1.200563
+01-28 18:51 INFO     Epoch: 2 Loss: 1.195774
+01-28 18:51 INFO     Epoch: 3 Loss: 1.174274
+01-28 18:51 INFO     Epoch: 4 Loss: 1.164886
+01-28 18:51 INFO     Epoch: 5 Loss: 1.192088
+01-28 18:51 INFO     Epoch: 6 Loss: 1.110027
+01-28 18:51 INFO     Epoch: 7 Loss: 1.121064
+01-28 18:51 INFO     Epoch: 8 Loss: 1.125116
+01-28 18:51 INFO     Epoch: 9 Loss: 1.067949
+01-28 18:51 INFO      ** Training complete **
+01-28 18:51 INFO     Training network 9. n_training: 347
+01-28 18:51 INFO     Training network 9
+01-28 18:51 INFO     n_training: 1
+01-28 18:51 INFO     n_test: 10
+01-28 18:51 INFO     Epoch: 0 Loss: 1.206829
+01-28 18:51 INFO     Epoch: 1 Loss: 1.299572
+01-28 18:51 INFO     Epoch: 2 Loss: 1.299970
+01-28 18:51 INFO     Epoch: 3 Loss: 1.235556
+01-28 18:51 INFO     Epoch: 4 Loss: 1.297659
+01-28 18:51 INFO     Epoch: 5 Loss: 1.247467
+01-28 18:51 INFO     Epoch: 6 Loss: 1.197484
+01-28 18:51 INFO     Epoch: 7 Loss: 1.262662
+01-28 18:51 INFO     Epoch: 8 Loss: 1.188079
+01-28 18:51 INFO     Epoch: 9 Loss: 1.128816
+01-28 18:51 INFO      ** Training complete **
+01-28 18:53 INFO     >> Global Model Test accuracy Top1: 47.680000
+01-28 18:53 INFO     >> Global Model Test accuracy Top5: 91.630000
