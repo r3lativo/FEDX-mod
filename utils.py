@@ -38,13 +38,9 @@ def set_logger(args):
     for handler in logging.root.handlers[:]:
         logging.root.removeHandler(handler)
 
-    #args.log_file_name = (
-    #    f"{args.dataset}-{args.portion}-{args.method}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_log-%s"
-    #    % (datetime.datetime.now().strftime("%Y-%m-%d-%H%M-%S"))
-    #)
     args.log_file_name = (
         f"{args.dataset}-{args.portion}-{args.method}"
-        f"{'_rel_loss' if args.method == 'simsiam' and args.rel_loss == True else ''}"
+        f"_{'rel_loss' if args.rel_loss == True else 'no_rel_loss'}"
         f"-{args.batch_size}-{args.n_parties}-{args.temperature}"
         f"-{args.tt}-{args.ts}-{args.epochs}_log"
         f"-{datetime.datetime.now().strftime('%Y-%m-%d-%H%M-%S')}"

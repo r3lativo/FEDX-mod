@@ -49,7 +49,10 @@ def get_args():
     # Added arguments
     parser.add_argument("--portion", type=float, default=1.0, help="Fraction of the dataset to load (e.g., 0.1 for 10%, 1.0 for 100%)")
     parser.add_argument("--method", type=str, default="default", help="the method used for training")
-    parser.add_argument("--rel_loss", type=bool, default=False, help="whether to use relational loss. Always true for default model")
+    #parser.add_argument("--rel_loss", type=bool, default=False, help="whether to use relational loss. Always true for default model")
+    parser.add_argument('--rel_loss', dest='rel_loss', action='store_true', help='Set the relational loss value to True.')
+    parser.add_argument('--no_rel_loss', dest='rel_loss', action='store_false', help='Set the relational loss value to False.')
+    parser.set_defaults(rel_loss=True)
     args = parser.parse_args()
     return args
 
@@ -333,7 +336,7 @@ def local_train_net(
 
     return nets
 
-
+import sys
 if __name__ == "__main__":
     args = get_args()
 
@@ -341,8 +344,8 @@ if __name__ == "__main__":
     mkdirs(args.logdir)
     mkdirs(args.modeldir)
     argument_path = (
-        f"{args.dataset}-{args.portion}-{args.method}"
-        f"{'_rel_loss' if args.method == 'simsiam' and args.rel_loss == True else ''}"
+        f"{args.dataset}-{args.portion}-{args.method}_"
+        f"{'rel_loss' if args.rel_loss == True else 'no_rel_loss'}"
         f"-{args.batch_size}-{args.n_parties}-{args.temperature}"
         f"-{args.tt}-{args.ts}-{args.epochs}_arguments"
         f"-{datetime.datetime.now().strftime('%Y-%m-%d-%H%M-%S')}.json"
@@ -361,7 +364,7 @@ if __name__ == "__main__":
     plain_args = (
         f"Dataset: {args.dataset}, "
         f"Portion: {args.portion}, "
-        f"Method: {args.method}{'_rel_loss' if args.method == 'simsiam' and args.rel_loss == True else ''}, "
+        f"Method: {args.method}_{'rel_loss' if args.rel_loss == True else 'no_rel_loss'}, "
         f"Batch Size: {args.batch_size}, "
         f"Number of Parties: {args.n_parties}, "
         f"Temperature: {args.temperature}, "
@@ -371,6 +374,7 @@ if __name__ == "__main__":
         f"Log Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
     )
     logger.info(plain_args)
+    sys.exit()
 
     logger.info(device)
 
