@@ -49,6 +49,7 @@ def get_args():
     # Added arguments
     parser.add_argument("--portion", type=float, default=1.0, help="Fraction of the dataset to load (e.g., 0.1 for 10%, 1.0 for 100%)")
     parser.add_argument("--method", type=str, default="default", help="the method used for training")
+    parser.add_argument("--rel_loss", type=bool, default=False, help="whether to use relational loss. Always true for default model")
     args = parser.parse_args()
     return args
 
@@ -75,7 +76,8 @@ def train_simsiam_net_fedx(
     args,
     round,
     device="cpu",
-    pbar=None
+    pbar=None,
+    rel_loss=False
 ):
     """
     Adapted FedX model to integrate SimSiam method
@@ -102,35 +104,58 @@ def train_simsiam_net_fedx(
     net.train()
     global_net.eval()
 
+    if rel_loss == True:
+        # Random dataloader for relational loss
+        random_loader = copy.deepcopy(train_dataloader)
+        random_dataloader = iter(random_loader)
+
     for epoch in range(epochs):
         epoch_loss_collector = []
         for batch_idx, (x1, x2, _, _) in enumerate(train_dataloader):
             x1, x2 = x1.cuda(), x2.cuda()
             optimizer.zero_grad()  # Clear previous gradients
 
+            if rel_loss == True:
+            # Fetch a random batch
+                try:
+                    random_x, _, _, _ = next(random_dataloader)
+                except:
+                    random_dataloader = iter(random_loader)
+                    random_x, _, _, _ = next(random_dataloader)
+                random_x = random_x.cuda()
+
             # Forward pass on local model
             z1_local, p1_local = net(x1)
             z2_local, p2_local = net(x2)
+            if rel_loss == True:
+                zR_local, pR_local = net(random_x)
 
             # Forward pass on global model
             with torch.no_grad():  # Global model remains fixed for the current round
-                z1_global, p1_global = global_net(x1)
-                z2_global, p2_global = global_net(x2)
+                z1_GLOBAL, p1_GLOBAL = global_net(x1)
+                z2_GLOBAL, p2_GLOBAL = global_net(x2)
+                if rel_loss == True:
+                    zR_GLOBAL, pR_GLOBAL = global_net(random_x)
 
-            # Compute local SimSiam loss scaling with temperature
-            local_loss = (
+            # SimSiam losses (local, global) IT IS NEGATIVE
+            local_simsiam_loss = (
                 simsiam_loss_func(p1_local, z2_local, t) +
                 simsiam_loss_func(p2_local, z1_local, t)
             ) / 2.0
-
-            # Compute global SimSiam loss scaling with temperature
-            global_loss = (
-                simsiam_loss_func(p1_local, z2_global, t) +
-                simsiam_loss_func(p2_local, z1_global, t)
+            global_simsiam_loss = (
+                simsiam_loss_func(p1_local, z2_GLOBAL, t) +
+                simsiam_loss_func(p2_local, z1_GLOBAL, t)
             ) / 2.0
+            loss_ss = local_simsiam_loss + global_simsiam_loss
+
+            if rel_loss == True:
+                # Relational losses (local, global)
+                js_global = js_loss(p1_local, p2_local, zR_GLOBAL, t, args.tt)
+                js_local = js_loss(z1_local, z2_local, zR_local, t, args.ts)
+                loss_js = js_global + js_local
 
             # Combine losses
-            loss = local_loss + global_loss
+            loss = loss_ss + loss_js if rel_loss == True else loss_ss
             loss.backward()
             optimizer.step()
 
@@ -160,7 +185,8 @@ def train_net_fedx(
     args,
     round,
     device="cpu",
-    pbar=None
+    pbar=None,
+    rel_loss=True
 ):
     net.cuda()
     global_net.cuda()
@@ -251,7 +277,8 @@ def local_train_net(
     round=None,
     device="cpu",
     method="default",
-    pbar=None
+    pbar=None,
+    rel_loss=False
 ):
 
     if global_model:
@@ -279,7 +306,8 @@ def local_train_net(
                 args,
                 round,
                 device=device,
-                pbar=pbar
+                pbar=pbar,
+                rel_loss=rel_loss
             )
         else:
             train_net_fedx(
@@ -296,7 +324,8 @@ def local_train_net(
                 args,
                 round,
                 device=device,
-                pbar=pbar
+                pbar=pbar,
+                rel_loss=True
             )
 
     if global_model:
@@ -311,8 +340,12 @@ if __name__ == "__main__":
     # Create directory to save log and model
     mkdirs(args.logdir)
     mkdirs(args.modeldir)
-    argument_path = f"{args.dataset}-{args.portion}-{args.method}-{args.batch_size}-{args.n_parties}-{args.temperature}-{args.tt}-{args.ts}-{args.epochs}_arguments-%s.json" % datetime.datetime.now().strftime(
-        "%Y-%m-%d-%H%M-%S"
+    argument_path = (
+        f"{args.dataset}-{args.portion}-{args.method}"
+        f"{'_rel_loss' if args.method == 'simsiam' and args.rel_loss == True else ''}"
+        f"-{args.batch_size}-{args.n_parties}-{args.temperature}"
+        f"-{args.tt}-{args.ts}-{args.epochs}_arguments"
+        f"-{datetime.datetime.now().strftime('%Y-%m-%d-%H%M-%S')}.json"
     )
 
     # Save arguments
@@ -328,7 +361,7 @@ if __name__ == "__main__":
     plain_args = (
         f"Dataset: {args.dataset}, "
         f"Portion: {args.portion}, "
-        f"Method: {args.method}, "
+        f"Method: {args.method}{'_rel_loss' if args.method == 'simsiam' and args.rel_loss == True else ''}, "
         f"Batch Size: {args.batch_size}, "
         f"Number of Parties: {args.n_parties}, "
         f"Temperature: {args.temperature}, "
@@ -421,7 +454,8 @@ if __name__ == "__main__":
                 global_model=global_model,
                 device=device,
                 method=args.method,
-                pbar=pbar
+                pbar=pbar,
+                rel_loss=args.rel_loss
             )
 
             total_data_points = sum([len(net_dataidx_map[r]) for r in range(args.n_parties)])

@@ -106,6 +106,14 @@ def init_nets(net_configs, n_parties, args, device="cpu", method="default"):
 
 class SimSiam(ModelFedX):
     def __init__(self, base_model, output_dim, net_configs=None):
+        """Implements SimSiam (https://arxiv.org/abs/2011.10566).
+
+        Args:
+            base_model (str): name of the base model.
+            output_dim (int): number of dimensions of output features.
+            net_configs (dict): dictionary containing the network configurations.
+        """
+
         super(ModelFedX, self).__init__()
 
         if base_model == "resnet18":
@@ -121,7 +129,6 @@ class SimSiam(ModelFedX):
         proj_hidden_dim: int = self.num_ftrs
         proj_output_dim: int = output_dim
         pred_hidden_dim: int = output_dim
-
 
         # projector
         self.projector = nn.Sequential(
@@ -145,6 +152,16 @@ class SimSiam(ModelFedX):
         )
 
     def forward(self, x):
+        """Performs the forward pass of the backbone, the projector and the predictor.
+
+        Args:
+            x (torch.Tensor): an images in the tensor format
+
+        Returns:
+            z: projected features
+            p: predicted features
+        """
+
         h = self.encoder(x).flatten(start_dim=1)
         z = self.projector(h)
         p = self.predictor(z)
