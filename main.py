@@ -140,7 +140,7 @@ def train_simsiam_net_fedx(
                 if rel_loss == True:
                     zR_GLOBAL, pR_GLOBAL = global_net(random_x)
 
-            # SimSiam losses (local, global) IT IS NEGATIVE
+            # SimSiam Losses (Local + Global)
             local_simsiam_loss = (
                 simsiam_loss_func(p1_local, z2_local, t) +
                 simsiam_loss_func(p2_local, z1_local, t)
@@ -151,12 +151,20 @@ def train_simsiam_net_fedx(
             ) / 2.0
             loss_ss = local_simsiam_loss + global_simsiam_loss
 
+            # Relational Losses
             if rel_loss == True:
-                # Relational losses (local, global)
-                js_global = js_loss(p1_local, p2_local, zR_GLOBAL, t, args.tt)
-                js_local = js_loss(z1_local, z2_local, zR_local, t, args.ts)
-                loss_js = js_global + js_local
+                # A) Local Relational: match distribution of (z1_local, z2_local)
+                #    over the random set zR_local.
+                js_local = js_loss(x1=z1_local, x2=z2_local, xa=zR_local, t=t, t2=args.ts)
 
+                # B) Local vs. Global Distillation: match distribution of (z1_local, z1_GLOBAL)
+                #    over the random set from the global model zR_GLOBAL
+                js_global = js_loss(x1=z1_local, x2=z1_GLOBAL, xa=zR_GLOBAL, t=t, t2=args.tt)
+                
+                loss_js = js_global + js_local
+            else:
+                loss_js = 0.0
+            
             # Combine losses
             loss = loss_ss + loss_js if rel_loss == True else loss_ss
             loss.backward()
