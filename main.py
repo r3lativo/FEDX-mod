@@ -336,7 +336,7 @@ def local_train_net(
 
     return nets
 
-import sys
+
 if __name__ == "__main__":
     args = get_args()
 
@@ -374,7 +374,6 @@ if __name__ == "__main__":
         f"Log Date: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
     )
     logger.info(plain_args)
-    sys.exit()
 
     logger.info(device)
 
