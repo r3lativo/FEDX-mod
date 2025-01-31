@@ -80,7 +80,7 @@ def train_simsiam_net_fedx(
     round,
     device="cpu",
     pbar=None,
-    rel_loss=False
+    rel_loss=True
 ):
     """
     Adapted FedX model to integrate SimSiam method
@@ -166,7 +166,7 @@ def train_simsiam_net_fedx(
                 loss_js = 0.0
             
             # Combine losses
-            loss = loss_ss + loss_js if rel_loss == True else loss_ss
+            loss = loss_ss + loss_js
             loss.backward()
             optimizer.step()
 
@@ -254,10 +254,14 @@ def train_net_fedx(
             nt_global = nt_xent(pred1_original, proj2_pos, args.temperature)
             loss_nt = nt_local + nt_global
 
-            # Relational losses (local, global)
-            js_global = js_loss(pred1_original, pred1_pos, proj2_random, args.temperature, args.tt)
-            js_local = js_loss(proj1_original, proj1_pos, proj1_random, args.temperature, args.ts)
-            loss_js = js_global + js_local
+
+            if rel_loss == True:
+                # Relational losses (local, global)
+                js_global = js_loss(pred1_original, pred1_pos, proj2_random, args.temperature, args.tt)
+                js_local = js_loss(proj1_original, proj1_pos, proj1_random, args.temperature, args.ts)
+                loss_js = js_global + js_local
+            else:
+                loss_js = 0.0
 
             # Combine all losses and perform backpropagation
             loss = loss_nt + loss_js
@@ -289,7 +293,7 @@ def local_train_net(
     device="cpu",
     method="default",
     pbar=None,
-    rel_loss=False
+    rel_loss=True
 ):
 
     if global_model:
@@ -336,7 +340,7 @@ def local_train_net(
                 round,
                 device=device,
                 pbar=pbar,
-                rel_loss=True
+                rel_loss=rel_loss
             )
 
     if global_model:
