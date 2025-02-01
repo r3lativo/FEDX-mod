@@ -1,0 +1,1065 @@
+02-01 01:16 INFO     Dataset: svhn, Portion: 0.1, Method: simsiam_no_rel_loss, Batch Size: 256, Number of Parties: 5, Temperature: 0.1, Teacher Temperature: 0.1, Student Temperature: 0.1, Epochs: 5, Log Date: 2025-02-01 01:16:59
+02-01 01:16 INFO     cuda:1
+02-01 01:16 INFO     Partitioning data
+02-01 01:17 INFO     Data statistics: {0: {np.int64(0): np.int64(56), np.int64(1): np.int64(954), np.int64(2): np.int64(166), np.int64(3): np.int64(50), np.int64(4): np.int64(26), np.int64(5): np.int64(5), np.int64(6): np.int64(8), np.int64(7): np.int64(321)}, 1: {np.int64(0): np.int64(28), np.int64(1): np.int64(113), np.int64(2): np.int64(698), np.int64(3): np.int64(244), np.int64(4): np.int64(4), np.int64(5): np.int64(199), np.int64(6): np.int64(18), np.int64(7): np.int64(86), np.int64(8): np.int64(1), np.int64(9): np.int64(407)}, 2: {np.int64(0): np.int64(31), np.int64(1): np.int64(123), np.int64(2): np.int64(141), np.int64(3): np.int64(5), np.int64(4): np.int64(34), np.int64(5): np.int64(129), np.int64(6): np.int64(314), np.int64(7): np.int64(16), np.int64(8): np.int64(162), np.int64(9): np.int64(23)}, 3: {np.int64(0): np.int64(355), np.int64(1): np.int64(2), np.int64(2): np.int64(28), np.int64(3): np.int64(24), np.int64(4): np.int64(484), np.int64(5): np.int64(326), np.int64(6): np.int64(23), np.int64(7): np.int64(60), np.int64(8): np.int64(20), np.int64(9): np.int64(54)}, 4: {np.int64(0): np.int64(14), np.int64(1): np.int64(179), np.int64(2): np.int64(32), np.int64(3): np.int64(520), np.int64(4): np.int64(197), np.int64(5): np.int64(39), np.int64(6): np.int64(186), np.int64(7): np.int64(82), np.int64(8): np.int64(338)}}
+02-01 01:17 INFO     Initializing nets
+02-01 01:17 INFO     in comm round:0
+02-01 01:17 INFO     Training network 0. n_training: 1586
+02-01 01:17 INFO     Training network 0
+02-01 01:17 INFO     n_training: 12
+02-01 01:17 INFO     n_test: 51
+02-01 01:17 INFO     Epoch: 0 Loss: -5.702999
+02-01 01:17 INFO     Epoch: 1 Loss: -9.071445
+02-01 01:17 INFO     Epoch: 2 Loss: -9.583031
+02-01 01:17 INFO     Epoch: 3 Loss: -9.802167
+02-01 01:17 INFO     Epoch: 4 Loss: -10.013066
+02-01 01:17 INFO      ** Training complete **
+02-01 01:17 INFO     Training network 1. n_training: 1798
+02-01 01:17 INFO     Training network 1
+02-01 01:17 INFO     n_training: 14
+02-01 01:17 INFO     n_test: 51
+02-01 01:17 INFO     Epoch: 0 Loss: -6.168610
+02-01 01:18 INFO     Epoch: 1 Loss: -9.127918
+02-01 01:18 INFO     Epoch: 2 Loss: -9.628297
+02-01 01:18 INFO     Epoch: 3 Loss: -9.738298
+02-01 01:18 INFO     Epoch: 4 Loss: -10.072007
+02-01 01:18 INFO      ** Training complete **
+02-01 01:18 INFO     Training network 2. n_training: 978
+02-01 01:18 INFO     Training network 2
+02-01 01:18 INFO     n_training: 7
+02-01 01:18 INFO     n_test: 51
+02-01 01:18 INFO     Epoch: 0 Loss: -3.998026
+02-01 01:18 INFO     Epoch: 1 Loss: -8.305081
+02-01 01:18 INFO     Epoch: 2 Loss: -8.841051
+02-01 01:18 INFO     Epoch: 3 Loss: -9.392364
+02-01 01:18 INFO     Epoch: 4 Loss: -9.754710
+02-01 01:18 INFO      ** Training complete **
+02-01 01:18 INFO     Training network 3. n_training: 1376
+02-01 01:18 INFO     Training network 3
+02-01 01:18 INFO     n_training: 10
+02-01 01:18 INFO     n_test: 51
+02-01 01:18 INFO     Epoch: 0 Loss: -5.232663
+02-01 01:18 INFO     Epoch: 1 Loss: -8.759580
+02-01 01:18 INFO     Epoch: 2 Loss: -9.284699
+02-01 01:18 INFO     Epoch: 3 Loss: -9.677239
+02-01 01:18 INFO     Epoch: 4 Loss: -9.753671
+02-01 01:18 INFO      ** Training complete **
+02-01 01:18 INFO     Training network 4. n_training: 1587
+02-01 01:18 INFO     Training network 4
+02-01 01:18 INFO     n_training: 12
+02-01 01:18 INFO     n_test: 51
+02-01 01:18 INFO     Epoch: 0 Loss: -5.834744
+02-01 01:18 INFO     Epoch: 1 Loss: -9.041047
+02-01 01:18 INFO     Epoch: 2 Loss: -9.723838
+02-01 01:18 INFO     Epoch: 3 Loss: -10.010723
+02-01 01:19 INFO     Epoch: 4 Loss: -10.255823
+02-01 01:19 INFO      ** Training complete **
+02-01 01:23 INFO     >> Global Model Test accuracy Top1: 23.313614
+02-01 01:23 INFO     >> Global Model Test accuracy Top5: 68.143055
+02-01 01:23 INFO     in comm round:1
+02-01 01:23 INFO     Training network 0. n_training: 1586
+02-01 01:23 INFO     Training network 0
+02-01 01:23 INFO     n_training: 12
+02-01 01:23 INFO     n_test: 51
+02-01 01:23 INFO     Epoch: 0 Loss: -5.008299
+02-01 01:23 INFO     Epoch: 1 Loss: -14.301486
+02-01 01:23 INFO     Epoch: 2 Loss: -14.465206
+02-01 01:24 INFO     Epoch: 3 Loss: -14.298708
+02-01 01:24 INFO     Epoch: 4 Loss: -13.685825
+02-01 01:24 INFO      ** Training complete **
+02-01 01:24 INFO     Training network 1. n_training: 1798
+02-01 01:24 INFO     Training network 1
+02-01 01:24 INFO     n_training: 14
+02-01 01:24 INFO     n_test: 51
+02-01 01:24 INFO     Epoch: 0 Loss: -6.066259
+02-01 01:24 INFO     Epoch: 1 Loss: -14.415303
+02-01 01:24 INFO     Epoch: 2 Loss: -13.610248
+02-01 01:24 INFO     Epoch: 3 Loss: -13.533419
+02-01 01:24 INFO     Epoch: 4 Loss: -13.280810
+02-01 01:24 INFO      ** Training complete **
+02-01 01:24 INFO     Training network 2. n_training: 978
+02-01 01:24 INFO     Training network 2
+02-01 01:24 INFO     n_training: 7
+02-01 01:24 INFO     n_test: 51
+02-01 01:24 INFO     Epoch: 0 Loss: -1.648415
+02-01 01:24 INFO     Epoch: 1 Loss: -10.758403
+02-01 01:24 INFO     Epoch: 2 Loss: -14.890826
+02-01 01:24 INFO     Epoch: 3 Loss: -14.750147
+02-01 01:24 INFO     Epoch: 4 Loss: -14.128538
+02-01 01:24 INFO      ** Training complete **
+02-01 01:24 INFO     Training network 3. n_training: 1376
+02-01 01:24 INFO     Training network 3
+02-01 01:24 INFO     n_training: 10
+02-01 01:24 INFO     n_test: 51
+02-01 01:24 INFO     Epoch: 0 Loss: -3.676547
+02-01 01:24 INFO     Epoch: 1 Loss: -13.836392
+02-01 01:24 INFO     Epoch: 2 Loss: -14.505753
+02-01 01:24 INFO     Epoch: 3 Loss: -13.990170
+02-01 01:24 INFO     Epoch: 4 Loss: -13.728833
+02-01 01:24 INFO      ** Training complete **
+02-01 01:24 INFO     Training network 4. n_training: 1587
+02-01 01:24 INFO     Training network 4
+02-01 01:24 INFO     n_training: 12
+02-01 01:24 INFO     n_test: 51
+02-01 01:24 INFO     Epoch: 0 Loss: -4.973838
+02-01 01:25 INFO     Epoch: 1 Loss: -14.607079
+02-01 01:25 INFO     Epoch: 2 Loss: -14.061570
+02-01 01:25 INFO     Epoch: 3 Loss: -13.823525
+02-01 01:25 INFO     Epoch: 4 Loss: -13.268239
+02-01 01:25 INFO      ** Training complete **
+02-01 01:30 INFO     >> Global Model Test accuracy Top1: 19.629687
+02-01 01:30 INFO     >> Global Model Test accuracy Top5: 66.322219
+02-01 01:30 INFO     in comm round:2
+02-01 01:30 INFO     Training network 0. n_training: 1586
+02-01 01:30 INFO     Training network 0
+02-01 01:30 INFO     n_training: 12
+02-01 01:30 INFO     n_test: 51
+02-01 01:30 INFO     Epoch: 0 Loss: -14.257202
+02-01 01:30 INFO     Epoch: 1 Loss: -15.845641
+02-01 01:30 INFO     Epoch: 2 Loss: -15.356005
+02-01 01:30 INFO     Epoch: 3 Loss: -14.980618
+02-01 01:30 INFO     Epoch: 4 Loss: -15.129371
+02-01 01:30 INFO      ** Training complete **
+02-01 01:30 INFO     Training network 1. n_training: 1798
+02-01 01:30 INFO     Training network 1
+02-01 01:30 INFO     n_training: 14
+02-01 01:30 INFO     n_test: 51
+02-01 01:30 INFO     Epoch: 0 Loss: -14.667943
+02-01 01:30 INFO     Epoch: 1 Loss: -15.858122
+02-01 01:30 INFO     Epoch: 2 Loss: -14.892710
+02-01 01:30 INFO     Epoch: 3 Loss: -15.094164
+02-01 01:30 INFO     Epoch: 4 Loss: -15.605531
+02-01 01:30 INFO      ** Training complete **
+02-01 01:30 INFO     Training network 2. n_training: 978
+02-01 01:30 INFO     Training network 2
+02-01 01:30 INFO     n_training: 7
+02-01 01:30 INFO     n_test: 51
+02-01 01:30 INFO     Epoch: 0 Loss: -13.407617
+02-01 01:30 INFO     Epoch: 1 Loss: -15.660930
+02-01 01:30 INFO     Epoch: 2 Loss: -16.245009
+02-01 01:31 INFO     Epoch: 3 Loss: -16.010972
+02-01 01:31 INFO     Epoch: 4 Loss: -15.479886
+02-01 01:31 INFO      ** Training complete **
+02-01 01:31 INFO     Training network 3. n_training: 1376
+02-01 01:31 INFO     Training network 3
+02-01 01:31 INFO     n_training: 10
+02-01 01:31 INFO     n_test: 51
+02-01 01:31 INFO     Epoch: 0 Loss: -13.963027
+02-01 01:31 INFO     Epoch: 1 Loss: -16.076440
+02-01 01:31 INFO     Epoch: 2 Loss: -15.797967
+02-01 01:31 INFO     Epoch: 3 Loss: -14.892364
+02-01 01:31 INFO     Epoch: 4 Loss: -14.899011
+02-01 01:31 INFO      ** Training complete **
+02-01 01:31 INFO     Training network 4. n_training: 1587
+02-01 01:31 INFO     Training network 4
+02-01 01:31 INFO     n_training: 12
+02-01 01:31 INFO     n_test: 51
+02-01 01:31 INFO     Epoch: 0 Loss: -14.358175
+02-01 01:31 INFO     Epoch: 1 Loss: -15.651638
+02-01 01:31 INFO     Epoch: 2 Loss: -14.998283
+02-01 01:31 INFO     Epoch: 3 Loss: -14.971469
+02-01 01:31 INFO     Epoch: 4 Loss: -15.498460
+02-01 01:31 INFO      ** Training complete **
+02-01 01:34 INFO     >> Global Model Test accuracy Top1: 19.702674
+02-01 01:34 INFO     >> Global Model Test accuracy Top5: 65.538568
+02-01 01:34 INFO     in comm round:3
+02-01 01:34 INFO     Training network 0. n_training: 1586
+02-01 01:34 INFO     Training network 0
+02-01 01:34 INFO     n_training: 12
+02-01 01:34 INFO     n_test: 51
+02-01 01:34 INFO     Epoch: 0 Loss: -14.475062
+02-01 01:34 INFO     Epoch: 1 Loss: -14.606234
+02-01 01:35 INFO     Epoch: 2 Loss: -14.599314
+02-01 01:35 INFO     Epoch: 3 Loss: -15.102050
+02-01 01:35 INFO     Epoch: 4 Loss: -15.245746
+02-01 01:35 INFO      ** Training complete **
+02-01 01:35 INFO     Training network 1. n_training: 1798
+02-01 01:35 INFO     Training network 1
+02-01 01:35 INFO     n_training: 14
+02-01 01:35 INFO     n_test: 51
+02-01 01:35 INFO     Epoch: 0 Loss: -14.599541
+02-01 01:35 INFO     Epoch: 1 Loss: -14.589859
+02-01 01:35 INFO     Epoch: 2 Loss: -15.124066
+02-01 01:35 INFO     Epoch: 3 Loss: -14.932121
+02-01 01:35 INFO     Epoch: 4 Loss: -14.962939
+02-01 01:35 INFO      ** Training complete **
+02-01 01:35 INFO     Training network 2. n_training: 978
+02-01 01:35 INFO     Training network 2
+02-01 01:35 INFO     n_training: 7
+02-01 01:35 INFO     n_test: 51
+02-01 01:35 INFO     Epoch: 0 Loss: -14.680303
+02-01 01:35 INFO     Epoch: 1 Loss: -15.515762
+02-01 01:35 INFO     Epoch: 2 Loss: -15.274373
+02-01 01:35 INFO     Epoch: 3 Loss: -15.175577
+02-01 01:35 INFO     Epoch: 4 Loss: -15.019144
+02-01 01:35 INFO      ** Training complete **
+02-01 01:35 INFO     Training network 3. n_training: 1376
+02-01 01:35 INFO     Training network 3
+02-01 01:35 INFO     n_training: 10
+02-01 01:35 INFO     n_test: 51
+02-01 01:35 INFO     Epoch: 0 Loss: -14.549911
+02-01 01:35 INFO     Epoch: 1 Loss: -15.029906
+02-01 01:35 INFO     Epoch: 2 Loss: -15.074539
+02-01 01:35 INFO     Epoch: 3 Loss: -15.380727
+02-01 01:35 INFO     Epoch: 4 Loss: -15.383806
+02-01 01:35 INFO      ** Training complete **
+02-01 01:35 INFO     Training network 4. n_training: 1587
+02-01 01:35 INFO     Training network 4
+02-01 01:35 INFO     n_training: 12
+02-01 01:35 INFO     n_test: 51
+02-01 01:35 INFO     Epoch: 0 Loss: -14.405578
+02-01 01:35 INFO     Epoch: 1 Loss: -14.972729
+02-01 01:35 INFO     Epoch: 2 Loss: -14.810397
+02-01 01:35 INFO     Epoch: 3 Loss: -15.108151
+02-01 01:35 INFO     Epoch: 4 Loss: -15.473757
+02-01 01:35 INFO      ** Training complete **
+02-01 01:38 INFO     >> Global Model Test accuracy Top1: 21.723264
+02-01 01:38 INFO     >> Global Model Test accuracy Top5: 66.909957
+02-01 01:38 INFO     in comm round:4
+02-01 01:38 INFO     Training network 0. n_training: 1586
+02-01 01:38 INFO     Training network 0
+02-01 01:38 INFO     n_training: 12
+02-01 01:38 INFO     n_test: 51
+02-01 01:38 INFO     Epoch: 0 Loss: -15.827845
+02-01 01:38 INFO     Epoch: 1 Loss: -16.204593
+02-01 01:38 INFO     Epoch: 2 Loss: -16.099832
+02-01 01:38 INFO     Epoch: 3 Loss: -16.315442
+02-01 01:38 INFO     Epoch: 4 Loss: -16.487308
+02-01 01:38 INFO      ** Training complete **
+02-01 01:38 INFO     Training network 1. n_training: 1798
+02-01 01:38 INFO     Training network 1
+02-01 01:38 INFO     n_training: 14
+02-01 01:38 INFO     n_test: 51
+02-01 01:38 INFO     Epoch: 0 Loss: -15.971020
+02-01 01:38 INFO     Epoch: 1 Loss: -16.227910
+02-01 01:38 INFO     Epoch: 2 Loss: -16.287936
+02-01 01:39 INFO     Epoch: 3 Loss: -16.491782
+02-01 01:39 INFO     Epoch: 4 Loss: -16.111679
+02-01 01:39 INFO      ** Training complete **
+02-01 01:39 INFO     Training network 2. n_training: 978
+02-01 01:39 INFO     Training network 2
+02-01 01:39 INFO     n_training: 7
+02-01 01:39 INFO     n_test: 51
+02-01 01:39 INFO     Epoch: 0 Loss: -15.829592
+02-01 01:39 INFO     Epoch: 1 Loss: -16.101490
+02-01 01:39 INFO     Epoch: 2 Loss: -16.150623
+02-01 01:39 INFO     Epoch: 3 Loss: -15.957611
+02-01 01:39 INFO     Epoch: 4 Loss: -16.333364
+02-01 01:39 INFO      ** Training complete **
+02-01 01:39 INFO     Training network 3. n_training: 1376
+02-01 01:39 INFO     Training network 3
+02-01 01:39 INFO     n_training: 10
+02-01 01:39 INFO     n_test: 51
+02-01 01:39 INFO     Epoch: 0 Loss: -15.719672
+02-01 01:39 INFO     Epoch: 1 Loss: -16.118489
+02-01 01:39 INFO     Epoch: 2 Loss: -16.253892
+02-01 01:39 INFO     Epoch: 3 Loss: -16.252997
+02-01 01:39 INFO     Epoch: 4 Loss: -16.252754
+02-01 01:39 INFO      ** Training complete **
+02-01 01:39 INFO     Training network 4. n_training: 1587
+02-01 01:39 INFO     Training network 4
+02-01 01:39 INFO     n_training: 12
+02-01 01:39 INFO     n_test: 51
+02-01 01:39 INFO     Epoch: 0 Loss: -15.778297
+02-01 01:39 INFO     Epoch: 1 Loss: -16.076724
+02-01 01:39 INFO     Epoch: 2 Loss: -16.111662
+02-01 01:39 INFO     Epoch: 3 Loss: -15.980303
+02-01 01:39 INFO     Epoch: 4 Loss: -15.899135
+02-01 01:39 INFO      ** Training complete **
+02-01 01:42 INFO     >> Global Model Test accuracy Top1: 22.506915
+02-01 01:42 INFO     >> Global Model Test accuracy Top5: 68.231407
+02-01 01:42 INFO     in comm round:5
+02-01 01:42 INFO     Training network 0. n_training: 1586
+02-01 01:42 INFO     Training network 0
+02-01 01:42 INFO     n_training: 12
+02-01 01:42 INFO     n_test: 51
+02-01 01:42 INFO     Epoch: 0 Loss: -16.161418
+02-01 01:42 INFO     Epoch: 1 Loss: -15.916270
+02-01 01:42 INFO     Epoch: 2 Loss: -16.028478
+02-01 01:42 INFO     Epoch: 3 Loss: -16.115989
+02-01 01:42 INFO     Epoch: 4 Loss: -16.213480
+02-01 01:42 INFO      ** Training complete **
+02-01 01:42 INFO     Training network 1. n_training: 1798
+02-01 01:42 INFO     Training network 1
+02-01 01:42 INFO     n_training: 14
+02-01 01:42 INFO     n_test: 51
+02-01 01:42 INFO     Epoch: 0 Loss: -15.915723
+02-01 01:42 INFO     Epoch: 1 Loss: -16.094244
+02-01 01:42 INFO     Epoch: 2 Loss: -16.015346
+02-01 01:42 INFO     Epoch: 3 Loss: -16.019191
+02-01 01:42 INFO     Epoch: 4 Loss: -15.982122
+02-01 01:42 INFO      ** Training complete **
+02-01 01:42 INFO     Training network 2. n_training: 978
+02-01 01:42 INFO     Training network 2
+02-01 01:42 INFO     n_training: 7
+02-01 01:42 INFO     n_test: 51
+02-01 01:42 INFO     Epoch: 0 Loss: -16.240106
+02-01 01:43 INFO     Epoch: 1 Loss: -16.107601
+02-01 01:43 INFO     Epoch: 2 Loss: -16.071006
+02-01 01:43 INFO     Epoch: 3 Loss: -16.048137
+02-01 01:43 INFO     Epoch: 4 Loss: -16.090626
+02-01 01:43 INFO      ** Training complete **
+02-01 01:43 INFO     Training network 3. n_training: 1376
+02-01 01:43 INFO     Training network 3
+02-01 01:43 INFO     n_training: 10
+02-01 01:43 INFO     n_test: 51
+02-01 01:43 INFO     Epoch: 0 Loss: -15.960972
+02-01 01:43 INFO     Epoch: 1 Loss: -16.084652
+02-01 01:43 INFO     Epoch: 2 Loss: -16.248831
+02-01 01:43 INFO     Epoch: 3 Loss: -16.196566
+02-01 01:43 INFO     Epoch: 4 Loss: -16.227683
+02-01 01:43 INFO      ** Training complete **
+02-01 01:43 INFO     Training network 4. n_training: 1587
+02-01 01:43 INFO     Training network 4
+02-01 01:43 INFO     n_training: 12
+02-01 01:43 INFO     n_test: 51
+02-01 01:43 INFO     Epoch: 0 Loss: -15.929931
+02-01 01:43 INFO     Epoch: 1 Loss: -16.054927
+02-01 01:43 INFO     Epoch: 2 Loss: -15.876654
+02-01 01:43 INFO     Epoch: 3 Loss: -16.125314
+02-01 01:43 INFO     Epoch: 4 Loss: -16.472008
+02-01 01:43 INFO      ** Training complete **
+02-01 01:46 INFO     >> Global Model Test accuracy Top1: 19.556699
+02-01 01:46 INFO     >> Global Model Test accuracy Top5: 65.911186
+02-01 01:46 INFO     in comm round:6
+02-01 01:46 INFO     Training network 0. n_training: 1586
+02-01 01:46 INFO     Training network 0
+02-01 01:46 INFO     n_training: 12
+02-01 01:46 INFO     n_test: 51
+02-01 01:46 INFO     Epoch: 0 Loss: -15.779945
+02-01 01:46 INFO     Epoch: 1 Loss: -15.763287
+02-01 01:46 INFO     Epoch: 2 Loss: -15.666939
+02-01 01:46 INFO     Epoch: 3 Loss: -15.615149
+02-01 01:46 INFO     Epoch: 4 Loss: -15.779318
+02-01 01:46 INFO      ** Training complete **
+02-01 01:46 INFO     Training network 1. n_training: 1798
+02-01 01:46 INFO     Training network 1
+02-01 01:46 INFO     n_training: 14
+02-01 01:46 INFO     n_test: 51
+02-01 01:46 INFO     Epoch: 0 Loss: -15.798652
+02-01 01:46 INFO     Epoch: 1 Loss: -15.843422
+02-01 01:46 INFO     Epoch: 2 Loss: -15.802105
+02-01 01:46 INFO     Epoch: 3 Loss: -15.819846
+02-01 01:46 INFO     Epoch: 4 Loss: -15.856326
+02-01 01:46 INFO      ** Training complete **
+02-01 01:46 INFO     Training network 2. n_training: 978
+02-01 01:46 INFO     Training network 2
+02-01 01:46 INFO     n_training: 7
+02-01 01:46 INFO     n_test: 51
+02-01 01:46 INFO     Epoch: 0 Loss: -15.947846
+02-01 01:46 INFO     Epoch: 1 Loss: -15.978718
+02-01 01:46 INFO     Epoch: 2 Loss: -15.684136
+02-01 01:46 INFO     Epoch: 3 Loss: -15.847076
+02-01 01:46 INFO     Epoch: 4 Loss: -15.894179
+02-01 01:46 INFO      ** Training complete **
+02-01 01:46 INFO     Training network 3. n_training: 1376
+02-01 01:46 INFO     Training network 3
+02-01 01:46 INFO     n_training: 10
+02-01 01:46 INFO     n_test: 51
+02-01 01:46 INFO     Epoch: 0 Loss: -15.812895
+02-01 01:46 INFO     Epoch: 1 Loss: -15.787226
+02-01 01:46 INFO     Epoch: 2 Loss: -15.573310
+02-01 01:46 INFO     Epoch: 3 Loss: -15.581251
+02-01 01:47 INFO     Epoch: 4 Loss: -15.687878
+02-01 01:47 INFO      ** Training complete **
+02-01 01:47 INFO     Training network 4. n_training: 1587
+02-01 01:47 INFO     Training network 4
+02-01 01:47 INFO     n_training: 12
+02-01 01:47 INFO     n_test: 51
+02-01 01:47 INFO     Epoch: 0 Loss: -15.730936
+02-01 01:47 INFO     Epoch: 1 Loss: -15.598394
+02-01 01:47 INFO     Epoch: 2 Loss: -15.599949
+02-01 01:47 INFO     Epoch: 3 Loss: -15.766945
+02-01 01:47 INFO     Epoch: 4 Loss: -15.936569
+02-01 01:47 INFO      ** Training complete **
+02-01 01:49 INFO     >> Global Model Test accuracy Top1: 20.947296
+02-01 01:49 INFO     >> Global Model Test accuracy Top5: 68.427320
+02-01 01:49 INFO     in comm round:7
+02-01 01:49 INFO     Training network 0. n_training: 1586
+02-01 01:49 INFO     Training network 0
+02-01 01:49 INFO     n_training: 12
+02-01 01:49 INFO     n_test: 51
+02-01 01:50 INFO     Epoch: 0 Loss: -16.209721
+02-01 01:50 INFO     Epoch: 1 Loss: -16.259616
+02-01 01:50 INFO     Epoch: 2 Loss: -16.403479
+02-01 01:50 INFO     Epoch: 3 Loss: -16.491856
+02-01 01:50 INFO     Epoch: 4 Loss: -16.570773
+02-01 01:50 INFO      ** Training complete **
+02-01 01:50 INFO     Training network 1. n_training: 1798
+02-01 01:50 INFO     Training network 1
+02-01 01:50 INFO     n_training: 14
+02-01 01:50 INFO     n_test: 51
+02-01 01:50 INFO     Epoch: 0 Loss: -16.176127
+02-01 01:50 INFO     Epoch: 1 Loss: -16.067091
+02-01 01:50 INFO     Epoch: 2 Loss: -16.346920
+02-01 01:50 INFO     Epoch: 3 Loss: -16.410409
+02-01 01:50 INFO     Epoch: 4 Loss: -16.537215
+02-01 01:50 INFO      ** Training complete **
+02-01 01:50 INFO     Training network 2. n_training: 978
+02-01 01:50 INFO     Training network 2
+02-01 01:50 INFO     n_training: 7
+02-01 01:50 INFO     n_test: 51
+02-01 01:50 INFO     Epoch: 0 Loss: -16.248857
+02-01 01:50 INFO     Epoch: 1 Loss: -16.072777
+02-01 01:50 INFO     Epoch: 2 Loss: -15.944321
+02-01 01:50 INFO     Epoch: 3 Loss: -15.894145
+02-01 01:50 INFO     Epoch: 4 Loss: -16.264681
+02-01 01:50 INFO      ** Training complete **
+02-01 01:50 INFO     Training network 3. n_training: 1376
+02-01 01:50 INFO     Training network 3
+02-01 01:50 INFO     n_training: 10
+02-01 01:50 INFO     n_test: 51
+02-01 01:50 INFO     Epoch: 0 Loss: -16.318535
+02-01 01:50 INFO     Epoch: 1 Loss: -15.868822
+02-01 01:50 INFO     Epoch: 2 Loss: -16.088176
+02-01 01:50 INFO     Epoch: 3 Loss: -16.170487
+02-01 01:50 INFO     Epoch: 4 Loss: -16.290743
+02-01 01:50 INFO      ** Training complete **
+02-01 01:50 INFO     Training network 4. n_training: 1587
+02-01 01:50 INFO     Training network 4
+02-01 01:50 INFO     n_training: 12
+02-01 01:50 INFO     n_test: 51
+02-01 01:50 INFO     Epoch: 0 Loss: -16.291917
+02-01 01:50 INFO     Epoch: 1 Loss: -16.202126
+02-01 01:51 INFO     Epoch: 2 Loss: -16.083800
+02-01 01:51 INFO     Epoch: 3 Loss: -15.859526
+02-01 01:51 INFO     Epoch: 4 Loss: -16.050138
+02-01 01:51 INFO      ** Training complete **
+02-01 01:53 INFO     >> Global Model Test accuracy Top1: 27.062846
+02-01 01:53 INFO     >> Global Model Test accuracy Top5: 73.528734
+02-01 01:53 INFO     in comm round:8
+02-01 01:53 INFO     Training network 0. n_training: 1586
+02-01 01:53 INFO     Training network 0
+02-01 01:53 INFO     n_training: 12
+02-01 01:53 INFO     n_test: 51
+02-01 01:53 INFO     Epoch: 0 Loss: -17.019626
+02-01 01:53 INFO     Epoch: 1 Loss: -17.006500
+02-01 01:53 INFO     Epoch: 2 Loss: -16.868501
+02-01 01:53 INFO     Epoch: 3 Loss: -16.937756
+02-01 01:53 INFO     Epoch: 4 Loss: -16.714807
+02-01 01:53 INFO      ** Training complete **
+02-01 01:53 INFO     Training network 1. n_training: 1798
+02-01 01:53 INFO     Training network 1
+02-01 01:53 INFO     n_training: 14
+02-01 01:53 INFO     n_test: 51
+02-01 01:53 INFO     Epoch: 0 Loss: -16.727172
+02-01 01:54 INFO     Epoch: 1 Loss: -16.995964
+02-01 01:54 INFO     Epoch: 2 Loss: -16.599328
+02-01 01:54 INFO     Epoch: 3 Loss: -16.714431
+02-01 01:54 INFO     Epoch: 4 Loss: -16.927954
+02-01 01:54 INFO      ** Training complete **
+02-01 01:54 INFO     Training network 2. n_training: 978
+02-01 01:54 INFO     Training network 2
+02-01 01:54 INFO     n_training: 7
+02-01 01:54 INFO     n_test: 51
+02-01 01:54 INFO     Epoch: 0 Loss: -16.931954
+02-01 01:54 INFO     Epoch: 1 Loss: -16.908961
+02-01 01:54 INFO     Epoch: 2 Loss: -16.861756
+02-01 01:54 INFO     Epoch: 3 Loss: -16.986993
+02-01 01:54 INFO     Epoch: 4 Loss: -16.815451
+02-01 01:54 INFO      ** Training complete **
+02-01 01:54 INFO     Training network 3. n_training: 1376
+02-01 01:54 INFO     Training network 3
+02-01 01:54 INFO     n_training: 10
+02-01 01:54 INFO     n_test: 51
+02-01 01:54 INFO     Epoch: 0 Loss: -17.181517
+02-01 01:54 INFO     Epoch: 1 Loss: -16.950593
+02-01 01:54 INFO     Epoch: 2 Loss: -17.028160
+02-01 01:54 INFO     Epoch: 3 Loss: -16.891410
+02-01 01:54 INFO     Epoch: 4 Loss: -16.896352
+02-01 01:54 INFO      ** Training complete **
+02-01 01:54 INFO     Training network 4. n_training: 1587
+02-01 01:54 INFO     Training network 4
+02-01 01:54 INFO     n_training: 12
+02-01 01:54 INFO     n_test: 51
+02-01 01:54 INFO     Epoch: 0 Loss: -17.070741
+02-01 01:54 INFO     Epoch: 1 Loss: -16.870225
+02-01 01:54 INFO     Epoch: 2 Loss: -16.743805
+02-01 01:54 INFO     Epoch: 3 Loss: -16.900927
+02-01 01:54 INFO     Epoch: 4 Loss: -17.035671
+02-01 01:54 INFO      ** Training complete **
+02-01 01:57 INFO     >> Global Model Test accuracy Top1: 20.382606
+02-01 01:57 INFO     >> Global Model Test accuracy Top5: 66.560387
+02-01 01:57 INFO     in comm round:9
+02-01 01:57 INFO     Training network 0. n_training: 1586
+02-01 01:57 INFO     Training network 0
+02-01 01:57 INFO     n_training: 12
+02-01 01:57 INFO     n_test: 51
+02-01 01:57 INFO     Epoch: 0 Loss: -16.204403
+02-01 01:57 INFO     Epoch: 1 Loss: -16.347367
+02-01 01:57 INFO     Epoch: 2 Loss: -16.408087
+02-01 01:57 INFO     Epoch: 3 Loss: -16.663905
+02-01 01:57 INFO     Epoch: 4 Loss: -16.548063
+02-01 01:57 INFO      ** Training complete **
+02-01 01:57 INFO     Training network 1. n_training: 1798
+02-01 01:57 INFO     Training network 1
+02-01 01:57 INFO     n_training: 14
+02-01 01:57 INFO     n_test: 51
+02-01 01:57 INFO     Epoch: 0 Loss: -16.533449
+02-01 01:57 INFO     Epoch: 1 Loss: -16.415123
+02-01 01:57 INFO     Epoch: 2 Loss: -16.580773
+02-01 01:57 INFO     Epoch: 3 Loss: -16.630516
+02-01 01:57 INFO     Epoch: 4 Loss: -16.584402
+02-01 01:57 INFO      ** Training complete **
+02-01 01:57 INFO     Training network 2. n_training: 978
+02-01 01:57 INFO     Training network 2
+02-01 01:57 INFO     n_training: 7
+02-01 01:57 INFO     n_test: 51
+02-01 01:57 INFO     Epoch: 0 Loss: -16.404333
+02-01 01:57 INFO     Epoch: 1 Loss: -16.517213
+02-01 01:57 INFO     Epoch: 2 Loss: -16.404080
+02-01 01:58 INFO     Epoch: 3 Loss: -16.607902
+02-01 01:58 INFO     Epoch: 4 Loss: -16.610726
+02-01 01:58 INFO      ** Training complete **
+02-01 01:58 INFO     Training network 3. n_training: 1376
+02-01 01:58 INFO     Training network 3
+02-01 01:58 INFO     n_training: 10
+02-01 01:58 INFO     n_test: 51
+02-01 01:58 INFO     Epoch: 0 Loss: -16.396404
+02-01 01:58 INFO     Epoch: 1 Loss: -16.501015
+02-01 01:58 INFO     Epoch: 2 Loss: -16.324426
+02-01 01:58 INFO     Epoch: 3 Loss: -16.396680
+02-01 01:58 INFO     Epoch: 4 Loss: -16.267287
+02-01 01:58 INFO      ** Training complete **
+02-01 01:58 INFO     Training network 4. n_training: 1587
+02-01 01:58 INFO     Training network 4
+02-01 01:58 INFO     n_training: 12
+02-01 01:58 INFO     n_test: 51
+02-01 01:58 INFO     Epoch: 0 Loss: -16.443526
+02-01 01:58 INFO     Epoch: 1 Loss: -16.319796
+02-01 01:58 INFO     Epoch: 2 Loss: -16.675538
+02-01 01:58 INFO     Epoch: 3 Loss: -16.288836
+02-01 01:58 INFO     Epoch: 4 Loss: -16.521666
+02-01 01:58 INFO      ** Training complete **
+02-01 02:01 INFO     >> Global Model Test accuracy Top1: 27.085894
+02-01 02:01 INFO     >> Global Model Test accuracy Top5: 74.627382
+02-01 02:01 INFO     in comm round:10
+02-01 02:01 INFO     Training network 0. n_training: 1586
+02-01 02:01 INFO     Training network 0
+02-01 02:01 INFO     n_training: 12
+02-01 02:01 INFO     n_test: 51
+02-01 02:01 INFO     Epoch: 0 Loss: -17.576585
+02-01 02:01 INFO     Epoch: 1 Loss: -17.385014
+02-01 02:01 INFO     Epoch: 2 Loss: -17.450839
+02-01 02:01 INFO     Epoch: 3 Loss: -17.202817
+02-01 02:01 INFO     Epoch: 4 Loss: -17.289197
+02-01 02:01 INFO      ** Training complete **
+02-01 02:01 INFO     Training network 1. n_training: 1798
+02-01 02:01 INFO     Training network 1
+02-01 02:01 INFO     n_training: 14
+02-01 02:01 INFO     n_test: 51
+02-01 02:01 INFO     Epoch: 0 Loss: -17.468951
+02-01 02:01 INFO     Epoch: 1 Loss: -17.335143
+02-01 02:01 INFO     Epoch: 2 Loss: -16.605510
+02-01 02:01 INFO     Epoch: 3 Loss: -16.925690
+02-01 02:01 INFO     Epoch: 4 Loss: -17.255373
+02-01 02:01 INFO      ** Training complete **
+02-01 02:01 INFO     Training network 2. n_training: 978
+02-01 02:01 INFO     Training network 2
+02-01 02:01 INFO     n_training: 7
+02-01 02:01 INFO     n_test: 51
+02-01 02:01 INFO     Epoch: 0 Loss: -17.520093
+02-01 02:01 INFO     Epoch: 1 Loss: -17.317023
+02-01 02:01 INFO     Epoch: 2 Loss: -17.486507
+02-01 02:01 INFO     Epoch: 3 Loss: -17.366707
+02-01 02:01 INFO     Epoch: 4 Loss: -17.290701
+02-01 02:01 INFO      ** Training complete **
+02-01 02:01 INFO     Training network 3. n_training: 1376
+02-01 02:01 INFO     Training network 3
+02-01 02:01 INFO     n_training: 10
+02-01 02:01 INFO     n_test: 51
+02-01 02:01 INFO     Epoch: 0 Loss: -17.465525
+02-01 02:01 INFO     Epoch: 1 Loss: -17.323550
+02-01 02:01 INFO     Epoch: 2 Loss: -17.425282
+02-01 02:01 INFO     Epoch: 3 Loss: -17.347459
+02-01 02:01 INFO     Epoch: 4 Loss: -17.279346
+02-01 02:01 INFO      ** Training complete **
+02-01 02:01 INFO     Training network 4. n_training: 1587
+02-01 02:01 INFO     Training network 4
+02-01 02:01 INFO     n_training: 12
+02-01 02:01 INFO     n_test: 51
+02-01 02:01 INFO     Epoch: 0 Loss: -17.435489
+02-01 02:02 INFO     Epoch: 1 Loss: -17.430245
+02-01 02:02 INFO     Epoch: 2 Loss: -17.236220
+02-01 02:02 INFO     Epoch: 3 Loss: -16.985494
+02-01 02:02 INFO     Epoch: 4 Loss: -17.235937
+02-01 02:02 INFO      ** Training complete **
+02-01 02:04 INFO     >> Global Model Test accuracy Top1: 27.312538
+02-01 02:04 INFO     >> Global Model Test accuracy Top5: 73.563307
+02-01 02:04 INFO     in comm round:11
+02-01 02:04 INFO     Training network 0. n_training: 1586
+02-01 02:04 INFO     Training network 0
+02-01 02:04 INFO     n_training: 12
+02-01 02:04 INFO     n_test: 51
+02-01 02:04 INFO     Epoch: 0 Loss: -17.873538
+02-01 02:04 INFO     Epoch: 1 Loss: -17.740907
+02-01 02:04 INFO     Epoch: 2 Loss: -17.744230
+02-01 02:04 INFO     Epoch: 3 Loss: -17.752499
+02-01 02:04 INFO     Epoch: 4 Loss: -17.650207
+02-01 02:04 INFO      ** Training complete **
+02-01 02:04 INFO     Training network 1. n_training: 1798
+02-01 02:04 INFO     Training network 1
+02-01 02:04 INFO     n_training: 14
+02-01 02:04 INFO     n_test: 51
+02-01 02:05 INFO     Epoch: 0 Loss: -17.787130
+02-01 02:05 INFO     Epoch: 1 Loss: -17.656708
+02-01 02:05 INFO     Epoch: 2 Loss: -17.612196
+02-01 02:05 INFO     Epoch: 3 Loss: -17.672837
+02-01 02:05 INFO     Epoch: 4 Loss: -17.611219
+02-01 02:05 INFO      ** Training complete **
+02-01 02:05 INFO     Training network 2. n_training: 978
+02-01 02:05 INFO     Training network 2
+02-01 02:05 INFO     n_training: 7
+02-01 02:05 INFO     n_test: 51
+02-01 02:05 INFO     Epoch: 0 Loss: -17.608620
+02-01 02:05 INFO     Epoch: 1 Loss: -17.638836
+02-01 02:05 INFO     Epoch: 2 Loss: -17.430214
+02-01 02:05 INFO     Epoch: 3 Loss: -17.588914
+02-01 02:05 INFO     Epoch: 4 Loss: -17.725345
+02-01 02:05 INFO      ** Training complete **
+02-01 02:05 INFO     Training network 3. n_training: 1376
+02-01 02:05 INFO     Training network 3
+02-01 02:05 INFO     n_training: 10
+02-01 02:05 INFO     n_test: 51
+02-01 02:05 INFO     Epoch: 0 Loss: -17.754655
+02-01 02:05 INFO     Epoch: 1 Loss: -17.552307
+02-01 02:05 INFO     Epoch: 2 Loss: -17.645402
+02-01 02:05 INFO     Epoch: 3 Loss: -17.720013
+02-01 02:05 INFO     Epoch: 4 Loss: -17.518709
+02-01 02:05 INFO      ** Training complete **
+02-01 02:05 INFO     Training network 4. n_training: 1587
+02-01 02:05 INFO     Training network 4
+02-01 02:05 INFO     n_training: 12
+02-01 02:05 INFO     n_test: 51
+02-01 02:05 INFO     Epoch: 0 Loss: -17.651872
+02-01 02:05 INFO     Epoch: 1 Loss: -17.499282
+02-01 02:05 INFO     Epoch: 2 Loss: -17.752629
+02-01 02:05 INFO     Epoch: 3 Loss: -17.665807
+02-01 02:05 INFO     Epoch: 4 Loss: -17.646263
+02-01 02:05 INFO      ** Training complete **
+02-01 02:08 INFO     >> Global Model Test accuracy Top1: 25.422557
+02-01 02:08 INFO     >> Global Model Test accuracy Top5: 73.163798
+02-01 02:08 INFO     in comm round:12
+02-01 02:08 INFO     Training network 0. n_training: 1586
+02-01 02:08 INFO     Training network 0
+02-01 02:08 INFO     n_training: 12
+02-01 02:08 INFO     n_test: 51
+02-01 02:08 INFO     Epoch: 0 Loss: -17.905148
+02-01 02:08 INFO     Epoch: 1 Loss: -17.939635
+02-01 02:08 INFO     Epoch: 2 Loss: -17.779747
+02-01 02:08 INFO     Epoch: 3 Loss: -17.856625
+02-01 02:08 INFO     Epoch: 4 Loss: -17.780111
+02-01 02:08 INFO      ** Training complete **
+02-01 02:08 INFO     Training network 1. n_training: 1798
+02-01 02:08 INFO     Training network 1
+02-01 02:08 INFO     n_training: 14
+02-01 02:08 INFO     n_test: 51
+02-01 02:08 INFO     Epoch: 0 Loss: -17.987462
+02-01 02:08 INFO     Epoch: 1 Loss: -17.662432
+02-01 02:08 INFO     Epoch: 2 Loss: -17.438991
+02-01 02:08 INFO     Epoch: 3 Loss: -17.648300
+02-01 02:08 INFO     Epoch: 4 Loss: -17.611002
+02-01 02:08 INFO      ** Training complete **
+02-01 02:08 INFO     Training network 2. n_training: 978
+02-01 02:08 INFO     Training network 2
+02-01 02:08 INFO     n_training: 7
+02-01 02:08 INFO     n_test: 51
+02-01 02:09 INFO     Epoch: 0 Loss: -18.043863
+02-01 02:09 INFO     Epoch: 1 Loss: -17.795264
+02-01 02:09 INFO     Epoch: 2 Loss: -17.690596
+02-01 02:09 INFO     Epoch: 3 Loss: -17.896108
+02-01 02:09 INFO     Epoch: 4 Loss: -17.684034
+02-01 02:09 INFO      ** Training complete **
+02-01 02:09 INFO     Training network 3. n_training: 1376
+02-01 02:09 INFO     Training network 3
+02-01 02:09 INFO     n_training: 10
+02-01 02:09 INFO     n_test: 51
+02-01 02:09 INFO     Epoch: 0 Loss: -17.904231
+02-01 02:09 INFO     Epoch: 1 Loss: -17.764701
+02-01 02:09 INFO     Epoch: 2 Loss: -17.704370
+02-01 02:09 INFO     Epoch: 3 Loss: -17.524413
+02-01 02:09 INFO     Epoch: 4 Loss: -17.586303
+02-01 02:09 INFO      ** Training complete **
+02-01 02:09 INFO     Training network 4. n_training: 1587
+02-01 02:09 INFO     Training network 4
+02-01 02:09 INFO     n_training: 12
+02-01 02:09 INFO     n_test: 51
+02-01 02:09 INFO     Epoch: 0 Loss: -18.016537
+02-01 02:09 INFO     Epoch: 1 Loss: -17.742123
+02-01 02:09 INFO     Epoch: 2 Loss: -17.736592
+02-01 02:09 INFO     Epoch: 3 Loss: -17.687125
+02-01 02:09 INFO     Epoch: 4 Loss: -17.454285
+02-01 02:09 INFO      ** Training complete **
+02-01 02:12 INFO     >> Global Model Test accuracy Top1: 25.576214
+02-01 02:12 INFO     >> Global Model Test accuracy Top5: 72.871850
+02-01 02:12 INFO     in comm round:13
+02-01 02:12 INFO     Training network 0. n_training: 1586
+02-01 02:12 INFO     Training network 0
+02-01 02:12 INFO     n_training: 12
+02-01 02:12 INFO     n_test: 51
+02-01 02:12 INFO     Epoch: 0 Loss: -17.906098
+02-01 02:12 INFO     Epoch: 1 Loss: -17.792249
+02-01 02:12 INFO     Epoch: 2 Loss: -17.646300
+02-01 02:12 INFO     Epoch: 3 Loss: -17.748163
+02-01 02:12 INFO     Epoch: 4 Loss: -17.867921
+02-01 02:12 INFO      ** Training complete **
+02-01 02:12 INFO     Training network 1. n_training: 1798
+02-01 02:12 INFO     Training network 1
+02-01 02:12 INFO     n_training: 14
+02-01 02:12 INFO     n_test: 51
+02-01 02:12 INFO     Epoch: 0 Loss: -17.892494
+02-01 02:12 INFO     Epoch: 1 Loss: -17.954444
+02-01 02:12 INFO     Epoch: 2 Loss: -17.654131
+02-01 02:12 INFO     Epoch: 3 Loss: -17.626997
+02-01 02:12 INFO     Epoch: 4 Loss: -17.696371
+02-01 02:12 INFO      ** Training complete **
+02-01 02:12 INFO     Training network 2. n_training: 978
+02-01 02:12 INFO     Training network 2
+02-01 02:12 INFO     n_training: 7
+02-01 02:12 INFO     n_test: 51
+02-01 02:12 INFO     Epoch: 0 Loss: -17.820283
+02-01 02:12 INFO     Epoch: 1 Loss: -17.889418
+02-01 02:12 INFO     Epoch: 2 Loss: -17.734519
+02-01 02:12 INFO     Epoch: 3 Loss: -17.729184
+02-01 02:12 INFO     Epoch: 4 Loss: -17.813357
+02-01 02:12 INFO      ** Training complete **
+02-01 02:12 INFO     Training network 3. n_training: 1376
+02-01 02:12 INFO     Training network 3
+02-01 02:12 INFO     n_training: 10
+02-01 02:12 INFO     n_test: 51
+02-01 02:12 INFO     Epoch: 0 Loss: -17.844173
+02-01 02:12 INFO     Epoch: 1 Loss: -17.732389
+02-01 02:12 INFO     Epoch: 2 Loss: -17.618139
+02-01 02:12 INFO     Epoch: 3 Loss: -17.512158
+02-01 02:13 INFO     Epoch: 4 Loss: -17.486667
+02-01 02:13 INFO      ** Training complete **
+02-01 02:13 INFO     Training network 4. n_training: 1587
+02-01 02:13 INFO     Training network 4
+02-01 02:13 INFO     n_training: 12
+02-01 02:13 INFO     n_test: 51
+02-01 02:13 INFO     Epoch: 0 Loss: -17.958474
+02-01 02:13 INFO     Epoch: 1 Loss: -17.697543
+02-01 02:13 INFO     Epoch: 2 Loss: -17.830951
+02-01 02:13 INFO     Epoch: 3 Loss: -17.388106
+02-01 02:13 INFO     Epoch: 4 Loss: -17.436513
+02-01 02:13 INFO      ** Training complete **
+02-01 02:15 INFO     >> Global Model Test accuracy Top1: 28.526429
+02-01 02:15 INFO     >> Global Model Test accuracy Top5: 76.252305
+02-01 02:15 INFO     in comm round:14
+02-01 02:15 INFO     Training network 0. n_training: 1586
+02-01 02:15 INFO     Training network 0
+02-01 02:15 INFO     n_training: 12
+02-01 02:15 INFO     n_test: 51
+02-01 02:15 INFO     Epoch: 0 Loss: -18.051016
+02-01 02:15 INFO     Epoch: 1 Loss: -17.917065
+02-01 02:16 INFO     Epoch: 2 Loss: -17.918069
+02-01 02:16 INFO     Epoch: 3 Loss: -17.960673
+02-01 02:16 INFO     Epoch: 4 Loss: -17.878994
+02-01 02:16 INFO      ** Training complete **
+02-01 02:16 INFO     Training network 1. n_training: 1798
+02-01 02:16 INFO     Training network 1
+02-01 02:16 INFO     n_training: 14
+02-01 02:16 INFO     n_test: 51
+02-01 02:16 INFO     Epoch: 0 Loss: -17.992894
+02-01 02:16 INFO     Epoch: 1 Loss: -18.081075
+02-01 02:16 INFO     Epoch: 2 Loss: -17.978605
+02-01 02:16 INFO     Epoch: 3 Loss: -17.933119
+02-01 02:16 INFO     Epoch: 4 Loss: -17.885210
+02-01 02:16 INFO      ** Training complete **
+02-01 02:16 INFO     Training network 2. n_training: 978
+02-01 02:16 INFO     Training network 2
+02-01 02:16 INFO     n_training: 7
+02-01 02:16 INFO     n_test: 51
+02-01 02:16 INFO     Epoch: 0 Loss: -17.849195
+02-01 02:16 INFO     Epoch: 1 Loss: -18.000746
+02-01 02:16 INFO     Epoch: 2 Loss: -17.925544
+02-01 02:16 INFO     Epoch: 3 Loss: -18.041516
+02-01 02:16 INFO     Epoch: 4 Loss: -17.869453
+02-01 02:16 INFO      ** Training complete **
+02-01 02:16 INFO     Training network 3. n_training: 1376
+02-01 02:16 INFO     Training network 3
+02-01 02:16 INFO     n_training: 10
+02-01 02:16 INFO     n_test: 51
+02-01 02:16 INFO     Epoch: 0 Loss: -17.957890
+02-01 02:16 INFO     Epoch: 1 Loss: -17.975548
+02-01 02:16 INFO     Epoch: 2 Loss: -17.724094
+02-01 02:16 INFO     Epoch: 3 Loss: -17.431611
+02-01 02:16 INFO     Epoch: 4 Loss: -17.592730
+02-01 02:16 INFO      ** Training complete **
+02-01 02:16 INFO     Training network 4. n_training: 1587
+02-01 02:16 INFO     Training network 4
+02-01 02:16 INFO     n_training: 12
+02-01 02:16 INFO     n_test: 51
+02-01 02:16 INFO     Epoch: 0 Loss: -17.886174
+02-01 02:16 INFO     Epoch: 1 Loss: -17.835145
+02-01 02:16 INFO     Epoch: 2 Loss: -18.012723
+02-01 02:16 INFO     Epoch: 3 Loss: -17.864571
+02-01 02:16 INFO     Epoch: 4 Loss: -17.867750
+02-01 02:16 INFO      ** Training complete **
+02-01 02:19 INFO     >> Global Model Test accuracy Top1: 27.005224
+02-01 02:19 INFO     >> Global Model Test accuracy Top5: 74.542870
+02-01 02:19 INFO     in comm round:15
+02-01 02:19 INFO     Training network 0. n_training: 1586
+02-01 02:19 INFO     Training network 0
+02-01 02:19 INFO     n_training: 12
+02-01 02:19 INFO     n_test: 51
+02-01 02:19 INFO     Epoch: 0 Loss: -17.966554
+02-01 02:19 INFO     Epoch: 1 Loss: -17.886032
+02-01 02:19 INFO     Epoch: 2 Loss: -17.879124
+02-01 02:19 INFO     Epoch: 3 Loss: -17.919780
+02-01 02:19 INFO     Epoch: 4 Loss: -17.938687
+02-01 02:19 INFO      ** Training complete **
+02-01 02:19 INFO     Training network 1. n_training: 1798
+02-01 02:19 INFO     Training network 1
+02-01 02:19 INFO     n_training: 14
+02-01 02:19 INFO     n_test: 51
+02-01 02:19 INFO     Epoch: 0 Loss: -18.046298
+02-01 02:19 INFO     Epoch: 1 Loss: -17.826809
+02-01 02:20 INFO     Epoch: 2 Loss: -18.060547
+02-01 02:20 INFO     Epoch: 3 Loss: -18.026991
+02-01 02:20 INFO     Epoch: 4 Loss: -18.079137
+02-01 02:20 INFO      ** Training complete **
+02-01 02:20 INFO     Training network 2. n_training: 978
+02-01 02:20 INFO     Training network 2
+02-01 02:20 INFO     n_training: 7
+02-01 02:20 INFO     n_test: 51
+02-01 02:20 INFO     Epoch: 0 Loss: -17.955442
+02-01 02:20 INFO     Epoch: 1 Loss: -17.886733
+02-01 02:20 INFO     Epoch: 2 Loss: -17.705168
+02-01 02:20 INFO     Epoch: 3 Loss: -17.773817
+02-01 02:20 INFO     Epoch: 4 Loss: -17.826853
+02-01 02:20 INFO      ** Training complete **
+02-01 02:20 INFO     Training network 3. n_training: 1376
+02-01 02:20 INFO     Training network 3
+02-01 02:20 INFO     n_training: 10
+02-01 02:20 INFO     n_test: 51
+02-01 02:20 INFO     Epoch: 0 Loss: -17.976013
+02-01 02:20 INFO     Epoch: 1 Loss: -17.808108
+02-01 02:20 INFO     Epoch: 2 Loss: -17.574682
+02-01 02:20 INFO     Epoch: 3 Loss: -17.797927
+02-01 02:20 INFO     Epoch: 4 Loss: -17.649259
+02-01 02:20 INFO      ** Training complete **
+02-01 02:20 INFO     Training network 4. n_training: 1587
+02-01 02:20 INFO     Training network 4
+02-01 02:20 INFO     n_training: 12
+02-01 02:20 INFO     n_test: 51
+02-01 02:20 INFO     Epoch: 0 Loss: -17.933026
+02-01 02:20 INFO     Epoch: 1 Loss: -17.616110
+02-01 02:20 INFO     Epoch: 2 Loss: -17.704853
+02-01 02:20 INFO     Epoch: 3 Loss: -17.957286
+02-01 02:20 INFO     Epoch: 4 Loss: -17.910738
+02-01 02:20 INFO      ** Training complete **
+02-01 02:23 INFO     >> Global Model Test accuracy Top1: 29.771051
+02-01 02:23 INFO     >> Global Model Test accuracy Top5: 76.674862
+02-01 02:23 INFO     in comm round:16
+02-01 02:23 INFO     Training network 0. n_training: 1586
+02-01 02:23 INFO     Training network 0
+02-01 02:23 INFO     n_training: 12
+02-01 02:23 INFO     n_test: 51
+02-01 02:23 INFO     Epoch: 0 Loss: -18.294297
+02-01 02:23 INFO     Epoch: 1 Loss: -18.076696
+02-01 02:23 INFO     Epoch: 2 Loss: -17.954576
+02-01 02:23 INFO     Epoch: 3 Loss: -17.987422
+02-01 02:23 INFO     Epoch: 4 Loss: -18.022892
+02-01 02:23 INFO      ** Training complete **
+02-01 02:23 INFO     Training network 1. n_training: 1798
+02-01 02:23 INFO     Training network 1
+02-01 02:23 INFO     n_training: 14
+02-01 02:23 INFO     n_test: 51
+02-01 02:23 INFO     Epoch: 0 Loss: -18.193082
+02-01 02:23 INFO     Epoch: 1 Loss: -18.077935
+02-01 02:23 INFO     Epoch: 2 Loss: -18.057682
+02-01 02:23 INFO     Epoch: 3 Loss: -18.106057
+02-01 02:23 INFO     Epoch: 4 Loss: -18.073070
+02-01 02:23 INFO      ** Training complete **
+02-01 02:23 INFO     Training network 2. n_training: 978
+02-01 02:23 INFO     Training network 2
+02-01 02:23 INFO     n_training: 7
+02-01 02:23 INFO     n_test: 51
+02-01 02:23 INFO     Epoch: 0 Loss: -18.188210
+02-01 02:23 INFO     Epoch: 1 Loss: -18.150184
+02-01 02:23 INFO     Epoch: 2 Loss: -18.079358
+02-01 02:23 INFO     Epoch: 3 Loss: -18.231684
+02-01 02:23 INFO     Epoch: 4 Loss: -18.304002
+02-01 02:23 INFO      ** Training complete **
+02-01 02:23 INFO     Training network 3. n_training: 1376
+02-01 02:23 INFO     Training network 3
+02-01 02:23 INFO     n_training: 10
+02-01 02:23 INFO     n_test: 51
+02-01 02:24 INFO     Epoch: 0 Loss: -18.036974
+02-01 02:24 INFO     Epoch: 1 Loss: -18.040072
+02-01 02:24 INFO     Epoch: 2 Loss: -17.882525
+02-01 02:24 INFO     Epoch: 3 Loss: -16.711782
+02-01 02:24 INFO     Epoch: 4 Loss: -16.586291
+02-01 02:24 INFO      ** Training complete **
+02-01 02:24 INFO     Training network 4. n_training: 1587
+02-01 02:24 INFO     Training network 4
+02-01 02:24 INFO     n_training: 12
+02-01 02:24 INFO     n_test: 51
+02-01 02:24 INFO     Epoch: 0 Loss: -18.220423
+02-01 02:24 INFO     Epoch: 1 Loss: -18.150744
+02-01 02:24 INFO     Epoch: 2 Loss: -14.693467
+02-01 02:24 INFO     Epoch: 3 Loss: -15.282586
+02-01 02:24 INFO     Epoch: 4 Loss: -15.846304
+02-01 02:24 INFO      ** Training complete **
+02-01 02:27 INFO     >> Global Model Test accuracy Top1: 26.813153
+02-01 02:27 INFO     >> Global Model Test accuracy Top5: 74.784880
+02-01 02:27 INFO     in comm round:17
+02-01 02:27 INFO     Training network 0. n_training: 1586
+02-01 02:27 INFO     Training network 0
+02-01 02:27 INFO     n_training: 12
+02-01 02:27 INFO     n_test: 51
+02-01 02:27 INFO     Epoch: 0 Loss: -15.732028
+02-01 02:27 INFO     Epoch: 1 Loss: -16.270346
+02-01 02:27 INFO     Epoch: 2 Loss: -16.401355
+02-01 02:27 INFO     Epoch: 3 Loss: -16.673718
+02-01 02:27 INFO     Epoch: 4 Loss: -16.740719
+02-01 02:27 INFO      ** Training complete **
+02-01 02:27 INFO     Training network 1. n_training: 1798
+02-01 02:27 INFO     Training network 1
+02-01 02:27 INFO     n_training: 14
+02-01 02:27 INFO     n_test: 51
+02-01 02:27 INFO     Epoch: 0 Loss: -15.704984
+02-01 02:27 INFO     Epoch: 1 Loss: -16.120680
+02-01 02:27 INFO     Epoch: 2 Loss: -16.571942
+02-01 02:27 INFO     Epoch: 3 Loss: -16.615847
+02-01 02:27 INFO     Epoch: 4 Loss: -16.767176
+02-01 02:27 INFO      ** Training complete **
+02-01 02:27 INFO     Training network 2. n_training: 978
+02-01 02:27 INFO     Training network 2
+02-01 02:27 INFO     n_training: 7
+02-01 02:27 INFO     n_test: 51
+02-01 02:27 INFO     Epoch: 0 Loss: -15.618524
+02-01 02:27 INFO     Epoch: 1 Loss: -16.016019
+02-01 02:27 INFO     Epoch: 2 Loss: -16.101450
+02-01 02:27 INFO     Epoch: 3 Loss: -16.369213
+02-01 02:27 INFO     Epoch: 4 Loss: -16.686079
+02-01 02:27 INFO      ** Training complete **
+02-01 02:27 INFO     Training network 3. n_training: 1376
+02-01 02:27 INFO     Training network 3
+02-01 02:27 INFO     n_training: 10
+02-01 02:27 INFO     n_test: 51
+02-01 02:27 INFO     Epoch: 0 Loss: -15.568819
+02-01 02:27 INFO     Epoch: 1 Loss: -16.054450
+02-01 02:27 INFO     Epoch: 2 Loss: -16.148021
+02-01 02:27 INFO     Epoch: 3 Loss: -16.437600
+02-01 02:27 INFO     Epoch: 4 Loss: -16.462267
+02-01 02:27 INFO      ** Training complete **
+02-01 02:27 INFO     Training network 4. n_training: 1587
+02-01 02:27 INFO     Training network 4
+02-01 02:27 INFO     n_training: 12
+02-01 02:27 INFO     n_test: 51
+02-01 02:27 INFO     Epoch: 0 Loss: -15.736934
+02-01 02:28 INFO     Epoch: 1 Loss: -16.226744
+02-01 02:28 INFO     Epoch: 2 Loss: -16.433720
+02-01 02:28 INFO     Epoch: 3 Loss: -16.674624
+02-01 02:28 INFO     Epoch: 4 Loss: -16.492891
+02-01 02:28 INFO      ** Training complete **
+02-01 02:30 INFO     >> Global Model Test accuracy Top1: 29.060387
+02-01 02:30 INFO     >> Global Model Test accuracy Top5: 76.624923
+02-01 02:30 INFO     in comm round:18
+02-01 02:30 INFO     Training network 0. n_training: 1586
+02-01 02:30 INFO     Training network 0
+02-01 02:30 INFO     n_training: 12
+02-01 02:30 INFO     n_test: 51
+02-01 02:30 INFO     Epoch: 0 Loss: -17.172279
+02-01 02:30 INFO     Epoch: 1 Loss: -17.371119
+02-01 02:30 INFO     Epoch: 2 Loss: -17.377916
+02-01 02:30 INFO     Epoch: 3 Loss: -17.466627
+02-01 02:31 INFO     Epoch: 4 Loss: -17.516489
+02-01 02:31 INFO      ** Training complete **
+02-01 02:31 INFO     Training network 1. n_training: 1798
+02-01 02:31 INFO     Training network 1
+02-01 02:31 INFO     n_training: 14
+02-01 02:31 INFO     n_test: 51
+02-01 02:31 INFO     Epoch: 0 Loss: -17.348828
+02-01 02:31 INFO     Epoch: 1 Loss: -17.461045
+02-01 02:31 INFO     Epoch: 2 Loss: -17.553079
+02-01 02:31 INFO     Epoch: 3 Loss: -17.554614
+02-01 02:31 INFO     Epoch: 4 Loss: -17.584063
+02-01 02:31 INFO      ** Training complete **
+02-01 02:31 INFO     Training network 2. n_training: 978
+02-01 02:31 INFO     Training network 2
+02-01 02:31 INFO     n_training: 7
+02-01 02:31 INFO     n_test: 51
+02-01 02:31 INFO     Epoch: 0 Loss: -16.998754
+02-01 02:31 INFO     Epoch: 1 Loss: -17.324612
+02-01 02:31 INFO     Epoch: 2 Loss: -17.351950
+02-01 02:31 INFO     Epoch: 3 Loss: -17.254845
+02-01 02:31 INFO     Epoch: 4 Loss: -17.370173
+02-01 02:31 INFO      ** Training complete **
+02-01 02:31 INFO     Training network 3. n_training: 1376
+02-01 02:31 INFO     Training network 3
+02-01 02:31 INFO     n_training: 10
+02-01 02:31 INFO     n_test: 51
+02-01 02:31 INFO     Epoch: 0 Loss: -17.110966
+02-01 02:31 INFO     Epoch: 1 Loss: -17.255729
+02-01 02:31 INFO     Epoch: 2 Loss: -17.444364
+02-01 02:31 INFO     Epoch: 3 Loss: -17.319659
+02-01 02:31 INFO     Epoch: 4 Loss: -17.441671
+02-01 02:31 INFO      ** Training complete **
+02-01 02:31 INFO     Training network 4. n_training: 1587
+02-01 02:31 INFO     Training network 4
+02-01 02:31 INFO     n_training: 12
+02-01 02:31 INFO     n_test: 51
+02-01 02:31 INFO     Epoch: 0 Loss: -17.308227
+02-01 02:31 INFO     Epoch: 1 Loss: -17.373168
+02-01 02:31 INFO     Epoch: 2 Loss: -17.538378
+02-01 02:31 INFO     Epoch: 3 Loss: -17.514150
+02-01 02:31 INFO     Epoch: 4 Loss: -17.328310
+02-01 02:31 INFO      ** Training complete **
+02-01 02:34 INFO     >> Global Model Test accuracy Top1: 29.590504
+02-01 02:34 INFO     >> Global Model Test accuracy Top5: 76.943762
+02-01 02:34 INFO     in comm round:19
+02-01 02:34 INFO     Training network 0. n_training: 1586
+02-01 02:34 INFO     Training network 0
+02-01 02:34 INFO     n_training: 12
+02-01 02:34 INFO     n_test: 51
+02-01 02:34 INFO     Epoch: 0 Loss: -17.858696
+02-01 02:34 INFO     Epoch: 1 Loss: -17.844506
+02-01 02:34 INFO     Epoch: 2 Loss: -17.952851
+02-01 02:34 INFO     Epoch: 3 Loss: -18.016938
+02-01 02:34 INFO     Epoch: 4 Loss: -17.947384
+02-01 02:34 INFO      ** Training complete **
+02-01 02:34 INFO     Training network 1. n_training: 1798
+02-01 02:34 INFO     Training network 1
+02-01 02:34 INFO     n_training: 14
+02-01 02:34 INFO     n_test: 51
+02-01 02:34 INFO     Epoch: 0 Loss: -17.880171
+02-01 02:34 INFO     Epoch: 1 Loss: -17.774745
+02-01 02:35 INFO     Epoch: 2 Loss: -17.923523
+02-01 02:35 INFO     Epoch: 3 Loss: -17.926996
+02-01 02:35 INFO     Epoch: 4 Loss: -18.062034
+02-01 02:35 INFO      ** Training complete **
+02-01 02:35 INFO     Training network 2. n_training: 978
+02-01 02:35 INFO     Training network 2
+02-01 02:35 INFO     n_training: 7
+02-01 02:35 INFO     n_test: 51
+02-01 02:35 INFO     Epoch: 0 Loss: -17.940280
+02-01 02:35 INFO     Epoch: 1 Loss: -17.715778
+02-01 02:35 INFO     Epoch: 2 Loss: -17.871209
+02-01 02:35 INFO     Epoch: 3 Loss: -17.952223
+02-01 02:35 INFO     Epoch: 4 Loss: -17.926828
+02-01 02:35 INFO      ** Training complete **
+02-01 02:35 INFO     Training network 3. n_training: 1376
+02-01 02:35 INFO     Training network 3
+02-01 02:35 INFO     n_training: 10
+02-01 02:35 INFO     n_test: 51
+02-01 02:35 INFO     Epoch: 0 Loss: -17.787316
+02-01 02:35 INFO     Epoch: 1 Loss: -17.680308
+02-01 02:35 INFO     Epoch: 2 Loss: -17.757094
+02-01 02:35 INFO     Epoch: 3 Loss: -17.690311
+02-01 02:35 INFO     Epoch: 4 Loss: -17.730888
+02-01 02:35 INFO      ** Training complete **
+02-01 02:35 INFO     Training network 4. n_training: 1587
+02-01 02:35 INFO     Training network 4
+02-01 02:35 INFO     n_training: 12
+02-01 02:35 INFO     n_test: 51
+02-01 02:35 INFO     Epoch: 0 Loss: -17.882483
+02-01 02:35 INFO     Epoch: 1 Loss: -17.846237
+02-01 02:35 INFO     Epoch: 2 Loss: -17.736424
+02-01 02:35 INFO     Epoch: 3 Loss: -17.875960
+02-01 02:35 INFO     Epoch: 4 Loss: -17.913321
+02-01 02:35 INFO      ** Training complete **
+02-01 02:38 INFO     >> Global Model Test accuracy Top1: 30.220498
+02-01 02:38 INFO     >> Global Model Test accuracy Top5: 77.942532
