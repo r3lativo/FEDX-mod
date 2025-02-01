@@ -1,7 +1,7 @@
 
 # FedX with SimSiam
 
-This repository contains an **unsupervised federated learning** framework, based on **FedX** \[[Han et al.\]](#han2022fedx), extended to use **SimSiam** \[[Chen et al.\]](#chen2020simsiam) for self-supervised learning. The project aims to explore how a lightweight method like SimSiam performs in non-IID, privacy-critical federated settings.
+This repository contains an **unsupervised federated learning** framework, based on **FedX** \[[Han et al., 2022\]](#han2022fedx), extended to use **SimSiam** \[[Chen & He, 2020\]](#chen2020simsiam) for self-supervised learning. The project aims to explore how a lightweight method like SimSiam performs in non-IID, privacy-critical federated settings.
 
 ## Overview
 
@@ -82,5 +82,5 @@ More simply, one can use the bash files to have some simple runs one after the o
 
 ## References
 
-- <a name="han2022fedx"></a> **Han et al., 2022**: Han, Xu, et al. (2022). *FedX: Towards Large-Scale Unsupervised Federated Learning with Cross Knowledge Distillation.*  
-- <a name="chen2020simsiam"></a> **Chen et al., 2020**: Chen, Xinlei, et al. (2020). *Exploring Simple Siamese Representation Learning.*  
+- <a name="han2022fedx"></a> **Han et al., 2022**: *FedX: Unsupervised Federated Learning with Cross Knowledge Distillation*  
+- <a name="chen2020simsiam"></a> **Chen & He., 2020**: *Exploring Simple Siamese Representation Learning*  
